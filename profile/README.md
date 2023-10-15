@@ -4,4 +4,4 @@
 
 Welcome to Knuckles-Team Organization
 
-We have several repositories that range from Python, Docker, Bash, PowerShell, API Wrappers, and much more!
+We have several repositories that range from Python, Docker, Bash, PowerShell, API Wrappers, and cover topics from Artificial General Intelligence to Low Level code and automation!
