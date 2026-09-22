@@ -1,18 +1,19 @@
+
 <div align="center">
 
-<img src="./assets/runtime-architecture.svg" alt="Knuckles platform runtime architecture" width="100%">
-
-# Knuckles agent platform
+# Knuckles-Team agent platform
 
 **A governed runtime for building agents, connecting operational systems, and turning every action into durable, explainable knowledge.**
 
 [![Platform documentation](https://img.shields.io/badge/platform-documentation-6d5dfc?style=for-the-badge)](https://knuckles-team.github.io/agent-utilities/) [![Run GraphOS](https://img.shields.io/badge/start-GraphOS-18a999?style=for-the-badge)](https://knuckles-team.github.io/graph-os/) [![GitHub repositories](https://img.shields.io/badge/explore-repositories-111827?style=for-the-badge&logo=github)](https://github.com/orgs/Knuckles-Team/repositories)
 
+<img src="./assets/runtime-architecture.svg" alt="Knuckles platform runtime architecture" width="100%">
+
 </div>
 
 ## One platform, five clear responsibilities
 
-People and MCP/A2A clients enter through **Agent WebUI** or **GraphOS**. GraphOS applies the runtime boundary and delegates agent work to the **agent-utilities** control plane. **epistemic-graph** commits durable knowledge, evidence, provenance, and reasoning results. Source systems connect through the governed **agent-connector-sdk** contract.
+People and MCP/A2A clients enter through **Agent WebUI** or **GraphOS**. GraphOS applies the runtime boundary and delegates agent work to the **Agent Utilities** control plane. **Epistemic Graph** commits durable knowledge, evidence, provenance, and reasoning results. Source systems connect through the governed **Agent Connector SDK** contract.
 
 <table>
 <tr>
@@ -38,7 +39,7 @@ The operator experience for conversations, approvals, tool activity, and graph-b
 <tr>
 <td width="50%" valign="top">
 
-### [agent-utilities](https://github.com/Knuckles-Team/agent-utilities)
+### [Agent Utilities](https://github.com/Knuckles-Team/agent-utilities)
 
 The agent control plane: agents, workflows, evaluation, skills, and governed execution.
 
@@ -47,7 +48,7 @@ The agent control plane: agents, workflows, evaluation, skills, and governed exe
 </td>
 <td width="50%" valign="top">
 
-### [epistemic-graph](https://github.com/Knuckles-Team/epistemic-graph)
+### [Epistemic Graph](https://github.com/Knuckles-Team/epistemic-graph)
 
 The reasoning and durable knowledge engine for graph, RDF, SQL, vectors, time, blobs, evidence, and provenance.
 
@@ -58,7 +59,7 @@ The reasoning and durable knowledge engine for graph, RDF, SQL, vectors, time, b
 <tr>
 <td colspan="2" valign="top">
 
-### [agent-connector-sdk](https://github.com/Knuckles-Team/agent-connector-sdk)
+### [Agent Connector SDK](https://github.com/Knuckles-Team/agent-connector-sdk)
 
 The governed source-integration boundary for connector identity, discovery, synchronization, replay, and write-back.
 
