@@ -1,162 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="620" viewBox="0 0 1280 620" role="img" aria-labelledby="title description">
-  <title id="title">Knuckles agent platform runtime architecture</title>
-  <desc id="description">People and MCP or A2A clients enter through Agent WebUI or GraphOS. Agent WebUI is hosted and composed by GraphOS. GraphOS delegates agent work to agent-utilities, which uses epistemic-graph for reasoning and durable knowledge. Source systems connect through agent-connector-sdk to epistemic-graph.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1320 700" role="img" aria-labelledby="diagram-title diagram-description">
+  <title id="diagram-title">Knuckles-Team agent ecosystem runtime architecture</title>
+  <desc id="diagram-description">People use Agent Web UI, Agent Terminal UI, Geniusbot, or messaging channels. MCP, REST, and A2A clients also enter through Graph OS. Graph OS is the governed gateway and composition host, Agent Utilities is the agent control plane, and Epistemic Graph is the durable knowledge and reasoning engine. Source systems connect through Agent Connector SDK.</desc>
   <defs>
-    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#07111f"/>
-      <stop offset="0.55" stop-color="#0d1830"/>
-      <stop offset="1" stop-color="#111b35"/>
-    </linearGradient>
-    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
-      <stop offset="0" stop-color="#6d5dfc" stop-opacity="0.18"/>
-      <stop offset="1" stop-color="#6d5dfc" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#8b7cff"/><stop offset="1" stop-color="#6554e8"/>
-    </linearGradient>
-    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#55d9ed"/><stop offset="1" stop-color="#16a6c2"/>
-    </linearGradient>
-    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#58dfb5"/><stop offset="1" stop-color="#1eb18a"/>
-    </linearGradient>
-    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#ffc866"/><stop offset="1" stop-color="#ee913c"/>
-    </linearGradient>
-    <linearGradient id="rose" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#ff7fb0"/><stop offset="1" stop-color="#e65088"/>
-    </linearGradient>
-    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
-      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#9aa9c6" stroke-opacity="0.055" stroke-width="1"/>
-    </pattern>
-    <filter id="shadow" x="-20%" y="-30%" width="140%" height="170%">
-      <feDropShadow dx="0" dy="10" stdDeviation="13" flood-color="#000814" flood-opacity="0.42"/>
-    </filter>
-    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
-      <feGaussianBlur stdDeviation="5" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#91a3c5"/>
-    </marker>
+    <linearGradient id="gateway" x1="0" x2="1"><stop stop-color="#e5f4ff"/><stop offset="1" stop-color="#e7fff5"/></linearGradient>
+    <linearGradient id="core" x1="0" x2="1"><stop stop-color="#eef0ff"/><stop offset="1" stop-color="#f3eaff"/></linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0 0 10 5 0 10z" fill="#365f93"/></marker>
     <style>
-      .eyebrow { font: 700 13px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: 2.4px; fill: #8fa2c5; }
-      .headline { font: 700 30px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #f8fbff; }
-      .subtitle { font: 400 15px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #a8b7d1; }
-      .card-title { font: 700 18px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #f8fbff; }
-      .card-copy { font: 500 13px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #aebbd2; }
-      .small-title { font: 700 14px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #ecf4ff; }
-      .small-copy { font: 500 12px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #9fb0cb; }
-      .flow { fill: none; stroke: #91a3c5; stroke-width: 2; stroke-opacity: .72; marker-end: url(#arrow); }
-      .flow-soft { fill: none; stroke: #91a3c5; stroke-width: 1.5; stroke-opacity: .48; marker-end: url(#arrow); }
+      .bg{fill:#fff}.box{fill:#f5f8fc;stroke:#58769b;stroke-width:2}.entry{fill:#f7fbff;stroke:#2f75b5;stroke-width:2}.gateway{fill:url(#gateway);stroke:#087f6d;stroke-width:3}.core{fill:url(#core);stroke:#5b4cc4;stroke-width:2.5}.label{font:700 18px system-ui,-apple-system,Segoe UI,sans-serif;fill:#14243b;text-anchor:middle}.role{font:14px system-ui,-apple-system,Segoe UI,sans-serif;fill:#435773;text-anchor:middle}.small{font:13px system-ui,-apple-system,Segoe UI,sans-serif;fill:#526780;text-anchor:middle}.arrow{fill:none;stroke:#58769b;stroke-width:2.5;marker-end:url(#arrow)}
+      @media(prefers-color-scheme:dark){.bg{fill:#0f1725}.box,.entry{fill:#172338}.label{fill:#f3f7ff}.role,.small{fill:#c5d2e3}}
     </style>
   </defs>
-
-  <rect width="1280" height="620" rx="28" fill="url(#background)"/>
-  <rect width="1280" height="620" rx="28" fill="url(#grid)"/>
-  <ellipse cx="720" cy="290" rx="510" ry="330" fill="url(#halo)"/>
-
-  <g transform="translate(54 48)">
-    <g filter="url(#glow)">
-      <circle cx="12" cy="13" r="5" fill="#8b7cff"/>
-      <circle cx="28" cy="5" r="4" fill="#55d9ed"/>
-      <circle cx="31" cy="23" r="4" fill="#58dfb5"/>
-      <path d="M16 11 24 7M16 15l11 6M29 9l1 10" stroke="#b6c2ff" stroke-width="2"/>
-    </g>
-    <text x="48" y="10" class="eyebrow">KNUCKLES · AGENT PLATFORM</text>
-    <text x="48" y="46" class="headline">One runtime. Five clear responsibilities.</text>
-    <text x="48" y="75" class="subtitle">A governed path from human intent and source data to agent action and durable knowledge.</text>
+  <rect class="bg" width="1320" height="700" rx="24"/>
+  <g class="arrow">
+    <path d="M120 90V135"/><path d="M120 90H310V135"/><path d="M120 90H500V135"/><path d="M120 90H690V135"/>
+    <path d="M210 180H825"/><path d="M400 180H825"/><path d="M590 180H825"/><path d="M780 180H825"/><path d="M610 285H825"/>
+    <path d="M1050 305V335"/><path d="M1050 435V485"/>
+    <path d="M255 590H445"/><path d="M705 590H825V548"/>
   </g>
-
-  <!-- Entry points -->
-  <g transform="translate(54 178)" filter="url(#shadow)">
-    <rect width="176" height="78" rx="16" fill="#121f37" stroke="#31405d"/>
-    <circle cx="29" cy="27" r="10" fill="#8b7cff" fill-opacity=".18" stroke="#8b7cff"/>
-    <path d="M17 52c2-10 8-15 12-15s10 5 12 15" fill="none" stroke="#b5abff" stroke-width="2"/>
-    <text x="52" y="31" class="small-title">People</text>
-    <text x="17" y="64" class="small-copy">operators · builders</text>
-  </g>
-  <g transform="translate(54 284)" filter="url(#shadow)">
-    <rect width="176" height="78" rx="16" fill="#121f37" stroke="#31405d"/>
-    <path d="M19 22h20v20H19zM23 26h12v12H23z" fill="none" stroke="#55d9ed" stroke-width="2"/>
-    <text x="52" y="31" class="small-title">MCP / A2A</text>
-    <text x="17" y="64" class="small-copy">clients · peers</text>
-  </g>
-
-  <!-- Agent WebUI -->
-  <g transform="translate(302 156)" filter="url(#shadow)">
-    <rect width="220" height="104" rx="18" fill="#111f38" stroke="#e65088" stroke-opacity=".68"/>
-    <rect width="6" height="72" x="0" y="16" rx="3" fill="url(#rose)"/>
-    <circle cx="31" cy="32" r="12" fill="#ff7fb0" fill-opacity=".14"/>
-    <path d="M24 29h14M24 34h9" stroke="#ff9bc1" stroke-width="2" stroke-linecap="round"/>
-    <text x="54" y="36" class="card-title">Agent WebUI</text>
-    <text x="24" y="68" class="card-copy">Operator experience</text>
-    <text x="24" y="88" class="card-copy">Chat · approvals · activity</text>
-  </g>
-
-  <!-- GraphOS -->
-  <g transform="translate(302 288)" filter="url(#shadow)">
-    <rect width="220" height="104" rx="18" fill="#111f38" stroke="#16a6c2" stroke-opacity=".75"/>
-    <rect width="6" height="72" x="0" y="16" rx="3" fill="url(#cyan)"/>
-    <circle cx="31" cy="32" r="12" fill="#55d9ed" fill-opacity=".14"/>
-    <path d="M24 32h14M31 25v14" stroke="#71e2f0" stroke-width="2" stroke-linecap="round"/>
-    <text x="54" y="36" class="card-title">GraphOS</text>
-    <text x="24" y="68" class="card-copy">Public runtime gateway</text>
-    <text x="24" y="88" class="card-copy">MCP · REST · A2A · policy</text>
-  </g>
-
-  <!-- agent-utilities -->
-  <g transform="translate(590 222)" filter="url(#shadow)">
-    <rect width="238" height="104" rx="18" fill="#111f38" stroke="#6554e8" stroke-opacity=".8"/>
-    <rect width="6" height="72" x="0" y="16" rx="3" fill="url(#violet)"/>
-    <circle cx="31" cy="32" r="12" fill="#8b7cff" fill-opacity=".16"/>
-    <path d="M24 35l7-12 7 12z" fill="none" stroke="#aea5ff" stroke-width="2" stroke-linejoin="round"/>
-    <text x="54" y="36" class="card-title">agent-utilities</text>
-    <text x="24" y="68" class="card-copy">Agent control plane</text>
-    <text x="24" y="88" class="card-copy">Agents · workflows · evaluation</text>
-  </g>
-
-  <!-- epistemic-graph -->
-  <g transform="translate(896 222)" filter="url(#shadow)">
-    <rect width="330" height="104" rx="18" fill="#111f38" stroke="#1eb18a" stroke-opacity=".8"/>
-    <rect width="6" height="72" x="0" y="16" rx="3" fill="url(#green)"/>
-    <g transform="translate(21 21)" stroke="#75e6c1" stroke-width="1.8">
-      <circle cx="7" cy="10" r="4" fill="#58dfb5"/><circle cx="24" cy="4" r="4" fill="#58dfb5"/><circle cx="26" cy="22" r="4" fill="#58dfb5"/>
-      <path d="M11 8l9-3M11 12l11 8M25 8l1 10"/>
-    </g>
-    <text x="64" y="36" class="card-title">epistemic-graph</text>
-    <text x="24" y="68" class="card-copy">Reasoning + durable knowledge engine</text>
-    <text x="24" y="88" class="card-copy">Graph · RDF · SQL · vector · time · provenance</text>
-  </g>
-
-  <!-- Source integration -->
-  <g transform="translate(54 472)" filter="url(#shadow)">
-    <rect width="176" height="78" rx="16" fill="#121f37" stroke="#31405d"/>
-    <path d="M20 24h18v7H20zM20 36h18v7H20z" fill="none" stroke="#ffc866" stroke-width="2"/>
-    <text x="52" y="31" class="small-title">Source systems</text>
-    <text x="17" y="64" class="small-copy">APIs · events · records</text>
-  </g>
-  <g transform="translate(302 454)" filter="url(#shadow)">
-    <rect width="286" height="104" rx="18" fill="#111f38" stroke="#ee913c" stroke-opacity=".78"/>
-    <rect width="6" height="72" x="0" y="16" rx="3" fill="url(#amber)"/>
-    <circle cx="31" cy="32" r="12" fill="#ffc866" fill-opacity=".14"/>
-    <path d="M24 32h14M27 27l-5 5 5 5M35 27l5 5-5 5" fill="none" stroke="#ffd58b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <text x="54" y="36" class="card-title">agent-connector-sdk</text>
-    <text x="24" y="68" class="card-copy">Governed source integration</text>
-    <text x="24" y="88" class="card-copy">Discover · sync · replay · write back</text>
-  </g>
-
-  <!-- Runtime flow -->
-  <path d="M230 217H270Q286 217 286 208H294" class="flow-soft"/>
-  <path d="M230 323H294" class="flow"/>
-  <path d="M412 260V280" class="flow"/>
-  <path d="M522 340H550Q566 340 566 324V298Q566 282 582 282" class="flow"/>
-  <path d="M828 274H888" class="flow"/>
-  <path d="M230 511H294" class="flow"/>
-  <path d="M588 506H852Q872 506 872 486V346Q872 326 888 326" class="flow"/>
-
-  <g transform="translate(958 565)">
-    <circle cx="5" cy="-4" r="3" fill="#58dfb5"/>
-    <text x="17" y="0" class="eyebrow" style="font-size:11px;letter-spacing:1.6px">EVIDENCE · POLICY · PROVENANCE</text>
+  <g>
+    <rect class="box" x="35" y="35" width="170" height="55" rx="14"/><text class="label" x="120" y="69">People</text>
+    <rect class="entry" x="35" y="135" width="170" height="90" rx="16"/><text class="label" x="120" y="172">Agent Web UI</text><text class="role" x="120" y="198">browser experience</text>
+    <rect class="entry" x="225" y="135" width="170" height="90" rx="16"/><text class="label" x="310" y="169">Agent Terminal UI</text><text class="role" x="310" y="198">REST operations</text>
+    <rect class="entry" x="415" y="135" width="170" height="90" rx="16"/><text class="label" x="500" y="172">Geniusbot</text><text class="role" x="500" y="198">desktop cockpit</text>
+    <rect class="entry" x="605" y="135" width="175" height="90" rx="16"/><text class="label" x="692" y="169">Messaging</text><text class="role" x="692" y="194">chat + voice channels</text><text class="small" x="692" y="214">hosted by Graph OS</text>
+    <rect class="box" x="415" y="245" width="390" height="80" rx="16"/><text class="label" x="610" y="280">MCP / REST / A2A clients</text><text class="role" x="610" y="305">external agents and applications</text>
+    <rect class="gateway" x="825" y="145" width="450" height="160" rx="22"/><text class="label" x="1050" y="198">Graph OS</text><text class="role" x="1050" y="230">governed runtime gateway</text><text class="role" x="1050" y="255">and composition host</text>
+    <rect class="core" x="825" y="335" width="450" height="100" rx="18"/><text class="label" x="1050" y="376">Agent Utilities</text><text class="role" x="1050" y="405">agent control plane</text>
+    <rect class="core" x="825" y="485" width="450" height="125" rx="18"/><text class="label" x="1050" y="528">Epistemic Graph</text><text class="role" x="1050" y="558">durable multimodal knowledge, evidence,</text><text class="role" x="1050" y="582">provenance, and reasoning engine</text>
+    <rect class="box" x="35" y="545" width="220" height="90" rx="16"/><text class="label" x="145" y="582">Source systems</text><text class="role" x="145" y="608">governed external data</text>
+    <rect class="box" x="445" y="545" width="260" height="90" rx="16"/><text class="label" x="575" y="582">Agent Connector SDK</text><text class="role" x="575" y="608">typed source integration</text>
   </g>
 </svg>
