@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="620" viewBox="0 0 1280 620" role="img" aria-labelledby="title description">
   <title id="title">Knuckles agent platform runtime architecture</title>
-  <desc id="description">People and MCP or A2A clients enter through Agent WebUI and GraphOS. GraphOS delegates agent work to agent-utilities, which uses epistemic-graph for reasoning and durable knowledge. Source systems connect through agent-connector-sdk to epistemic-graph.</desc>
+  <desc id="description">People and MCP or A2A clients enter through Agent WebUI or GraphOS. Agent WebUI is hosted and composed by GraphOS. GraphOS delegates agent work to agent-utilities, which uses epistemic-graph for reasoning and durable knowledge. Source systems connect through agent-connector-sdk to epistemic-graph.</desc>
   <defs>
     <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#07111f"/>
@@ -149,7 +149,7 @@
   <!-- Runtime flow -->
   <path d="M230 217H270Q286 217 286 208H294" class="flow-soft"/>
   <path d="M230 323H294" class="flow"/>
-  <path d="M522 208H550Q566 208 566 224V250Q566 266 582 266" class="flow"/>
+  <path d="M412 260V280" class="flow"/>
   <path d="M522 340H550Q566 340 566 324V298Q566 282 582 282" class="flow"/>
   <path d="M828 274H888" class="flow"/>
   <path d="M230 511H294" class="flow"/>
