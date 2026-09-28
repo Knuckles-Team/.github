@@ -23,6 +23,11 @@ use at each stage.
    A **related spec** in another repository describes a consumer or interface;
    it does not take ownership from the component that owns the behavior.
 3. Read that repository's `AGENTS.md`, contribution guide, and local setup.
+   Repositories that provide `scripts/bootstrap.sh` use it to install their
+   pinned toolchains, locked dependencies, and git hooks from a fresh clone.
+   Check that repository's setup instructions and CI workflow for the exact
+   commands and required checks. Some repositories also run bootstrap from a
+   Claude Code SessionStart hook.
    Use [`graph-os-development`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/graph-os-development)
    to bootstrap a local ecosystem environment and find the established code,
    wiring, interfaces, and components to reuse.

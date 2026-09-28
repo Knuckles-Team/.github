@@ -31,6 +31,7 @@ REPOS = (
     "agent-terminal-ui",
     "emerald-exchange",
     "tunnel-manager",
+    "universal-skills",
 )
 DELIVERY = frozenset(
     {
@@ -348,7 +349,7 @@ def main() -> int:
             parser.error(f"unknown repository {name}")
         paths[name] = Path(path)
     if set(paths) != set(REPOS):
-        parser.error("provide --checkouts-root or all eleven --repo NAME=PATH values")
+        parser.error("provide --checkouts-root or all twelve --repo NAME=PATH values")
     revisions: dict[str, str] = {}
     source_times: list[datetime] = []
     rows: list[dict[str, Any]] = []
