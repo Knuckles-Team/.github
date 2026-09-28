@@ -7,7 +7,7 @@
 
 [![Platform documentation](https://img.shields.io/badge/platform-documentation-6d5dfc?style=for-the-badge)](https://knuckles-team.github.io/agent-utilities/) [![Run GraphOS](https://img.shields.io/badge/start-GraphOS-18a999?style=for-the-badge)](https://knuckles-team.github.io/graph-os/) [![GitHub repositories](https://img.shields.io/badge/explore-repositories-111827?style=for-the-badge&logo=github)](https://github.com/orgs/Knuckles-Team/repositories)
 
-**[Build-first program](https://knuckles-team.github.io/.github/build-first.html)** · **[Public specification status](https://knuckles-team.github.io/.github/spec-status.html)** · **[Contribution guide](https://github.com/Knuckles-Team/.github/blob/main/CONTRIBUTING.md)**
+**[Build-first program](https://knuckles-team.github.io/.github/build-first.html)** · **[Public specification status](https://knuckles-team.github.io/.github/spec-status.html)** · **[Repositories and skills](https://knuckles-team.github.io/.github/skills.html)** · **[Contribution guide](https://github.com/Knuckles-Team/.github/blob/main/CONTRIBUTING.md)**
 
 <img src="https://raw.githubusercontent.com/Knuckles-Team/.github/main/profile/assets/runtime-architecture.svg" alt="Knuckles-Team platform runtime architecture" width="100%">
 

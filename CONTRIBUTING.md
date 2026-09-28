@@ -5,6 +5,10 @@ you control. The normal spec, build, and pull request path requires no private
 service or live deployment. Start here even if you have
 never worked in this ecosystem:
 
+The [repositories and skills map](https://knuckles-team.github.io/.github/skills.html)
+shows which public repository owns each kind of work and which shared skill to
+use at each stage.
+
 1. Open the [build-first program](https://knuckles-team.github.io/.github/build-first.html)
    and choose a `QUEUED` or `BUILDING` requirement. The proposed owner is
    provisional. If it says **Owner unresolved**, resolve the owner and consumer

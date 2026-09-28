@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Graph OS repositories and skills</title>
+  <style>
+    :root { color-scheme: light dark; font: 16px system-ui, sans-serif; }
+    body { max-width: 72rem; margin: auto; padding: 2rem; line-height: 1.55; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: .6rem; border-bottom: 1px solid #8886; text-align: left; vertical-align: top; }
+    nav a { margin-right: 1.5rem; }
+  </style>
+</head>
+<body><main>
+  <h1>Graph OS repositories and skills</h1>
+  <nav><a href="index.html">Ecosystem</a><a href="build-first.html">Work to build</a><a href="spec-status.html">Spec status</a><a href="https://github.com/Knuckles-Team/.github/blob/main/CONTRIBUTING.md">Contribute</a></nav>
+  <p><a href="https://github.com/Knuckles-Team/universal-skills">universal-skills</a> distributes the shared contributor skills. The <a href="https://github.com/Knuckles-Team/graph-os/tree/main/graph_os/skills/graph-os-development">Graph OS package</a> contains the canonical ecosystem development skill and its public bootstrap recipe. The <a href="https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/graph-os-development">universal-skills entry</a> makes that canonical skill discoverable before Graph OS is installed.</p>
+  <p>Install the skill kit with <code>pip install universal-skills</code> and <code>install-skills --all-detected --symlink</code>. Read a chosen repository's <code>AGENTS.md</code> and all five owner spec files before building: <code>spec.md</code>, <code>plan.md</code>, <code>test-spec.md</code>, <code>tasks.md</code>, and <code>status.json</code>. The <a href="https://github.com/Knuckles-Team/.github/blob/main/CONTRIBUTING.md">contribution guide</a> gives the full path from a public checkout to a PR.</p>
+  <h2>Which skill to use</h2>
+  <table><thead><tr><th>Stage</th><th>Skill</th><th>Use it for</th></tr></thead><tbody>
+    <tr><td>Orient and bootstrap</td><td><a href="https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/graph-os-development">graph-os-development</a></td><td>Choose the owner, clone public sources, reuse existing wiring, and follow repository gates.</td></tr>
+    <tr><td>Engine work</td><td><a href="https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/epistemic-graph-development">epistemic-graph-development</a></td><td>Apply Epistemic Graph engine and client conventions after finding an engine-owned spec.</td></tr>
+    <tr><td>Specify</td><td><a href="https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/spec-generator">spec-generator</a></td><td>Write a complete public owner contract from a feature request.</td></tr>
+    <tr><td>Design</td><td><a href="https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/c4-architecture">c4-architecture</a></td><td>Describe system boundaries and the components a design reuses.</td></tr>
+    <tr><td>Plan and implement</td><td><a href="https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/task-planner">task-planner</a> and <a href="https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/sdd-implementer">sdd-implementer</a></td><td>Turn spec acceptance into ordered changes and implement them.</td></tr>
+    <tr><td>Test and verify</td><td><a href="https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/automated-test-runner">automated-test-runner</a> and <a href="https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/spec-verifier">spec-verifier</a></td><td>Run repository checks and verify design, tests, and public evidence.</td></tr>
+    <tr><td>Full sequence</td><td><a href="https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development-workflows/sdd-full-lifecycle">sdd-full-lifecycle</a></td><td>Coordinate specification through accepted delivery.</td></tr>
+  </tbody></table>
+  <h2>Where the code lives</h2>
+  <p>The <a href="https://github.com/Knuckles-Team/.github">organization hub</a> owns the cross-repository map, status report, and governance. Each deliverable is implemented in the repository named by its <a href="spec-status.html">owner spec</a>. The build queue includes <a href="https://github.com/Knuckles-Team/epistemic-graph">Epistemic Graph</a>, <a href="https://github.com/Knuckles-Team/agent-connector-sdk">Connector SDK</a>, <a href="https://github.com/Knuckles-Team/agent-utilities">Agent Utilities</a>, <a href="https://github.com/Knuckles-Team/graph-os">Graph OS</a>, <a href="https://github.com/Knuckles-Team/agent-webui">Web UI</a>, <a href="https://github.com/Knuckles-Team/repository-manager">Repository Manager</a>, <a href="https://github.com/Knuckles-Team/pipelines">Pipelines</a>, <a href="https://github.com/Knuckles-Team/agent-terminal-ui">Terminal UI</a>, <a href="https://github.com/Knuckles-Team/emerald-exchange">Emerald Exchange</a>, and <a href="https://github.com/Knuckles-Team/tunnel-manager">Tunnel Manager</a>. Related specs describe consumers and interfaces; a disputed owner stays unresolved until its contract is reviewed.</p>
+</main></body></html>
