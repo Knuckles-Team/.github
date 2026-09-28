@@ -16,6 +16,10 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: org-spec-pages
+  cancel-in-progress: true
+
 jobs:
   publish:
     runs-on: ubuntu-latest
