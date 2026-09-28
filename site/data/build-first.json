@@ -2,14 +2,14 @@
   "schema_version": 1,
   "scope": "Provisional public build-first tracking snapshot. An ID in a status manifest is a pointer, not proof of complete design, tests, implementation, or acceptance.",
   "source_revisions": {
-    ".github": "225a65a8c90c517d0cf2897ec6abac17b32334b7",
+    ".github": "3e5571fdac2c0abc5aab43a052b281f13410577c",
     "epistemic-graph": "6a795577dff539da06c52f467220422bf23e0b03",
     "agent-connector-sdk": "4336008dffdcb741d606b23a2caaa20ee8bfc752",
     "agent-utilities": "e848be61f9f090f9c540703145c3e932aea4ae74",
-    "graph-os": "749e4e4dadb0d31e2f769bbe8dc7f06948c12fce",
+    "graph-os": "94055608edd5abdc9f025e6d5b63be6b6a1e901c",
     "agent-webui": "c56f166d9dc0f060013046200c4a24f4be453828",
     "repository-manager": "9a5b1d718404b5b8146809dad4f80137d833a7da",
-    "pipelines": "fe4d11323d0b94c044c38f5257a15576c076500e",
+    "pipelines": "bd8a1101a4fc2a3619fbc0b09fa1f2ebf70662d4",
     "agent-terminal-ui": "860a78aea71d0a724f9596f43f3da2dc658f9387",
     "emerald-exchange": "a964de866cdcdb506bdcf983717b5f2247bdce67",
     "tunnel-manager": "42b4eb8744ca68792354a4fed09af565ec2ab503"
@@ -20,7 +20,7 @@
       "train": "T4",
       "provisional_owner": "graph-os",
       "implementation_state": "BUILDING",
-      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/hosted-api-operations/spec.md",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/hosted-api-operations/spec.md",
       "related_spec_urls": [
         "https://github.com/Knuckles-Team/epistemic-graph/blob/6a795577dff539da06c52f467220422bf23e0b03/specs/public-engine-contract-and-release/spec.md"
       ],
@@ -36,7 +36,7 @@
       "implementation_state": "QUEUED",
       "owner_spec_url": "https://github.com/Knuckles-Team/agent-connector-sdk/blob/4336008dffdcb741d606b23a2caaa20ee8bfc752/specs/SDK-CONNECTOR-CONTROL/spec.md",
       "related_spec_urls": [
-        "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/fleet-catalog-and-tools/spec.md"
+        "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/fleet-catalog-and-tools/spec.md"
       ],
       "needs_spec": false,
       "needs_design_review": true,
@@ -74,7 +74,7 @@
       "implementation_state": "QUEUED",
       "owner_spec_url": "https://github.com/Knuckles-Team/agent-connector-sdk/blob/4336008dffdcb741d606b23a2caaa20ee8bfc752/specs/SDK-CONNECTOR-CONTROL/spec.md",
       "related_spec_urls": [
-        "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/fleet-catalog-and-tools/spec.md"
+        "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/fleet-catalog-and-tools/spec.md"
       ],
       "needs_spec": false,
       "needs_design_review": true,
@@ -88,7 +88,7 @@
       "implementation_state": "QUEUED",
       "owner_spec_url": "https://github.com/Knuckles-Team/agent-connector-sdk/blob/4336008dffdcb741d606b23a2caaa20ee8bfc752/specs/SDK-GOVERNED-WRITEBACK/spec.md",
       "related_spec_urls": [
-        "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/fleet-catalog-and-tools/spec.md"
+        "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/fleet-catalog-and-tools/spec.md"
       ],
       "needs_spec": false,
       "needs_design_review": true,
@@ -148,9 +148,9 @@
       "train": "T5",
       "provisional_owner": "graph-os",
       "implementation_state": "QUEUED",
-      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/a2a-task-projection/spec.md",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/a2a-task-projection/spec.md",
       "related_spec_urls": [
-        "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/hosted-api-operations/spec.md"
+        "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/hosted-api-operations/spec.md"
       ],
       "needs_spec": false,
       "needs_design_review": true,
@@ -162,11 +162,11 @@
       "train": "T5",
       "provisional_owner": "pipelines",
       "implementation_state": "QUEUED",
-      "owner_spec_url": null,
+      "owner_spec_url": "https://github.com/Knuckles-Team/pipelines/blob/bd8a1101a4fc2a3619fbc0b09fa1f2ebf70662d4/specs/ordered-digest-release/spec.md",
       "related_spec_urls": [
-        "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/dependency-ordered-release/spec.md"
+        "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/dependency-ordered-release/spec.md"
       ],
-      "needs_spec": true,
+      "needs_spec": false,
       "needs_design_review": true,
       "needs_partition_review": true,
       "needs_owner_review": true
@@ -178,7 +178,7 @@
       "implementation_state": "QUEUED",
       "owner_spec_url": null,
       "related_spec_urls": [
-        "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/host-composition-boundary/spec.md"
+        "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/host-composition-boundary/spec.md"
       ],
       "needs_spec": true,
       "needs_design_review": true,
@@ -230,7 +230,7 @@
       "implementation_state": "QUEUED",
       "owner_spec_url": null,
       "related_spec_urls": [
-        "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/portable-deployment/spec.md"
+        "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/portable-deployment/spec.md"
       ],
       "needs_spec": true,
       "needs_design_review": true,
@@ -256,7 +256,7 @@
       "train": "T5",
       "provisional_owner": "graph-os",
       "implementation_state": "QUEUED",
-      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/host-composition-boundary/spec.md",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/host-composition-boundary/spec.md",
       "related_spec_urls": [
         "https://github.com/Knuckles-Team/agent-utilities/blob/e848be61f9f090f9c540703145c3e932aea4ae74/specs/au-boundary-deconstruction/spec.md"
       ],
@@ -270,7 +270,7 @@
       "train": "T5",
       "provisional_owner": "graph-os",
       "implementation_state": "QUEUED",
-      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/portable-deployment/spec.md",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/portable-deployment/spec.md",
       "related_spec_urls": [
         "https://github.com/Knuckles-Team/agent-utilities/blob/e848be61f9f090f9c540703145c3e932aea4ae74/specs/au-boundary-deconstruction/spec.md"
       ],
@@ -284,7 +284,7 @@
       "train": "T5",
       "provisional_owner": "graph-os",
       "implementation_state": "QUEUED",
-      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/host-composition-boundary/spec.md",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/host-composition-boundary/spec.md",
       "related_spec_urls": [
         "https://github.com/Knuckles-Team/agent-utilities/blob/e848be61f9f090f9c540703145c3e932aea4ae74/specs/au-boundary-deconstruction/spec.md"
       ],
@@ -298,7 +298,7 @@
       "train": "T5",
       "provisional_owner": "graph-os",
       "implementation_state": "QUEUED",
-      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/host-composition-boundary/spec.md",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/host-composition-boundary/spec.md",
       "related_spec_urls": [
         "https://github.com/Knuckles-Team/agent-utilities/blob/e848be61f9f090f9c540703145c3e932aea4ae74/specs/au-boundary-deconstruction/spec.md"
       ],
@@ -340,7 +340,7 @@
       "train": "T5",
       "provisional_owner": "graph-os",
       "implementation_state": "QUEUED",
-      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/host-composition-boundary/spec.md",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/host-composition-boundary/spec.md",
       "related_spec_urls": [
         "https://github.com/Knuckles-Team/agent-utilities/blob/e848be61f9f090f9c540703145c3e932aea4ae74/specs/au-boundary-deconstruction/spec.md"
       ],
@@ -354,10 +354,10 @@
       "train": "T5",
       "provisional_owner": "graph-os",
       "implementation_state": "QUEUED",
-      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/host-composition-boundary/spec.md",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/host-composition-boundary/spec.md",
       "related_spec_urls": [
         "https://github.com/Knuckles-Team/agent-utilities/blob/e848be61f9f090f9c540703145c3e932aea4ae74/specs/au-boundary-deconstruction/spec.md",
-        "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/portable-deployment/spec.md"
+        "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/portable-deployment/spec.md"
       ],
       "needs_spec": false,
       "needs_design_review": true,
@@ -369,7 +369,7 @@
       "train": "T5",
       "provisional_owner": "graph-os",
       "implementation_state": "QUEUED",
-      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/host-composition-boundary/spec.md",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/host-composition-boundary/spec.md",
       "related_spec_urls": [
         "https://github.com/Knuckles-Team/agent-utilities/blob/e848be61f9f090f9c540703145c3e932aea4ae74/specs/au-boundary-deconstruction/spec.md"
       ],
@@ -386,8 +386,8 @@
       "owner_spec_url": "https://github.com/Knuckles-Team/agent-utilities/blob/e848be61f9f090f9c540703145c3e932aea4ae74/specs/au-boundary-deconstruction/spec.md",
       "related_spec_urls": [
         "https://github.com/Knuckles-Team/agent-connector-sdk/blob/4336008dffdcb741d606b23a2caaa20ee8bfc752/specs/SDK-CONNECTOR-CONTROL/spec.md",
-        "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/host-composition-boundary/spec.md",
-        "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/portable-deployment/spec.md"
+        "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/host-composition-boundary/spec.md",
+        "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/portable-deployment/spec.md"
       ],
       "needs_spec": false,
       "needs_design_review": true,
@@ -399,7 +399,7 @@
       "train": "T5",
       "provisional_owner": "graph-os",
       "implementation_state": "QUEUED",
-      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/host-composition-boundary/spec.md",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/host-composition-boundary/spec.md",
       "related_spec_urls": [
         "https://github.com/Knuckles-Team/agent-utilities/blob/e848be61f9f090f9c540703145c3e932aea4ae74/specs/au-boundary-deconstruction/spec.md"
       ],
@@ -637,7 +637,7 @@
       "implementation_state": "QUEUED",
       "owner_spec_url": "https://github.com/Knuckles-Team/agent-utilities/blob/e848be61f9f090f9c540703145c3e932aea4ae74/specs/au-boundary-deconstruction/spec.md",
       "related_spec_urls": [
-        "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/host-composition-boundary/spec.md"
+        "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/host-composition-boundary/spec.md"
       ],
       "needs_spec": false,
       "needs_design_review": true,
@@ -652,7 +652,7 @@
       "owner_spec_url": null,
       "related_spec_urls": [
         "https://github.com/Knuckles-Team/agent-utilities/blob/e848be61f9f090f9c540703145c3e932aea4ae74/specs/au-boundary-deconstruction/spec.md",
-        "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/host-composition-boundary/spec.md"
+        "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/host-composition-boundary/spec.md"
       ],
       "needs_spec": true,
       "needs_design_review": true,
@@ -676,7 +676,7 @@
       "train": "T5",
       "provisional_owner": "graph-os",
       "implementation_state": "QUEUED",
-      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/hosted-api-operations/spec.md",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/hosted-api-operations/spec.md",
       "related_spec_urls": [
         "https://github.com/Knuckles-Team/epistemic-graph/blob/6a795577dff539da06c52f467220422bf23e0b03/specs/public-engine-contract-and-release/spec.md"
       ],
@@ -690,7 +690,7 @@
       "train": "T5",
       "provisional_owner": "graph-os",
       "implementation_state": "QUEUED",
-      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/hosted-api-operations/spec.md",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/hosted-api-operations/spec.md",
       "related_spec_urls": [],
       "needs_spec": false,
       "needs_design_review": true,
@@ -702,9 +702,9 @@
       "train": "T5",
       "provisional_owner": "graph-os",
       "implementation_state": "QUEUED",
-      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/fleet-catalog-and-tools/spec.md",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/fleet-catalog-and-tools/spec.md",
       "related_spec_urls": [
-        "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/hosted-api-operations/spec.md"
+        "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/hosted-api-operations/spec.md"
       ],
       "needs_spec": false,
       "needs_design_review": true,
@@ -716,7 +716,7 @@
       "train": "T5",
       "provisional_owner": "graph-os",
       "implementation_state": "QUEUED",
-      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/a2a-task-projection/spec.md",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/a2a-task-projection/spec.md",
       "related_spec_urls": [],
       "needs_spec": false,
       "needs_design_review": true,
@@ -728,9 +728,9 @@
       "train": "T5",
       "provisional_owner": "graph-os",
       "implementation_state": "QUEUED",
-      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/hosted-api-operations/spec.md",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/hosted-api-operations/spec.md",
       "related_spec_urls": [
-        "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/identity-access/spec.md"
+        "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/identity-access/spec.md"
       ],
       "needs_spec": false,
       "needs_design_review": true,
@@ -742,9 +742,9 @@
       "train": "T5",
       "provisional_owner": "graph-os",
       "implementation_state": "QUEUED",
-      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/adaptive-capacity/spec.md",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/adaptive-capacity/spec.md",
       "related_spec_urls": [
-        "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/hosted-api-operations/spec.md"
+        "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/hosted-api-operations/spec.md"
       ],
       "needs_spec": false,
       "needs_design_review": true,
@@ -756,9 +756,9 @@
       "train": "T5",
       "provisional_owner": "graph-os",
       "implementation_state": "QUEUED",
-      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/data-and-market-projections/spec.md",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/data-and-market-projections/spec.md",
       "related_spec_urls": [
-        "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/hosted-api-operations/spec.md"
+        "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/hosted-api-operations/spec.md"
       ],
       "needs_spec": false,
       "needs_design_review": true,
@@ -770,7 +770,7 @@
       "train": "T5",
       "provisional_owner": "graph-os",
       "implementation_state": "QUEUED",
-      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/hosted-api-operations/spec.md",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/hosted-api-operations/spec.md",
       "related_spec_urls": [],
       "needs_spec": false,
       "needs_design_review": true,
@@ -782,7 +782,7 @@
       "train": "T5",
       "provisional_owner": "graph-os",
       "implementation_state": "QUEUED",
-      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/hosted-api-operations/spec.md",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/hosted-api-operations/spec.md",
       "related_spec_urls": [],
       "needs_spec": false,
       "needs_design_review": true,
@@ -794,7 +794,7 @@
       "train": "T5",
       "provisional_owner": "graph-os",
       "implementation_state": "QUEUED",
-      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/hosted-api-operations/spec.md",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/hosted-api-operations/spec.md",
       "related_spec_urls": [],
       "needs_spec": false,
       "needs_design_review": true,
@@ -806,7 +806,7 @@
       "train": "T5",
       "provisional_owner": "graph-os",
       "implementation_state": "QUEUED",
-      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/hosted-api-operations/spec.md",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/hosted-api-operations/spec.md",
       "related_spec_urls": [],
       "needs_spec": false,
       "needs_design_review": true,
@@ -818,7 +818,7 @@
       "train": "T5",
       "provisional_owner": "graph-os",
       "implementation_state": "QUEUED",
-      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/hosted-api-operations/spec.md",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/hosted-api-operations/spec.md",
       "related_spec_urls": [],
       "needs_spec": false,
       "needs_design_review": true,
@@ -830,9 +830,9 @@
       "train": "T5",
       "provisional_owner": "graph-os",
       "implementation_state": "QUEUED",
-      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/fleet-catalog-and-tools/spec.md",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/fleet-catalog-and-tools/spec.md",
       "related_spec_urls": [
-        "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/hosted-api-operations/spec.md"
+        "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/hosted-api-operations/spec.md"
       ],
       "needs_spec": false,
       "needs_design_review": true,
@@ -844,7 +844,7 @@
       "train": "T5",
       "provisional_owner": "graph-os",
       "implementation_state": "QUEUED",
-      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/hosted-api-operations/spec.md",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/hosted-api-operations/spec.md",
       "related_spec_urls": [],
       "needs_spec": false,
       "needs_design_review": true,
@@ -856,7 +856,7 @@
       "train": "T5",
       "provisional_owner": "graph-os",
       "implementation_state": "QUEUED",
-      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/hosted-api-operations/spec.md",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/hosted-api-operations/spec.md",
       "related_spec_urls": [],
       "needs_spec": false,
       "needs_design_review": true,
@@ -868,9 +868,9 @@
       "train": "T5",
       "provisional_owner": "graph-os",
       "implementation_state": "QUEUED",
-      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/fleet-catalog-and-tools/spec.md",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/fleet-catalog-and-tools/spec.md",
       "related_spec_urls": [
-        "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/hosted-api-operations/spec.md"
+        "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/hosted-api-operations/spec.md"
       ],
       "needs_spec": false,
       "needs_design_review": true,
@@ -882,9 +882,9 @@
       "train": "T5",
       "provisional_owner": "graph-os",
       "implementation_state": "QUEUED",
-      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/fleet-catalog-and-tools/spec.md",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/fleet-catalog-and-tools/spec.md",
       "related_spec_urls": [
-        "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/hosted-api-operations/spec.md"
+        "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/hosted-api-operations/spec.md"
       ],
       "needs_spec": false,
       "needs_design_review": true,
@@ -896,9 +896,9 @@
       "train": "T5",
       "provisional_owner": "graph-os",
       "implementation_state": "QUEUED",
-      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/hosted-api-operations/spec.md",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/hosted-api-operations/spec.md",
       "related_spec_urls": [
-        "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/identity-access/spec.md"
+        "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/identity-access/spec.md"
       ],
       "needs_spec": false,
       "needs_design_review": true,
@@ -910,7 +910,7 @@
       "train": "T5",
       "provisional_owner": "graph-os",
       "implementation_state": "QUEUED",
-      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/hosted-api-operations/spec.md",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/hosted-api-operations/spec.md",
       "related_spec_urls": [],
       "needs_spec": false,
       "needs_design_review": true,
@@ -970,7 +970,7 @@
       "train": "T5",
       "provisional_owner": "graph-os",
       "implementation_state": "QUEUED",
-      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/hosted-api-operations/spec.md",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/hosted-api-operations/spec.md",
       "related_spec_urls": [],
       "needs_spec": false,
       "needs_design_review": true,
@@ -982,9 +982,9 @@
       "train": "T5",
       "provisional_owner": "graph-os",
       "implementation_state": "QUEUED",
-      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/fleet-catalog-and-tools/spec.md",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/fleet-catalog-and-tools/spec.md",
       "related_spec_urls": [
-        "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/hosted-api-operations/spec.md"
+        "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/hosted-api-operations/spec.md"
       ],
       "needs_spec": false,
       "needs_design_review": true,
@@ -996,9 +996,9 @@
       "train": "T5",
       "provisional_owner": "graph-os",
       "implementation_state": "QUEUED",
-      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/fleet-catalog-and-tools/spec.md",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/fleet-catalog-and-tools/spec.md",
       "related_spec_urls": [
-        "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/hosted-api-operations/spec.md"
+        "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/hosted-api-operations/spec.md"
       ],
       "needs_spec": false,
       "needs_design_review": true,
@@ -1010,9 +1010,9 @@
       "train": "T5",
       "provisional_owner": "graph-os",
       "implementation_state": "QUEUED",
-      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/fleet-catalog-and-tools/spec.md",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/fleet-catalog-and-tools/spec.md",
       "related_spec_urls": [
-        "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/hosted-api-operations/spec.md"
+        "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/hosted-api-operations/spec.md"
       ],
       "needs_spec": false,
       "needs_design_review": true,
@@ -1026,8 +1026,8 @@
       "implementation_state": "QUEUED",
       "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/6a795577dff539da06c52f467220422bf23e0b03/specs/durable-graph-kernel/spec.md",
       "related_spec_urls": [
-        "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/a2a-task-projection/spec.md",
-        "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/hosted-api-operations/spec.md"
+        "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/a2a-task-projection/spec.md",
+        "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/hosted-api-operations/spec.md"
       ],
       "needs_spec": false,
       "needs_design_review": true,
@@ -1077,7 +1077,7 @@
       "train": "T5",
       "provisional_owner": "graph-os",
       "implementation_state": "QUEUED",
-      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/fleet-catalog-and-tools/spec.md",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/fleet-catalog-and-tools/spec.md",
       "related_spec_urls": [],
       "needs_spec": false,
       "needs_design_review": true,
@@ -1089,7 +1089,7 @@
       "train": "T5",
       "provisional_owner": ".github",
       "implementation_state": "QUEUED",
-      "owner_spec_url": "https://github.com/Knuckles-Team/.github/blob/225a65a8c90c517d0cf2897ec6abac17b32334b7/specs/crossrepo-authority-governance/spec.md",
+      "owner_spec_url": "https://github.com/Knuckles-Team/.github/blob/3e5571fdac2c0abc5aab43a052b281f13410577c/specs/crossrepo-authority-governance/spec.md",
       "related_spec_urls": [],
       "needs_spec": false,
       "needs_design_review": true,
@@ -1104,7 +1104,7 @@
       "owner_spec_url": null,
       "related_spec_urls": [
         "https://github.com/Knuckles-Team/agent-utilities/blob/e848be61f9f090f9c540703145c3e932aea4ae74/specs/agent-control-plane/spec.md",
-        "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/host-composition-boundary/spec.md"
+        "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/host-composition-boundary/spec.md"
       ],
       "needs_spec": true,
       "needs_design_review": true,
@@ -1116,9 +1116,9 @@
       "train": "T5",
       "provisional_owner": "graph-os",
       "implementation_state": "QUEUED",
-      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/a2a-task-projection/spec.md",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/a2a-task-projection/spec.md",
       "related_spec_urls": [
-        "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/hosted-api-operations/spec.md"
+        "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/hosted-api-operations/spec.md"
       ],
       "needs_spec": false,
       "needs_design_review": true,
@@ -1144,7 +1144,7 @@
       "train": "T6",
       "provisional_owner": "graph-os",
       "implementation_state": "QUEUED",
-      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/public-ingress-identity/spec.md",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/public-ingress-identity/spec.md",
       "related_spec_urls": [],
       "needs_spec": false,
       "needs_design_review": true,
@@ -1156,9 +1156,9 @@
       "train": "T6",
       "provisional_owner": "pipelines",
       "implementation_state": "QUEUED",
-      "owner_spec_url": null,
+      "owner_spec_url": "https://github.com/Knuckles-Team/pipelines/blob/bd8a1101a4fc2a3619fbc0b09fa1f2ebf70662d4/specs/ecosystem-pages-parity/spec.md",
       "related_spec_urls": [],
-      "needs_spec": true,
+      "needs_spec": false,
       "needs_design_review": true,
       "needs_partition_review": true,
       "needs_owner_review": true
@@ -1402,7 +1402,7 @@
       "train": "T6",
       "provisional_owner": "graph-os",
       "implementation_state": "QUEUED",
-      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/a2a-task-projection/spec.md",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/a2a-task-projection/spec.md",
       "related_spec_urls": [],
       "needs_spec": false,
       "needs_design_review": true,
@@ -1502,7 +1502,7 @@
       "implementation_state": "QUEUED",
       "owner_spec_url": null,
       "related_spec_urls": [
-        "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/identity-access/spec.md"
+        "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/identity-access/spec.md"
       ],
       "needs_spec": true,
       "needs_design_review": true,
@@ -1516,7 +1516,7 @@
       "implementation_state": "QUEUED",
       "owner_spec_url": null,
       "related_spec_urls": [
-        "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/identity-access/spec.md"
+        "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/identity-access/spec.md"
       ],
       "needs_spec": true,
       "needs_design_review": true,
@@ -1530,7 +1530,7 @@
       "implementation_state": "QUEUED",
       "owner_spec_url": null,
       "related_spec_urls": [
-        "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/identity-access/spec.md"
+        "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/identity-access/spec.md"
       ],
       "needs_spec": true,
       "needs_design_review": true,
@@ -1542,7 +1542,7 @@
       "train": "T7",
       "provisional_owner": "graph-os",
       "implementation_state": "QUEUED",
-      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/identity-access/spec.md",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/identity-access/spec.md",
       "related_spec_urls": [],
       "needs_spec": false,
       "needs_design_review": true,
@@ -1554,9 +1554,9 @@
       "train": "T7",
       "provisional_owner": "graph-os",
       "implementation_state": "QUEUED",
-      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/hosted-api-operations/spec.md",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/hosted-api-operations/spec.md",
       "related_spec_urls": [
-        "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/identity-access/spec.md"
+        "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/identity-access/spec.md"
       ],
       "needs_spec": false,
       "needs_design_review": true,
@@ -1568,9 +1568,9 @@
       "train": "T7",
       "provisional_owner": "graph-os",
       "implementation_state": "QUEUED",
-      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/hosted-api-operations/spec.md",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/hosted-api-operations/spec.md",
       "related_spec_urls": [
-        "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/identity-access/spec.md"
+        "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/identity-access/spec.md"
       ],
       "needs_spec": false,
       "needs_design_review": true,
@@ -1594,7 +1594,7 @@
       "train": "T7",
       "provisional_owner": "graph-os",
       "implementation_state": "QUEUED",
-      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/identity-access/spec.md",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/identity-access/spec.md",
       "related_spec_urls": [],
       "needs_spec": false,
       "needs_design_review": true,
@@ -1694,7 +1694,7 @@
       "implementation_state": "QUEUED",
       "owner_spec_url": null,
       "related_spec_urls": [
-        "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/data-and-market-projections/spec.md"
+        "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/data-and-market-projections/spec.md"
       ],
       "needs_spec": true,
       "needs_design_review": true,
@@ -2097,7 +2097,7 @@
       "owner_spec_url": null,
       "related_spec_urls": [
         "https://github.com/Knuckles-Team/epistemic-graph/blob/6a795577dff539da06c52f467220422bf23e0b03/specs/unified-data-plane/spec.md",
-        "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/data-and-market-projections/spec.md"
+        "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/data-and-market-projections/spec.md"
       ],
       "needs_spec": true,
       "needs_design_review": true,
@@ -2219,7 +2219,7 @@
       "implementation_state": "QUEUED",
       "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/6a795577dff539da06c52f467220422bf23e0b03/specs/unified-data-plane/spec.md",
       "related_spec_urls": [
-        "https://github.com/Knuckles-Team/graph-os/blob/749e4e4dadb0d31e2f769bbe8dc7f06948c12fce/specs/data-and-market-projections/spec.md"
+        "https://github.com/Knuckles-Team/graph-os/blob/94055608edd5abdc9f025e6d5b63be6b6a1e901c/specs/data-and-market-projections/spec.md"
       ],
       "needs_spec": false,
       "needs_design_review": true,
