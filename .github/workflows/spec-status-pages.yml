@@ -1,0 +1,122 @@
+name: Publish Graph OS specification status
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - site/**
+      - scripts/public_spec_report.py
+      - .github/workflows/spec-status-pages.yml
+  schedule:
+    - cron: '17 6 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout organization hub
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          path: hub
+          persist-credentials: false
+      - name: Checkout epistemic-graph
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: Knuckles-Team/epistemic-graph
+          path: sources/epistemic-graph
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Checkout agent-connector-sdk
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: Knuckles-Team/agent-connector-sdk
+          path: sources/agent-connector-sdk
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Checkout agent-utilities
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: Knuckles-Team/agent-utilities
+          path: sources/agent-utilities
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Checkout graph-os
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: Knuckles-Team/graph-os
+          path: sources/graph-os
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Checkout agent-webui
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: Knuckles-Team/agent-webui
+          path: sources/agent-webui
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Checkout repository-manager
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: Knuckles-Team/repository-manager
+          path: sources/repository-manager
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Checkout pipelines
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: Knuckles-Team/pipelines
+          path: sources/pipelines
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Checkout agent-terminal-ui
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: Knuckles-Team/agent-terminal-ui
+          path: sources/agent-terminal-ui
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Checkout emerald-exchange
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: Knuckles-Team/emerald-exchange
+          path: sources/emerald-exchange
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Checkout tunnel-manager
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: Knuckles-Team/tunnel-manager
+          path: sources/tunnel-manager
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Render from public committed specs
+        run: |
+          python hub/scripts/public_spec_report.py \
+            --checkouts-root sources \
+            --repo .github=hub \
+            --output hub/site/spec-status.html
+          python hub/scripts/refresh_build_first.py \
+            --checkouts-root sources \
+            --repo .github=hub \
+            --input hub/site/data/build-first.json \
+            --output hub/site/data/build-first.json
+      - name: Configure Pages
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5
+        with:
+          path: hub/site
+      - name: Deploy Pages
+        id: deployment
+        uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v5

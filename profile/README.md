@@ -7,6 +7,8 @@
 
 [![Platform documentation](https://img.shields.io/badge/platform-documentation-6d5dfc?style=for-the-badge)](https://knuckles-team.github.io/agent-utilities/) [![Run GraphOS](https://img.shields.io/badge/start-GraphOS-18a999?style=for-the-badge)](https://knuckles-team.github.io/graph-os/) [![GitHub repositories](https://img.shields.io/badge/explore-repositories-111827?style=for-the-badge&logo=github)](https://github.com/orgs/Knuckles-Team/repositories)
 
+**[Build-first program](https://knuckles-team.github.io/.github/build-first.html)** · **[Public specification status](https://knuckles-team.github.io/.github/spec-status.html)** · **[Contribution guide](https://github.com/Knuckles-Team/.github/blob/main/CONTRIBUTING.md)**
+
 <img src="https://raw.githubusercontent.com/Knuckles-Team/.github/main/profile/assets/runtime-architecture.svg" alt="Knuckles-Team platform runtime architecture" width="100%">
 
 </div>
@@ -95,5 +97,7 @@ Every repository documents its own contract and links back to this same runtime 
 ## Project health
 
 Build and release evidence lives with the component that owns it. Use each repository's **Actions** page for current CI and its Pages **Status** or **Capabilities** section for shipped behavior. Public issues and pull requests are tracked in the owning repository so operational and design discussions retain their architectural context.
+
+The [organization specification report](https://knuckles-team.github.io/.github/spec-status.html) collects owner-native public specs across the core repositories and related public owners. Filter to `SPECIFIED` to find published work waiting to be built; delivery and acceptance are separate states. The [contribution guide](https://github.com/Knuckles-Team/.github/blob/main/CONTRIBUTING.md) links the shared `graph-os-development` and spec skills.
 
 All five core projects are released under the [MIT License](https://opensource.org/license/mit).

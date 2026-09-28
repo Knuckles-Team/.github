@@ -1,0 +1,2351 @@
+{
+  "schema_version": 1,
+  "scope": "Provisional public build-first tracking snapshot. An ID in a status manifest is a pointer, not proof of complete design, tests, implementation, or acceptance.",
+  "source_revisions": {
+    "epistemic-graph": "84ad93569bb1aac727c4aa27067eefe9d1680ba0",
+    "agent-connector-sdk": "4336008dffdcb741d606b23a2caaa20ee8bfc752",
+    "agent-utilities": "63a7b5867197b73c86634c587ce570f330ebfcf9",
+    "graph-os": "cf9a57615e5116a7da153c8208d8aa7e7604689b",
+    "agent-webui": "e5dd729555bc2892428cc88ceabce1640594ab06",
+    "repository-manager": "9a5b1d718404b5b8146809dad4f80137d833a7da"
+  },
+  "items": [
+    {
+      "id": "EH-592",
+      "train": "T4",
+      "provisional_owner": "graph-os",
+      "implementation_state": "BUILDING",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/hosted-api-operations/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/public-engine-contract-and-release/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-215",
+      "train": "AU-batch",
+      "provisional_owner": "agent-connector-sdk",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/agent-connector-sdk/blob/4336008dffdcb741d606b23a2caaa20ee8bfc752/specs/SDK-CONNECTOR-CONTROL/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/fleet-catalog-and-tools/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-392",
+      "train": "AU-batch",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/federated-query-and-reasoning/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-047",
+      "train": "T4",
+      "provisional_owner": "agent-webui",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": null,
+      "related_spec_urls": [],
+      "needs_spec": true,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-213",
+      "train": "T4",
+      "provisional_owner": "agent-connector-sdk",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/agent-connector-sdk/blob/4336008dffdcb741d606b23a2caaa20ee8bfc752/specs/SDK-CONNECTOR-CONTROL/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/fleet-catalog-and-tools/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-216",
+      "train": "T4",
+      "provisional_owner": "agent-connector-sdk",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/agent-connector-sdk/blob/4336008dffdcb741d606b23a2caaa20ee8bfc752/specs/SDK-GOVERNED-WRITEBACK/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/fleet-catalog-and-tools/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-557",
+      "train": "T4",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/repository-index-and-ingestion/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-655",
+      "train": "T4",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/public-engine-contract-and-release/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-656",
+      "train": "T4",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/public-engine-contract-and-release/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "RF-019",
+      "train": "T4",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/federated-query-and-reasoning/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-218",
+      "train": "T5",
+      "provisional_owner": "graph-os",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/a2a-task-projection/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/hosted-api-operations/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-247",
+      "train": "T5",
+      "provisional_owner": "pipelines",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": null,
+      "related_spec_urls": [],
+      "needs_spec": true,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": true
+    },
+    {
+      "id": "EH-334",
+      "train": "T5",
+      "provisional_owner": "OWNER_REVIEW",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": null,
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/host-composition-boundary/spec.md"
+      ],
+      "needs_spec": true,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": true
+    },
+    {
+      "id": "EH-338",
+      "train": "T5",
+      "provisional_owner": "OWNER_REVIEW",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": null,
+      "related_spec_urls": [],
+      "needs_spec": true,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": true
+    },
+    {
+      "id": "EH-344",
+      "train": "T5",
+      "provisional_owner": "agent-utilities",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-integration-reliability/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-391",
+      "train": "T5",
+      "provisional_owner": "agent-utilities",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-boundary-quality/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-432",
+      "train": "T5",
+      "provisional_owner": "OWNER_REVIEW",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": null,
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/portable-deployment/spec.md"
+      ],
+      "needs_spec": true,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": true
+    },
+    {
+      "id": "EH-465",
+      "train": "T5",
+      "provisional_owner": "OWNER_REVIEW",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": null,
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/repository-manager/blob/9a5b1d718404b5b8146809dad4f80137d833a7da/specs/EH-465/spec.md"
+      ],
+      "needs_spec": true,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": true
+    },
+    {
+      "id": "EH-476",
+      "train": "T5",
+      "provisional_owner": "graph-os",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/host-composition-boundary/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-boundary-deconstruction/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-477",
+      "train": "T5",
+      "provisional_owner": "graph-os",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/portable-deployment/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-boundary-deconstruction/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-478",
+      "train": "T5",
+      "provisional_owner": "graph-os",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/host-composition-boundary/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-boundary-deconstruction/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-479",
+      "train": "T5",
+      "provisional_owner": "graph-os",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/host-composition-boundary/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-boundary-deconstruction/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-485",
+      "train": "T5",
+      "provisional_owner": "agent-utilities",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-boundary-deconstruction/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/agent-connector-sdk/blob/4336008dffdcb741d606b23a2caaa20ee8bfc752/specs/SDK-CONNECTOR-CONTROL/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-486",
+      "train": "T5",
+      "provisional_owner": "agent-connector-sdk",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/agent-connector-sdk/blob/4336008dffdcb741d606b23a2caaa20ee8bfc752/specs/SDK-CONNECTOR-CONTROL/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-boundary-deconstruction/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-488",
+      "train": "T5",
+      "provisional_owner": "graph-os",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/host-composition-boundary/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-boundary-deconstruction/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-489",
+      "train": "T5",
+      "provisional_owner": "graph-os",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/host-composition-boundary/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-boundary-deconstruction/spec.md",
+        "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/portable-deployment/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-490",
+      "train": "T5",
+      "provisional_owner": "graph-os",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/host-composition-boundary/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-boundary-deconstruction/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-491",
+      "train": "T5",
+      "provisional_owner": "agent-utilities",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-boundary-deconstruction/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/agent-connector-sdk/blob/4336008dffdcb741d606b23a2caaa20ee8bfc752/specs/SDK-CONNECTOR-CONTROL/spec.md",
+        "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/host-composition-boundary/spec.md",
+        "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/portable-deployment/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-492",
+      "train": "T5",
+      "provisional_owner": "graph-os",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/host-composition-boundary/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-boundary-deconstruction/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-493",
+      "train": "T5",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/decision-engine/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-boundary-deconstruction/spec.md",
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-semantic-client/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-494",
+      "train": "T5",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": null,
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-boundary-deconstruction/spec.md",
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-semantic-client/spec.md"
+      ],
+      "needs_spec": true,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-495",
+      "train": "T5",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": null,
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-boundary-deconstruction/spec.md",
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-semantic-client/spec.md"
+      ],
+      "needs_spec": true,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-496",
+      "train": "T5",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": null,
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-boundary-deconstruction/spec.md",
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-semantic-client/spec.md"
+      ],
+      "needs_spec": true,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-497",
+      "train": "T5",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": null,
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-boundary-deconstruction/spec.md",
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-semantic-client/spec.md"
+      ],
+      "needs_spec": true,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-498",
+      "train": "T5",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/repository-index-and-ingestion/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-boundary-deconstruction/spec.md",
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-semantic-client/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-499",
+      "train": "T5",
+      "provisional_owner": "agent-connector-sdk",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/agent-connector-sdk/blob/4336008dffdcb741d606b23a2caaa20ee8bfc752/specs/SDK-SOURCE-INGEST/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-boundary-deconstruction/spec.md",
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-semantic-client/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-500",
+      "train": "T5",
+      "provisional_owner": "agent-connector-sdk",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/agent-connector-sdk/blob/4336008dffdcb741d606b23a2caaa20ee8bfc752/specs/SDK-SOURCE-INGEST/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-boundary-deconstruction/spec.md",
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-semantic-client/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-501",
+      "train": "T5",
+      "provisional_owner": "agent-connector-sdk",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/agent-connector-sdk/blob/4336008dffdcb741d606b23a2caaa20ee8bfc752/specs/SDK-SOURCE-INGEST/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-boundary-deconstruction/spec.md",
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-semantic-client/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-503",
+      "train": "T5",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/repository-index-and-ingestion/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-boundary-deconstruction/spec.md",
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-semantic-client/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-504",
+      "train": "T5",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/typed-packs-and-catalog/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-boundary-deconstruction/spec.md",
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-semantic-client/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-505",
+      "train": "T5",
+      "provisional_owner": "agent-utilities",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-boundary-deconstruction/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-semantic-client/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-506",
+      "train": "T5",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/typed-packs-and-catalog/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-boundary-deconstruction/spec.md",
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-semantic-client/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-507",
+      "train": "T5",
+      "provisional_owner": "agent-utilities",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-boundary-deconstruction/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-semantic-client/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-511",
+      "train": "T5",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": null,
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-boundary-deconstruction/spec.md"
+      ],
+      "needs_spec": true,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-514",
+      "train": "T5",
+      "provisional_owner": "agent-utilities",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-boundary-deconstruction/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/host-composition-boundary/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-515",
+      "train": "T5",
+      "provisional_owner": "agent-webui",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": null,
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-boundary-deconstruction/spec.md",
+        "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/host-composition-boundary/spec.md"
+      ],
+      "needs_spec": true,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-516",
+      "train": "T5",
+      "provisional_owner": "agent-utilities",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-boundary-deconstruction/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-593",
+      "train": "T5",
+      "provisional_owner": "graph-os",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/hosted-api-operations/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/public-engine-contract-and-release/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-597",
+      "train": "T5",
+      "provisional_owner": "graph-os",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/hosted-api-operations/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-598",
+      "train": "T5",
+      "provisional_owner": "graph-os",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/fleet-catalog-and-tools/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/hosted-api-operations/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-601",
+      "train": "T5",
+      "provisional_owner": "graph-os",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/a2a-task-projection/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-603",
+      "train": "T5",
+      "provisional_owner": "graph-os",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/hosted-api-operations/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/identity-access/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-604",
+      "train": "T5",
+      "provisional_owner": "graph-os",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/adaptive-capacity/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/hosted-api-operations/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-605",
+      "train": "T5",
+      "provisional_owner": "graph-os",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/data-and-market-projections/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/hosted-api-operations/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-606",
+      "train": "T5",
+      "provisional_owner": "graph-os",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/hosted-api-operations/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-607",
+      "train": "T5",
+      "provisional_owner": "graph-os",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/hosted-api-operations/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-608",
+      "train": "T5",
+      "provisional_owner": "graph-os",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/hosted-api-operations/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-609",
+      "train": "T5",
+      "provisional_owner": "graph-os",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/hosted-api-operations/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-610",
+      "train": "T5",
+      "provisional_owner": "graph-os",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/hosted-api-operations/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-611",
+      "train": "T5",
+      "provisional_owner": "graph-os",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/fleet-catalog-and-tools/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/hosted-api-operations/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-612",
+      "train": "T5",
+      "provisional_owner": "graph-os",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/hosted-api-operations/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-613",
+      "train": "T5",
+      "provisional_owner": "graph-os",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/hosted-api-operations/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-614",
+      "train": "T5",
+      "provisional_owner": "graph-os",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/fleet-catalog-and-tools/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/hosted-api-operations/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-615",
+      "train": "T5",
+      "provisional_owner": "graph-os",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/fleet-catalog-and-tools/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/hosted-api-operations/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-616",
+      "train": "T5",
+      "provisional_owner": "graph-os",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/hosted-api-operations/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/identity-access/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-617",
+      "train": "T5",
+      "provisional_owner": "graph-os",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/hosted-api-operations/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-618",
+      "train": "T5",
+      "provisional_owner": "agent-webui",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": null,
+      "related_spec_urls": [],
+      "needs_spec": true,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-619",
+      "train": "T5",
+      "provisional_owner": "agent-webui",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": null,
+      "related_spec_urls": [],
+      "needs_spec": true,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-620",
+      "train": "T5",
+      "provisional_owner": "agent-webui",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": null,
+      "related_spec_urls": [],
+      "needs_spec": true,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-622",
+      "train": "T5",
+      "provisional_owner": "agent-terminal-ui",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": null,
+      "related_spec_urls": [],
+      "needs_spec": true,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-624",
+      "train": "T5",
+      "provisional_owner": "graph-os",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/hosted-api-operations/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-626",
+      "train": "T5",
+      "provisional_owner": "graph-os",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/fleet-catalog-and-tools/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/hosted-api-operations/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-627",
+      "train": "T5",
+      "provisional_owner": "graph-os",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/fleet-catalog-and-tools/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/hosted-api-operations/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-628",
+      "train": "T5",
+      "provisional_owner": "graph-os",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/fleet-catalog-and-tools/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/hosted-api-operations/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-658",
+      "train": "T5",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/durable-graph-kernel/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/a2a-task-projection/spec.md",
+        "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/hosted-api-operations/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "RF-001",
+      "train": "T5",
+      "provisional_owner": "OWNER_REVIEW",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": null,
+      "related_spec_urls": [],
+      "needs_spec": true,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": true
+    },
+    {
+      "id": "RF-016",
+      "train": "T5",
+      "provisional_owner": "repository-manager",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/repository-manager/blob/9a5b1d718404b5b8146809dad4f80137d833a7da/specs/RF-016/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "RF-018",
+      "train": "T5",
+      "provisional_owner": "tunnel-manager",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": null,
+      "related_spec_urls": [],
+      "needs_spec": true,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": true
+    },
+    {
+      "id": "RF-021",
+      "train": "T5",
+      "provisional_owner": "graph-os",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/fleet-catalog-and-tools/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "RF-024",
+      "train": "T5",
+      "provisional_owner": ".github",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/.github/blob/main/specs/crossrepo-authority-governance/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": true
+    },
+    {
+      "id": "RF-029",
+      "train": "T5",
+      "provisional_owner": "OWNER_REVIEW",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": null,
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/agent-control-plane/spec.md",
+        "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/host-composition-boundary/spec.md"
+      ],
+      "needs_spec": true,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": true
+    },
+    {
+      "id": "RF-030",
+      "train": "T5",
+      "provisional_owner": "graph-os",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/a2a-task-projection/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/hosted-api-operations/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "RF-031",
+      "train": "T5",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/repository-index-and-ingestion/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/agent-connector-sdk/blob/4336008dffdcb741d606b23a2caaa20ee8bfc752/specs/SDK-REPOSITORY-TRANSPORT/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-427",
+      "train": "T6",
+      "provisional_owner": "graph-os",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": null,
+      "related_spec_urls": [],
+      "needs_spec": true,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": true
+    },
+    {
+      "id": "EH-428",
+      "train": "T6",
+      "provisional_owner": "pipelines",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": null,
+      "related_spec_urls": [],
+      "needs_spec": true,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": true
+    },
+    {
+      "id": "EH-508",
+      "train": "T6",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/durable-graph-kernel/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-boundary-deconstruction/spec.md",
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-semantic-client/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-509",
+      "train": "T6",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": null,
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-boundary-deconstruction/spec.md",
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-semantic-client/spec.md"
+      ],
+      "needs_spec": true,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-522",
+      "train": "T6",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/decision-engine/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-525",
+      "train": "T6",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": null,
+      "related_spec_urls": [],
+      "needs_spec": true,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-528",
+      "train": "T6",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": null,
+      "related_spec_urls": [],
+      "needs_spec": true,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-530",
+      "train": "T6",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": null,
+      "related_spec_urls": [],
+      "needs_spec": true,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-535",
+      "train": "T6",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/durable-graph-kernel/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-563",
+      "train": "T6",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/federated-query-and-reasoning/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-571",
+      "train": "T6",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/federated-query-and-reasoning/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-572",
+      "train": "T6",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": null,
+      "related_spec_urls": [],
+      "needs_spec": true,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-573",
+      "train": "T6",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/federated-query-and-reasoning/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-574",
+      "train": "T6",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/federated-query-and-reasoning/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-575",
+      "train": "T6",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/federated-query-and-reasoning/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-576",
+      "train": "T6",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/federated-query-and-reasoning/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-577",
+      "train": "T6",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/federated-query-and-reasoning/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-578",
+      "train": "T6",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/federated-query-and-reasoning/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-579",
+      "train": "T6",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": null,
+      "related_spec_urls": [],
+      "needs_spec": true,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-580",
+      "train": "T6",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/federated-query-and-reasoning/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-581",
+      "train": "T6",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/federated-query-and-reasoning/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-590",
+      "train": "T6",
+      "provisional_owner": "graph-os",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/a2a-task-projection/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-632",
+      "train": "T6",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": null,
+      "related_spec_urls": [],
+      "needs_spec": true,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-635",
+      "train": "T6",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/typed-packs-and-catalog/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-636",
+      "train": "T6",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/repository-index-and-ingestion/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-638",
+      "train": "T6",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/repository-index-and-ingestion/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-651",
+      "train": "T6",
+      "provisional_owner": "agent-utilities",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/au-integration-reliability/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-652",
+      "train": "T6",
+      "provisional_owner": "OWNER_REVIEW",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": null,
+      "related_spec_urls": [],
+      "needs_spec": true,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": true
+    },
+    {
+      "id": "EH-659",
+      "train": "T6",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/federated-query-and-reasoning/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-542",
+      "train": "T7",
+      "provisional_owner": "OWNER_REVIEW",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": null,
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/identity-access/spec.md"
+      ],
+      "needs_spec": true,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": true
+    },
+    {
+      "id": "EH-545",
+      "train": "T7",
+      "provisional_owner": "OWNER_REVIEW",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": null,
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/identity-access/spec.md"
+      ],
+      "needs_spec": true,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": true
+    },
+    {
+      "id": "EH-553",
+      "train": "T7",
+      "provisional_owner": "OWNER_REVIEW",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": null,
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/identity-access/spec.md"
+      ],
+      "needs_spec": true,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": true
+    },
+    {
+      "id": "EH-556",
+      "train": "T7",
+      "provisional_owner": "graph-os",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/identity-access/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-602",
+      "train": "T7",
+      "provisional_owner": "graph-os",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/hosted-api-operations/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/identity-access/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-625",
+      "train": "T7",
+      "provisional_owner": "graph-os",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/hosted-api-operations/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/identity-access/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-653",
+      "train": "T7",
+      "provisional_owner": "agent-webui",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": null,
+      "related_spec_urls": [],
+      "needs_spec": true,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-716",
+      "train": "T7",
+      "provisional_owner": "graph-os",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/identity-access/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-698",
+      "train": "T8",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/finance-primitives/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-699",
+      "train": "T8",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/finance-primitives/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-700",
+      "train": "T8",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/finance-primitives/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-701",
+      "train": "T8",
+      "provisional_owner": "agent-connector-sdk",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/agent-connector-sdk/blob/4336008dffdcb741d606b23a2caaa20ee8bfc752/specs/SDK-FINANCE-SOURCES/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-702",
+      "train": "T8",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/finance-primitives/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-703",
+      "train": "T8",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/finance-primitives/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-704",
+      "train": "T8",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/finance-primitives/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/agent-utilities/blob/63a7b5867197b73c86634c587ce570f330ebfcf9/specs/agent-context-and-finance/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-705",
+      "train": "T8",
+      "provisional_owner": "OWNER_REVIEW",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": null,
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/data-and-market-projections/spec.md"
+      ],
+      "needs_spec": true,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": true
+    },
+    {
+      "id": "EH-706",
+      "train": "T8",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/finance-primitives/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-707",
+      "train": "T8",
+      "provisional_owner": "OWNER_REVIEW",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": null,
+      "related_spec_urls": [],
+      "needs_spec": true,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": true
+    },
+    {
+      "id": "EH-708",
+      "train": "T8",
+      "provisional_owner": "emerald-exchange",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": null,
+      "related_spec_urls": [],
+      "needs_spec": true,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-709",
+      "train": "T8",
+      "provisional_owner": "agent-connector-sdk",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/agent-connector-sdk/blob/4336008dffdcb741d606b23a2caaa20ee8bfc752/specs/SDK-FINANCE-SOURCES/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-710",
+      "train": "T8",
+      "provisional_owner": "agent-webui",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": null,
+      "related_spec_urls": [],
+      "needs_spec": true,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-711",
+      "train": "T8",
+      "provisional_owner": "agent-webui",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": null,
+      "related_spec_urls": [],
+      "needs_spec": true,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-712",
+      "train": "T8",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/finance-primitives/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-713",
+      "train": "T8",
+      "provisional_owner": "agent-connector-sdk",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/agent-connector-sdk/blob/4336008dffdcb741d606b23a2caaa20ee8bfc752/specs/SDK-FINANCE-SOURCES/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-715",
+      "train": "T8",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/finance-primitives/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-660",
+      "train": "T9",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/unified-data-plane/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-661",
+      "train": "T9",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/unified-data-plane/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-662",
+      "train": "T9",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/unified-data-plane/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-663",
+      "train": "T9",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/unified-data-plane/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-664",
+      "train": "T9",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/unified-data-plane/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-665",
+      "train": "T9",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/unified-data-plane/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-666",
+      "train": "T9",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/unified-data-plane/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-667",
+      "train": "T9",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/unified-data-plane/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-668",
+      "train": "T9",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/unified-data-plane/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-669",
+      "train": "T9",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/unified-data-plane/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-670",
+      "train": "T9",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/unified-data-plane/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-671",
+      "train": "T9",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/unified-data-plane/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/agent-connector-sdk/blob/4336008dffdcb741d606b23a2caaa20ee8bfc752/specs/SDK-GOVERNED-WRITEBACK/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-672",
+      "train": "T9",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/unified-data-plane/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-673",
+      "train": "T9",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/unified-data-plane/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-674",
+      "train": "T9",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/unified-data-plane/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-675",
+      "train": "T9",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/unified-data-plane/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-676",
+      "train": "T9",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/unified-data-plane/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-677",
+      "train": "T9",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/unified-data-plane/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-678",
+      "train": "T9",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/unified-data-plane/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-679",
+      "train": "T9",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/unified-data-plane/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-680",
+      "train": "T9",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/unified-data-plane/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-681",
+      "train": "T9",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/unified-data-plane/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-682",
+      "train": "T9",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/unified-data-plane/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-683",
+      "train": "T9",
+      "provisional_owner": "services",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": null,
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/unified-data-plane/spec.md",
+        "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/data-and-market-projections/spec.md"
+      ],
+      "needs_spec": true,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-684",
+      "train": "T9",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/durable-graph-kernel/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-685",
+      "train": "T9",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/durable-graph-kernel/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-686",
+      "train": "T9",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/unified-data-plane/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-687",
+      "train": "T9",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/unified-data-plane/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-688",
+      "train": "T9",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/unified-data-plane/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-689",
+      "train": "T9",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/unified-data-plane/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-690",
+      "train": "T9",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/durable-graph-kernel/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-691",
+      "train": "T9",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/durable-graph-kernel/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-692",
+      "train": "T9",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/durable-graph-kernel/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-693",
+      "train": "T9",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/unified-data-plane/spec.md",
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/graph-os/blob/cf9a57615e5116a7da153c8208d8aa7e7604689b/specs/data-and-market-projections/spec.md"
+      ],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-694",
+      "train": "T9",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/unified-data-plane/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-695",
+      "train": "T9",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/unified-data-plane/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-696",
+      "train": "T9",
+      "provisional_owner": "immich-mcp",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": null,
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/unified-data-plane/spec.md"
+      ],
+      "needs_spec": true,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-697",
+      "train": "T9",
+      "provisional_owner": "OWNER_REVIEW",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": null,
+      "related_spec_urls": [
+        "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/unified-data-plane/spec.md"
+      ],
+      "needs_spec": true,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": true
+    },
+    {
+      "id": "EH-714",
+      "train": "T9",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/finance-primitives/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-717",
+      "train": "T9",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/durable-graph-kernel/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-718",
+      "train": "T9",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/durable-graph-kernel/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-719",
+      "train": "T9",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/durable-graph-kernel/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-720",
+      "train": "T9",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/durable-graph-kernel/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": true,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-721",
+      "train": "T9",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/durable-graph-kernel/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    },
+    {
+      "id": "EH-722",
+      "train": "T9",
+      "provisional_owner": "epistemic-graph",
+      "implementation_state": "QUEUED",
+      "owner_spec_url": "https://github.com/Knuckles-Team/epistemic-graph/blob/84ad93569bb1aac727c4aa27067eefe9d1680ba0/specs/durable-graph-kernel/spec.md",
+      "related_spec_urls": [],
+      "needs_spec": false,
+      "needs_design_review": true,
+      "needs_partition_review": false,
+      "needs_owner_review": false
+    }
+  ]
+}
