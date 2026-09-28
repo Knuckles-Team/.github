@@ -12,7 +12,9 @@ from public `main` branches on each hub change, daily, and on manual dispatch.
 The report is a snapshot with source revisions, not a live CI feed. `SPECIFIED`
 is the build queue; `LANDED` and `ACCEPTED` require separate public evidence.
 The build-first program marks design review pending for every item. Its owner
-assignments are provisional and a linked ID alone does not make a spec complete.
+assignments are provisional: partition or owner-review rows expose candidate
+specs but no normative owner spec until an explicit reviewed decision exists.
+A linked ID alone does not make a spec complete.
 
 To render locally, clone the ten public owner repositories under one directory and run
 `python scripts/public_spec_report.py --checkouts-root <directory> --repo .github=. --output site/spec-status.html`.

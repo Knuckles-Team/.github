@@ -7,7 +7,9 @@ never worked in this ecosystem:
 
 1. Open the [build-first program](https://knuckles-team.github.io/.github/build-first.html)
    and choose a `QUEUED` or `BUILDING` requirement. The proposed owner is
-   provisional. If it says **Needs owner spec**, contribute the missing design
+   provisional. If it says **Owner unresolved**, resolve the owner and consumer
+   partition in public specs before implementing. Candidate links do not establish
+   authority. If it says **Needs public spec**, contribute the missing design
    first. The [specification status report](https://knuckles-team.github.io/.github/spec-status.html)
    shows each published spec's separate delivery and acceptance states.
 2. Open the **owner spec** and read `spec.md`, `plan.md`, `test-spec.md`,

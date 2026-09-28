@@ -54,13 +54,32 @@ def refresh(queue: dict, revisions: dict[str, str], links: dict[str, list[dict[s
         raise ValueError("unsupported build-first queue")
     for row in queue["items"]:
         refs = links.get(row["id"], [])
-        owner = [ref for ref in refs if ref["repo"] == row["provisional_owner"]]
+        reviewed_repo = row.get("reviewed_owner_repo")
+        reviewed_url = row.get("reviewed_owner_evidence_url") or ""
+        reviewed = bool(
+            reviewed_repo in revisions
+            and reviewed_url.startswith(f"https://github.com/Knuckles-Team/{reviewed_repo}/blob/")
+            and "/specs/" in reviewed_url
+            and any(
+                ref["repo"] == reviewed_repo
+                and ref["url"].split("/specs/", 1)[-1]
+                == reviewed_url.split("/specs/", 1)[-1]
+                for ref in refs
+            )
+        )
+        candidate_repo = reviewed_repo if reviewed else row["provisional_owner"]
+        owner = [ref for ref in refs if ref["repo"] == candidate_repo]
         previous = row.get("owner_spec_url") or ""
         owner.sort(key=lambda ref: (ref["url"].split("/specs/")[-1] not in previous, ref["url"]))
-        primary = owner[0] if owner else None
+        unresolved = (
+            not reviewed
+            and (row.get("needs_partition_review") or row.get("needs_owner_review") or not owner)
+        )
+        primary = owner[0] if owner and not unresolved else None
+        row["owner_unresolved"] = bool(unresolved)
         row["owner_spec_url"] = primary["url"] if primary else None
         row["related_spec_urls"] = [ref["url"] for ref in refs if ref is not primary]
-        row["needs_spec"] = primary is None
+        row["needs_spec"] = not refs
         # A matching ID is only a pointer. Design and test completeness needs review.
         row["needs_design_review"] = True
     queue["source_revisions"] = revisions

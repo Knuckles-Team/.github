@@ -6,12 +6,13 @@
 </style></head><body><main>
 <p><a href="./">Graph OS ecosystem</a> · <a href="spec-status.html">Specification status</a> · <a href="https://github.com/Knuckles-Team/.github/blob/main/CONTRIBUTING.md">Contribute</a></p>
 <h1>Build-first program</h1>
-<p>This queue tracks <strong>182 requirements</strong> proposed for implementation: 181 queued and one building. Owners are provisional. Every row still needs design and test review before its linked spec can be treated as a complete build contract. A requirement ID appearing in a spec does not prove the design, tests, implementation, or acceptance are complete. Follow the linked owner spec for the actual deliverable; related specs are cross-repository interfaces.</p>
+<p>This queue tracks <strong>182 requirements</strong> proposed for implementation: 181 queued and one building. Owners are provisional. Resolve an <strong>Owner unresolved</strong> row before implementing it: its links are candidate and related specs, not a normative owner decision. Every row still needs design and test review before its spec can be treated as a complete build contract. A requirement ID appearing in a spec does not prove the design, tests, implementation, or acceptance are complete.</p>
 <p id="summary" aria-live="polite">Loading the public queue…</p>
 <details open><summary>Missing published spec references</summary><p><span id="absent-count">Loading</span> active requirements have no matching ID in the published owner or related status manifests from the tracked public repositories. They need a self-contained owner spec before an external contributor can build from them.</p><p id="gaps">Loading…</p></details>
 <details><summary>State and review legend</summary><ul>
 <li><strong>QUEUED</strong>: proposed work has not started; <strong>BUILDING</strong>: work is underway. These are program tracking states and do not claim GitHub acceptance.</li>
-<li><strong>Needs owner spec</strong>: no matching status ID in the proposed owner's repository. A related spec in another repository is only an interface pointer.</li>
+<li><strong>Needs public spec</strong>: no matching ID in any tracked public status manifest.</li>
+<li><strong>Owner unresolved</strong>: a provisional assignment needs partition or owner review, or the proposed owner's repository has no matching spec. Candidate links do not establish authority. An explicit reviewed owner decision is required to promote a candidate to owner spec.</li>
 <li><strong>Design review</strong>: required for all rows until design, architecture, tasks, tests, and reuse of existing components are checked in the owner spec.</li>
 <li><strong>Partition review</strong>: ownership across repositories still needs a contract decision. Multiple spec links alone do not imply conflicting ownership.</li>
 <li><strong>Owner review</strong>: the proposed owner is unresolved. `OWNER_REVIEW` does not designate a repository.</li>
@@ -19,9 +20,9 @@
 <label>Search <input id="search" type="search" placeholder="ID, train, owner"></label>
 <label>Owner <select id="owner"><option value="">All</option></select></label>
 <label>Train <select id="train"><option value="">All</option></select></label>
-<label>Show <select id="filter"><option value="">All active</option><option value="missing">Needs owner spec</option><option value="partition">Partition review</option><option value="owner">Owner review</option></select></label>
+<label>Show <select id="filter"><option value="">All active</option><option value="missing">Needs public spec</option><option value="unresolved">Owner unresolved</option><option value="partition">Partition review</option><option value="owner">Owner review</option></select></label>
 <p id="visible" aria-live="polite"></p>
-<table><thead><tr><th>ID</th><th>Train</th><th>Provisional owner</th><th>Implementation</th><th>Owner spec</th><th>Related specs</th><th>Review</th></tr></thead><tbody id="rows"></tbody></table>
+<table><thead><tr><th>ID</th><th>Train</th><th>Provisional owner</th><th>Implementation</th><th>Verified owner spec</th><th>Candidate / related specs</th><th>Review</th></tr></thead><tbody id="rows"></tbody></table>
 <details><summary>Public source revisions</summary><ul id="sources"></ul></details>
 </main><script>
 const $=id=>document.getElementById(id);
@@ -29,15 +30,15 @@ let items=[];
 function link(url,label){const a=document.createElement('a');a.href=url;a.textContent=label;return a}
 function option(select,value){const o=document.createElement('option');o.value=value;o.textContent=value;select.append(o)}
 function render(){const q=$('search').value.toLowerCase(),owner=$('owner').value,train=$('train').value,filter=$('filter').value;const body=$('rows');body.replaceChildren();let shown=0;
- for(const r of items){if(q&&!`${r.id} ${r.train} ${r.provisional_owner}`.toLowerCase().includes(q))continue;if(owner&&r.provisional_owner!==owner)continue;if(train&&r.train!==train)continue;if(filter==='missing'&&!r.needs_spec)continue;if(filter==='partition'&&!r.needs_partition_review)continue;if(filter==='owner'&&!r.needs_owner_review)continue;
+ for(const r of items){if(q&&!`${r.id} ${r.train} ${r.provisional_owner}`.toLowerCase().includes(q))continue;if(owner&&r.provisional_owner!==owner)continue;if(train&&r.train!==train)continue;if(filter==='missing'&&!r.needs_spec)continue;if(filter==='unresolved'&&!r.owner_unresolved)continue;if(filter==='partition'&&!r.needs_partition_review)continue;if(filter==='owner'&&!(r.needs_owner_review&&r.owner_unresolved))continue;
  const tr=document.createElement('tr');const cells=Array.from({length:7},()=>document.createElement('td'));cells[0].textContent=r.id;cells[1].textContent=r.train;cells[2].textContent=r.provisional_owner;cells[3].textContent=r.implementation_state;
- if(r.owner_spec_url)cells[4].append(link(r.owner_spec_url,'Open owner spec'));else cells[4].textContent='Needed';
+ if(r.owner_spec_url)cells[4].append(link(r.owner_spec_url,'Open owner spec'));else cells[4].textContent=r.owner_unresolved?'Resolve ownership':'Needed';
  r.related_spec_urls.forEach((url,i)=>{if(i)cells[5].append(document.createTextNode(' · '));cells[5].append(link(url,new URL(url).pathname.split('/')[2]))});
- for(const [yes,label] of [[r.needs_spec,'Owner spec'],[r.needs_design_review,'Design and tests'],[r.needs_partition_review,'Partition'],[r.needs_owner_review,'Owner']]){if(yes){const span=document.createElement('span');span.className='flag';span.textContent=label;cells[6].append(span)}}
+ for(const [yes,label] of [[r.needs_spec,'Public spec'],[r.owner_unresolved,'Owner unresolved'],[r.needs_design_review,'Design and tests'],[r.needs_partition_review,'Partition'],[r.needs_owner_review&&r.owner_unresolved,'Owner review']]){if(yes){const span=document.createElement('span');span.className='flag';span.textContent=label;cells[6].append(span)}}
  cells.forEach(c=>tr.append(c));body.append(tr);shown++}
  $('visible').textContent=`${shown} matching requirements`}
 for(const id of ['search','owner','train','filter'])$(id).addEventListener('input',render);
-fetch('data/build-first.json').then(r=>{if(!r.ok)throw Error(`HTTP ${r.status}`);return r.json()}).then(data=>{items=data.items;const absent=items.filter(r=>!r.owner_spec_url&&!r.related_spec_urls);$('summary').textContent=`${items.length} active requirements · ${items.filter(r=>r.needs_spec).length} need an owner spec reference · ${items.filter(r=>r.needs_partition_review).length} need partition review · all need design and test review`;
+fetch('data/build-first.json').then(r=>{if(!r.ok)throw Error(`HTTP ${r.status}`);return r.json()}).then(data=>{items=data.items;const absent=items.filter(r=>r.needs_spec);$('summary').textContent=`${items.length} active requirements · ${items.filter(r=>r.owner_unresolved).length} need owner resolution · ${items.filter(r=>r.needs_spec).length} have no public spec mention · all need design and test review`;
  $('absent-count').textContent=absent.length;$('gaps').textContent=absent.map(r=>r.id).join(', ');for(const v of [...new Set(items.map(r=>r.provisional_owner))].sort())option($('owner'),v);for(const v of [...new Set(items.map(r=>r.train))].sort())option($('train'),v);
  for(const [repo,sha] of Object.entries(data.source_revisions)){const li=document.createElement('li');li.append(link(`https://github.com/Knuckles-Team/${repo}/commit/${sha}`,`${repo} @ ${sha.slice(0,12)}`));$('sources').append(li)}render()
 }).catch(e=>{$('summary').textContent=`Could not load the queue: ${e.message}`});
