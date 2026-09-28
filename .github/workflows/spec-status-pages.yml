@@ -6,6 +6,8 @@ on:
     paths:
       - site/**
       - scripts/public_spec_report.py
+      - scripts/refresh_build_first.py
+      - specs/**
       - .github/workflows/spec-status-pages.yml
   schedule:
     - cron: '17 6 * * *'
