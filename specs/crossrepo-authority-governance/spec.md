@@ -1,7 +1,7 @@
 # Cross-repository authority governance
 
-**Spec ID:** ORG-AUTH-001. **Requirement:** RF-024. **Delivery:** specified.
-**Acceptance:** not audited.
+**Spec ID:** ORG-AUTH-001. **Requirements:** ORG-AUTH-R001, ORG-AUTH-R002, ORG-AUTH-R003,
+ORG-AUTH-R004, ORG-AUTH-R005. **Delivery:** specified. **Acceptance:** not audited.
 
 ## Outcome
 
@@ -43,3 +43,5 @@ owner repos' CCCC, jscpd, dupehound, and KISS rules when implementing code.
 The register contains public architecture decisions only. Environment-specific
 deployment details belong to the operator's own configuration and cannot be
 required to build or test a public contribution.
+
+Requirement IDs are defined in [requirements.md](requirements.md); delivery state per ID is in `status.json`.

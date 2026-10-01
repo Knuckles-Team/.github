@@ -14,7 +14,7 @@ def status(**changes):
         "schema_version": 1,
         "spec_id": "GRAPHOS-001",
         "owner_repo": REPO,
-        "requirement_ids": ["EH-001"],
+        "requirement_ids": ["GRAPHOS-R001"],
         "delivery_state": "SPECIFIED",
         "acceptance_state": "NOT_AUDITED",
         "evidence": [],

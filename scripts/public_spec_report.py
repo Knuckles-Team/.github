@@ -19,6 +19,11 @@ from html import escape
 from pathlib import Path
 from typing import Any
 
+try:
+    from .requirement_progress import progress, requirement_rows
+except ImportError:  # direct script invocation from the workflow
+    from requirement_progress import progress, requirement_rows
+
 REPOS = (
     ".github",
     "epistemic-graph",
@@ -62,6 +67,26 @@ def git(repo: Path, *args: str) -> str:
     return process.stdout
 
 
+def on_main(repo: Path, commit: str) -> bool:
+    """True when the commit is an ancestor of the fetched default branch."""
+    return (
+        subprocess.run(
+            [
+                "git",
+                "-C",
+                str(repo),
+                "merge-base",
+                "--is-ancestor",
+                commit,
+                "refs/remotes/origin/main",
+            ],
+            check=False,
+            capture_output=True,
+        ).returncode
+        == 0
+    )
+
+
 def committed_specs(repo: Path, owner_repo: str) -> tuple[str, list[dict[str, Any]]]:
     """Read HEAD blobs only, so dirty worktrees cannot create false claims."""
     revision = git(repo, "rev-parse", "HEAD").strip()
@@ -93,26 +118,13 @@ def committed_specs(repo: Path, owner_repo: str) -> tuple[str, list[dict[str, An
             merged = next(
                 item for item in row["evidence"] if item["kind"] == "merged_head"
             )
-            on_main = (
-                subprocess.run(
-                    [
-                        "git",
-                        "-C",
-                        str(repo),
-                        "merge-base",
-                        "--is-ancestor",
-                        merged["commit"],
-                        "refs/remotes/origin/main",
-                    ],
-                    check=False,
-                    capture_output=True,
-                ).returncode
-                == 0
-            )
-            if not on_main:
+            if not on_main(repo, merged["commit"]):
                 row["delivery"] = "UNKNOWN"
                 row["acceptance"] = "NOT_AUDITED"
                 row["problem"] = "Claimed merged head is not reachable from origin/main"
+        row["requirements"] = requirement_rows(
+            owner_repo, manifest, valid_evidence, lambda sha: on_main(repo, sha)
+        )
         rows.append(row)
     return revision, rows
 
@@ -155,6 +167,7 @@ def evaluate_status(
         "delivery": "UNKNOWN",
         "acceptance": "NOT_AUDITED",
         "evidence": [],
+        "requirements": [],
         "problem": problem,
     }
     if manifest is None:
@@ -234,6 +247,56 @@ def evaluate_status(
     return row
 
 
+def progress_cell(row: dict[str, Any]) -> str:
+    """Delivered count, percentage, and the requirements still open."""
+    done = progress(row["requirements"])
+    remaining = "".join(
+        f"<li><code>{escape(item['id'])}</code> {escape(item['state'])}"
+        f"{' — ' + escape(item['title']) if item['title'] else ''}"
+        f"{' (' + escape(item['problem']) + ')' if item['problem'] else ''}</li>"
+        for item in row["requirements"]
+        if item["state"] not in {"LANDED", "CLOSED"}
+    )
+    detail = (
+        f"<details><summary>{done['total'] - done['delivered']} open</summary>"
+        f"<ul>{remaining}</ul></details>"
+        if remaining
+        else ""
+    )
+    return (
+        f'<progress max="{done["total"] or 1}" value="{done["delivered"]}"></progress> '
+        f"{done['delivered']}/{done['total']} ({done['percent']}%){detail}"
+    )
+
+
+def repo_summary(rows: list[dict[str, Any]]) -> str:
+    """One line per repository plus the organization total."""
+    lines = []
+    everything: list[dict[str, str]] = []
+    for repo in REPOS:
+        owned = [item for row in rows if row["repo"] == repo for item in row["requirements"]]
+        if not owned:
+            continue
+        everything.extend(owned)
+        done = progress(owned)
+        lines.append(
+            f"<tr><td>{escape(repo)}</td><td>{done['delivered']}</td>"
+            f"<td>{done['in_progress']}</td><td>{done['total']}</td>"
+            f"<td>{done['percent']}%</td></tr>"
+        )
+    done = progress(everything)
+    lines.append(
+        f"<tr><th>All repositories</th><th>{done['delivered']}</th>"
+        f"<th>{done['in_progress']}</th><th>{done['total']}</th>"
+        f"<th>{done['percent']}%</th></tr>"
+    )
+    return (
+        "<table><thead><tr><th>Repository</th><th>Delivered</th><th>Building or built</th>"
+        "<th>Requirements</th><th>Complete</th></tr></thead>"
+        f"<tbody>{''.join(lines)}</tbody></table>"
+    )
+
+
 def render(
     revisions: dict[str, str], rows: list[dict[str, Any]], source_time: str = "unknown"
 ) -> str:
@@ -247,7 +310,6 @@ def render(
     for row in sorted(rows, key=lambda value: (value["repo"], value["spec_id"])):
         repo = escape(row["repo"])
         spec_url = f"https://github.com/Knuckles-Team/{repo}/blob/main/{escape(row['spec_path'])}"
-        requirements = ", ".join(escape(value) for value in row["requirement_ids"])
         proof = " ".join(
             f'<a href="{escape(item["url"], quote=True)}">{escape(item["kind"])}</a>'
             for item in row["evidence"]
@@ -261,7 +323,7 @@ def render(
             f'<tr data-repo="{repo}" data-delivery="{escape(row["delivery"])}" data-acceptance="{escape(row["acceptance"])}">'
             f'<td><a href="{spec_url}">{escape(row["spec_id"])}</a></td><td>{repo}</td>'
             f"<td>{badge(row['delivery'])}</td><td>{badge(row['acceptance'])}</td>"
-            f"<td>{requirements}</td><td>{proof}{issue}</td></tr>"
+            f"<td>{progress_cell(row)}</td><td>{proof}{issue}</td></tr>"
         )
     source_rows = "".join(
         f'<li><a href="https://github.com/Knuckles-Team/{escape(repo)}/commit/{escape(sha)}">'
@@ -286,22 +348,27 @@ def render(
 table {{ width: 100%; border-collapse: collapse; }} th,td {{ padding: .5rem; border-bottom: 1px solid #8886; text-align: left; vertical-align: top; }}
 th {{ position: sticky; top: 0; background: Canvas; }} .badge {{ border: 1px solid #888; border-radius: .4rem; padding: .12rem .35rem; white-space: nowrap; }}
 .accepted,.landed,.closed {{ border-color: #18964a; }} .failed,.rejected {{ border-color: #c33; }} .issue {{ display: block; color: #b33; }}
-label {{ display: inline-block; margin: .3rem 1rem .3rem 0; }} input,select {{ font: inherit; padding: .3rem; }}
+progress {{ width: 6rem; }} details ul {{ margin: .3rem 0; padding-left: 1.1rem; }} label {{ display: inline-block; margin: .3rem 1rem .3rem 0; }} input,select {{ font: inherit; padding: .3rem; }}
 </style></head><body>
 <main><p><a href="./">Graph OS ecosystem</a> · <a href="https://github.com/Knuckles-Team/.github/blob/main/CONTRIBUTING.md">Contribute</a></p><h1>Graph OS public specification status</h1>
-<p>Snapshot through {escape(source_time)} from the committed <code>specs/</code> revisions listed below in eleven public repositories. The repository specs and linked CI results are the evidence; source presence alone cannot establish completion. Missing or unsupported status metadata is shown as UNKNOWN / NOT AUDITED.</p>
+<p>Snapshot through {escape(source_time)} from the committed <code>specs/</code> revisions listed below in the public repositories. The repository specs and linked CI results are the evidence; source presence alone cannot establish completion. Missing or unsupported status metadata is shown as UNKNOWN / NOT AUDITED.</p>
 <p><strong>{len(rows)} specs</strong> · Delivery: {escape(count_text)} · Acceptance: {escape(accept_text)}</p>
-<p>To find work ready for contributors, filter Delivery to <strong>SPECIFIED</strong>. Each linked owner spec supplies its design, tasks, and test contract. This report counts specifications, not individual program requirements.</p>
+<h2>Requirement delivery</h2>
+<p>A requirement counts as delivered only when its status entry cites an implementing commit that is on the owner repository's default branch. Everything else is still open, whatever its label.</p>
+{repo_summary(rows)}
+<h2>Specifications</h2>
+<p>To find work ready for contributors, open a specification's remaining requirements below. Each linked owner spec supplies its design, tasks, test contract, and a <code>requirements.md</code> that defines every ID.</p>
 <details><summary>State legend and evidence rules</summary>
 <p><strong>Delivery:</strong> UNKNOWN = no supported status claim; SPECIFIED = build contract is published; BUILDING = public implementation work exists; BUILT = implementation exists with public commit evidence; LANDED = exact implementation commit is on default branch; CLOSED = work closed with a merged-head record; DEFERRED/REJECTED = public disposition decision.</p>
 <p><strong>Acceptance:</strong> NOT AUDITED = no verified acceptance decision; PENDING = review is open; ACCEPTED = merged-head tests plus consumer or release proof at the same commit; FAILED = linked failed test. Delivery and acceptance are independent.</p>
-<p>This report validates the shape of public evidence and exact commit references. Human reviewers must still evaluate whether linked tests satisfy every requirement. The report lists published specs; it does not claim that every program obligation has a spec.</p></details>
+<p><strong>Requirements:</strong> each ID in a status manifest may carry its own delivery state and evidence. LANDED or CLOSED needs a merged-head commit on the default branch; BUILDING or BUILT needs a public implementation commit. A claim without that proof is shown as UNKNOWN and does not count.</p>
+<p>This report validates the shape of public evidence and exact commit references. Human reviewers must still evaluate whether linked tests satisfy every requirement.</p></details>
 <label>Search <input id="search" type="search" placeholder="Spec, repo, requirement"></label>
 <label>Repository <select id="repo"><option value="">All</option>{"".join(f'<option value="{escape(repo)}">{escape(repo)}</option>' for repo in REPOS)}</select></label>
 <label>Delivery <select id="delivery"><option value="">All</option>{"".join(f"<option>{escape(s)}</option>" for s in sorted(DELIVERY))}</select></label>
 <label>Acceptance <select id="acceptance"><option value="">All</option>{"".join(f"<option>{escape(s)}</option>" for s in sorted(ACCEPTANCE))}</select></label>
 <p id="visible" aria-live="polite"></p>
-<table><thead><tr><th>Specification</th><th>Owner</th><th>Delivery</th><th>Acceptance</th><th>Requirement IDs</th><th>Public evidence / issue</th></tr></thead><tbody>{"".join(body)}</tbody></table>
+<table><thead><tr><th>Specification</th><th>Owner</th><th>Delivery</th><th>Acceptance</th><th>Requirements delivered</th><th>Public evidence / issue</th></tr></thead><tbody>{"".join(body)}</tbody></table>
 <details><summary>Source revisions</summary><ul>{source_rows}</ul></details></main>
 <script>
 const controls = ['search','repo','delivery','acceptance'].map(id => document.getElementById(id));

@@ -18,7 +18,7 @@
 Exercise the validator against positive and negative fixtures in a clean
 checkout. For a real entry, inspect public owner and consumer specs, run the
 relevant component tests, and verify linked commits are reachable from the
-default branches. Record exact URLs and SHAs in the register. RF-024 is
-accepted only when the register is populated for the known cross-repository
-cases and every closed entry satisfies the receipts above; merely publishing
-this spec is not acceptance.
+default branches. Record exact URLs and SHAs in the register. ORG-AUTH-R001
+through ORG-AUTH-R005 are each accepted only when the register is populated
+for the known cross-repository cases and every closed entry satisfies the
+receipts above; merely publishing this spec is not acceptance.

@@ -9,13 +9,11 @@ The [repositories and skills map](https://knuckles-team.github.io/.github/skills
 shows which public repository owns each kind of work and which shared skill to
 use at each stage.
 
-1. Open the [build-first program](https://knuckles-team.github.io/.github/build-first.html)
-   and choose a `QUEUED` or `BUILDING` requirement. The proposed owner is
-   provisional. If it says **Owner unresolved**, resolve the owner and consumer
-   partition in public specs before implementing. Candidate links do not establish
-   authority. If it says **Needs public spec**, contribute the missing design
-   first. The [specification status report](https://knuckles-team.github.io/.github/spec-status.html)
-   shows each published spec's separate delivery and acceptance states.
+1. Open the [specification status report](https://knuckles-team.github.io/.github/spec-status.html)
+   and expand a specification's open requirements. Choose one that is `SPECIFIED`
+   (not started) or `BUILDING`. The owner repository named on that row is the
+   authority for it; its `requirements.md` defines the ID and how it is verified.
+   The report also shows each published spec's separate delivery and acceptance states.
 2. Open the **owner spec** and read `spec.md`, `plan.md`, `test-spec.md`,
    `tasks.md`, and `status.json` together. These describe the desired behavior,
    architecture, test cases, work slices, and evidence. If any part is missing,
