@@ -2,8 +2,46 @@
   "schema_version": 1,
   "spec_id": "ORG-AUTH-001",
   "owner_repo": ".github",
-  "requirement_ids": ["RF-024"],
+  "requirement_ids": [
+    "ORG-AUTH-R001",
+    "ORG-AUTH-R002",
+    "ORG-AUTH-R003",
+    "ORG-AUTH-R004",
+    "ORG-AUTH-R005"
+  ],
   "delivery_state": "SPECIFIED",
   "acceptance_state": "NOT_AUDITED",
-  "evidence": []
+  "evidence": [],
+  "requirements": [
+    {
+      "id": "ORG-AUTH-R001",
+      "title": "Duplicate-authority register entry contract",
+      "delivery_state": "SPECIFIED",
+      "evidence": []
+    },
+    {
+      "id": "ORG-AUTH-R002",
+      "title": "Single authority consolidation per capability",
+      "delivery_state": "UNKNOWN",
+      "evidence": []
+    },
+    {
+      "id": "ORG-AUTH-R003",
+      "title": "Authority register contribution and ownership rules",
+      "delivery_state": "UNKNOWN",
+      "evidence": []
+    },
+    {
+      "id": "ORG-AUTH-R004",
+      "title": "Register scope excludes deployment-specific detail",
+      "delivery_state": "UNKNOWN",
+      "evidence": []
+    },
+    {
+      "id": "ORG-AUTH-R005",
+      "title": "Unresolved-owner decisions stay visible as PROPOSED",
+      "delivery_state": "UNKNOWN",
+      "evidence": []
+    }
+  ]
 }

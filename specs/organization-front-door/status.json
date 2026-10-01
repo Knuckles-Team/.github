@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "spec_id": "ORG-FRONT-001",
+  "owner_repo": ".github",
+  "requirement_ids": [
+    "ORG-FRONT-R001"
+  ],
+  "delivery_state": "SPECIFIED",
+  "acceptance_state": "NOT_AUDITED",
+  "evidence": [],
+  "requirements": [
+    {
+      "id": "ORG-FRONT-R001",
+      "title": "Organization front door describes the five-repository flow",
+      "delivery_state": "LANDED",
+      "evidence": [
+        {
+          "kind": "merged_head",
+          "result": "passed",
+          "commit": "d7f37b577a948b6329699444ad4991cdb9805f79",
+          "url": "https://github.com/Knuckles-Team/.github/commit/d7f37b577a948b6329699444ad4991cdb9805f79",
+          "description": "Implementing commit is reachable from the default branch."
+        }
+      ]
+    }
+  ]
+}
