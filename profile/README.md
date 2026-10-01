@@ -59,6 +59,26 @@ The reasoning and durable knowledge engine for graph, RDF, SQL, vectors, time, b
 </td>
 </tr>
 <tr>
+<td width="50%" valign="top">
+
+### [Agent Terminal UI](https://github.com/Knuckles-Team/agent-terminal-ui)
+
+The terminal operator experience for agent conversations, durable sessions, tool approvals, and live run monitoring.
+
+**[Documentation](https://knuckles-team.github.io/agent-terminal-ui/)** · **[Build status](https://github.com/Knuckles-Team/agent-terminal-ui/actions)**
+
+</td>
+<td width="50%" valign="top">
+
+### [GeniusBot](https://github.com/Knuckles-Team/geniusbot)
+
+The desktop cockpit for specialist agents, embedded terminals, tool approvals, and graph-backed exploration.
+
+**[Documentation](https://knuckles-team.github.io/geniusbot/)** · **[Build status](https://github.com/Knuckles-Team/geniusbot/actions)**
+
+</td>
+</tr>
+<tr>
 <td colspan="2" valign="top">
 
 ### [Agent Connector SDK](https://github.com/Knuckles-Team/agent-connector-sdk)
