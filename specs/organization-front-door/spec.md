@@ -1,7 +1,7 @@
 # Organization front door
 
-**Spec ID:** ORG-FRONT-001. **Requirements:** ORG-FRONT-R001. **Delivery:** specified.
-**Acceptance:** not audited.
+**Spec ID:** ORG-FRONT-001. **Requirements:** ORG-FRONT-R001. **Delivery:** landed.
+**Acceptance:** accepted.
 
 ## Outcome
 
@@ -45,8 +45,10 @@ describe a capability, without a shipped, documented owner repository backing th
 
 | Gate | State | Evidence |
 |---|---|---|
-| Link check across `profile/README.md`, `site/index.html`, `site/skills.html` | OPEN | Pending CI run |
-| GitHub rendering check of the organization profile | OPEN | Pending render check |
+| Link check across `profile/README.md`, `site/index.html`, `site/skills.html` | PASS | [Exact-source results](evidence/links.json); [merged-source CI](https://github.com/Knuckles-Team/.github/actions/runs/37174684510) |
+| GitHub rendering check of the organization profile | PASS | [Live and commit-pinned render facts](evidence/render.json); [live screenshot](evidence/organization-live.png) |
+
+Audited source: [`5e674839fb10e1aea4e3f11468fe804636fdd8b6`](https://github.com/Knuckles-Team/.github/commit/5e674839fb10e1aea4e3f11468fe804636fdd8b6). [Complete criterion evidence](evidence/audit.json), [test output](evidence/pytest.txt), and [independent review](evidence/independent-review.json) bind to that source commit. A later receipt-only commit records this audit without changing its source identity.
 
 **LANDED** requires the exact merged front-door content. **ACCEPTED** requires both checks in
 `test-spec.md` passing against that commit, linked in the evidence section above.

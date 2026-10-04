@@ -5,9 +5,31 @@
   "requirement_ids": [
     "ORG-FRONT-R001"
   ],
-  "delivery_state": "SPECIFIED",
-  "acceptance_state": "NOT_AUDITED",
-  "evidence": [],
+  "delivery_state": "LANDED",
+  "acceptance_state": "ACCEPTED",
+  "evidence": [
+    {
+      "kind": "merged_head",
+      "result": "passed",
+      "commit": "5e674839fb10e1aea4e3f11468fe804636fdd8b6",
+      "url": "https://github.com/Knuckles-Team/.github/commit/5e674839fb10e1aea4e3f11468fe804636fdd8b6",
+      "description": "PR #3 merged the audited front-door source and regression checks."
+    },
+    {
+      "kind": "test",
+      "result": "passed",
+      "commit": "5e674839fb10e1aea4e3f11468fe804636fdd8b6",
+      "url": "https://github.com/Knuckles-Team/.github/actions/runs/37174684510",
+      "description": "Tests passed on the actual merged SHA. Clean local audit also passed 21 tests, all 48 external URLs, relative destinations and actual GitHub rendering; see evidence/audit.json."
+    },
+    {
+      "kind": "release",
+      "result": "passed",
+      "commit": "5e674839fb10e1aea4e3f11468fe804636fdd8b6",
+      "url": "https://github.com/Knuckles-Team/.github/actions/runs/37174684513",
+      "description": "Existing Pages workflow published this merged SHA. Live index/skills bytes and served architecture SVG match it; actual organization rendering is captured in evidence/render.json."
+    }
+  ],
   "requirements": [
     {
       "id": "ORG-FRONT-R001",
@@ -20,8 +42,34 @@
           "commit": "d7f37b577a948b6329699444ad4991cdb9805f79",
           "url": "https://github.com/Knuckles-Team/.github/commit/d7f37b577a948b6329699444ad4991cdb9805f79",
           "description": "Implementing commit is reachable from the default branch."
+        },
+        {
+          "kind": "merged_head",
+          "result": "passed",
+          "commit": "5e674839fb10e1aea4e3f11468fe804636fdd8b6",
+          "url": "https://github.com/Knuckles-Team/.github/commit/5e674839fb10e1aea4e3f11468fe804636fdd8b6",
+          "description": "PR #3 merged the audited front-door source and regression checks."
+        },
+        {
+          "kind": "test",
+          "result": "passed",
+          "commit": "5e674839fb10e1aea4e3f11468fe804636fdd8b6",
+          "url": "https://github.com/Knuckles-Team/.github/actions/runs/37174684510",
+          "description": "Tests passed on the actual merged SHA. Clean local audit also passed 21 tests, all 48 external URLs, relative destinations and actual GitHub rendering; see evidence/audit.json."
+        },
+        {
+          "kind": "release",
+          "result": "passed",
+          "commit": "5e674839fb10e1aea4e3f11468fe804636fdd8b6",
+          "url": "https://github.com/Knuckles-Team/.github/actions/runs/37174684513",
+          "description": "Existing Pages workflow published this merged SHA. Live index/skills bytes and served architecture SVG match it; actual organization rendering is captured in evidence/render.json."
         }
       ]
     }
-  ]
+  ],
+  "audit": {
+    "source_commit": "5e674839fb10e1aea4e3f11468fe804636fdd8b6",
+    "record": "evidence/audit.json",
+    "independent_review": "evidence/independent-review.json"
+  }
 }
