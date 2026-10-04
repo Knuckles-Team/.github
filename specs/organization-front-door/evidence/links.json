@@ -1,0 +1,556 @@
+{
+  "checked_at": "2026-10-04T03:41:08.262480+00:00",
+  "source_sha256": {
+    "profile/README.md": "3d12ab539e1ba16cbf088e2552be20ca2199e809e0b02a622b3497db01f3da12",
+    "site/index.html": "62066660a69eb537016e3c6ce66384b118ffe03726e7ad8acffccf2ed30aa991",
+    "site/skills.html": "56d449b550b7d3cefe7799e59f851db2d7d1149de96ba3880b6739ae65ffe893"
+  },
+  "method": "GET, follow redirects, require final HTTP 200; relative destinations must be repository files",
+  "http": [
+    {
+      "url": "https://docs.astral.sh/uv/",
+      "status": 200,
+      "final_url": "https://docs.astral.sh/uv/",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md"
+      ]
+    },
+    {
+      "url": "https://github.com/Knuckles-Team",
+      "status": 200,
+      "final_url": "https://github.com/Knuckles-Team",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "site/index.html"
+      ]
+    },
+    {
+      "url": "https://github.com/Knuckles-Team/.github",
+      "status": 200,
+      "final_url": "https://github.com/Knuckles-Team/.github",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "site/skills.html"
+      ]
+    },
+    {
+      "url": "https://github.com/Knuckles-Team/.github/blob/main/CONTRIBUTING.md",
+      "status": 200,
+      "final_url": "https://github.com/Knuckles-Team/.github/blob/main/CONTRIBUTING.md",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md",
+        "site/index.html",
+        "site/skills.html"
+      ]
+    },
+    {
+      "url": "https://github.com/Knuckles-Team/agent-connector-sdk",
+      "status": 200,
+      "final_url": "https://github.com/Knuckles-Team/agent-connector-sdk",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md",
+        "site/index.html",
+        "site/skills.html"
+      ]
+    },
+    {
+      "url": "https://github.com/Knuckles-Team/agent-connector-sdk/actions",
+      "status": 200,
+      "final_url": "https://github.com/Knuckles-Team/agent-connector-sdk/actions",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md"
+      ]
+    },
+    {
+      "url": "https://github.com/Knuckles-Team/agent-terminal-ui",
+      "status": 200,
+      "final_url": "https://github.com/Knuckles-Team/agent-terminal-ui",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md",
+        "site/index.html",
+        "site/skills.html"
+      ]
+    },
+    {
+      "url": "https://github.com/Knuckles-Team/agent-terminal-ui/actions",
+      "status": 200,
+      "final_url": "https://github.com/Knuckles-Team/agent-terminal-ui/actions",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md"
+      ]
+    },
+    {
+      "url": "https://github.com/Knuckles-Team/agent-utilities",
+      "status": 200,
+      "final_url": "https://github.com/Knuckles-Team/agent-utilities",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md",
+        "site/index.html",
+        "site/skills.html"
+      ]
+    },
+    {
+      "url": "https://github.com/Knuckles-Team/agent-utilities/actions",
+      "status": 200,
+      "final_url": "https://github.com/Knuckles-Team/agent-utilities/actions",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md"
+      ]
+    },
+    {
+      "url": "https://github.com/Knuckles-Team/agent-webui",
+      "status": 200,
+      "final_url": "https://github.com/Knuckles-Team/agent-webui",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md",
+        "site/index.html",
+        "site/skills.html"
+      ]
+    },
+    {
+      "url": "https://github.com/Knuckles-Team/agent-webui/actions",
+      "status": 200,
+      "final_url": "https://github.com/Knuckles-Team/agent-webui/actions",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md"
+      ]
+    },
+    {
+      "url": "https://github.com/Knuckles-Team/emerald-exchange",
+      "status": 200,
+      "final_url": "https://github.com/Knuckles-Team/emerald-exchange",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "site/index.html",
+        "site/skills.html"
+      ]
+    },
+    {
+      "url": "https://github.com/Knuckles-Team/epistemic-graph",
+      "status": 200,
+      "final_url": "https://github.com/Knuckles-Team/epistemic-graph",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md",
+        "site/index.html",
+        "site/skills.html"
+      ]
+    },
+    {
+      "url": "https://github.com/Knuckles-Team/geniusbot",
+      "status": 200,
+      "final_url": "https://github.com/Knuckles-Team/geniusbot",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md",
+        "site/index.html",
+        "site/skills.html"
+      ]
+    },
+    {
+      "url": "https://github.com/Knuckles-Team/geniusbot/actions",
+      "status": 200,
+      "final_url": "https://github.com/Knuckles-Team/geniusbot/actions",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md"
+      ]
+    },
+    {
+      "url": "https://github.com/Knuckles-Team/graph-os",
+      "status": 200,
+      "final_url": "https://github.com/Knuckles-Team/graph-os",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md",
+        "site/index.html",
+        "site/skills.html"
+      ]
+    },
+    {
+      "url": "https://github.com/Knuckles-Team/graph-os/actions",
+      "status": 200,
+      "final_url": "https://github.com/Knuckles-Team/graph-os/actions",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md"
+      ]
+    },
+    {
+      "url": "https://github.com/Knuckles-Team/graph-os/tree/main/graph_os/skills/graph-os-development",
+      "status": 200,
+      "final_url": "https://github.com/Knuckles-Team/graph-os/tree/main/graph_os/skills/graph-os-development",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "site/skills.html"
+      ]
+    },
+    {
+      "url": "https://github.com/Knuckles-Team/pipelines",
+      "status": 200,
+      "final_url": "https://github.com/Knuckles-Team/pipelines",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "site/index.html",
+        "site/skills.html"
+      ]
+    },
+    {
+      "url": "https://github.com/Knuckles-Team/repository-manager",
+      "status": 200,
+      "final_url": "https://github.com/Knuckles-Team/repository-manager",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "site/index.html",
+        "site/skills.html"
+      ]
+    },
+    {
+      "url": "https://github.com/Knuckles-Team/tunnel-manager",
+      "status": 200,
+      "final_url": "https://github.com/Knuckles-Team/tunnel-manager",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "site/index.html",
+        "site/skills.html"
+      ]
+    },
+    {
+      "url": "https://github.com/Knuckles-Team/universal-skills",
+      "status": 200,
+      "final_url": "https://github.com/Knuckles-Team/universal-skills",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md",
+        "site/index.html",
+        "site/skills.html"
+      ]
+    },
+    {
+      "url": "https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development-workflows/sdd-full-lifecycle",
+      "status": 200,
+      "final_url": "https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development-workflows/sdd-full-lifecycle",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md",
+        "site/index.html",
+        "site/skills.html"
+      ]
+    },
+    {
+      "url": "https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/automated-test-runner",
+      "status": 200,
+      "final_url": "https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/automated-test-runner",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "site/skills.html"
+      ]
+    },
+    {
+      "url": "https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/c4-architecture",
+      "status": 200,
+      "final_url": "https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/c4-architecture",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "site/skills.html"
+      ]
+    },
+    {
+      "url": "https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/epistemic-graph-development",
+      "status": 200,
+      "final_url": "https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/epistemic-graph-development",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "site/skills.html"
+      ]
+    },
+    {
+      "url": "https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/graph-os-development",
+      "status": 200,
+      "final_url": "https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/graph-os-development",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md",
+        "site/index.html",
+        "site/skills.html"
+      ]
+    },
+    {
+      "url": "https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/sdd-implementer",
+      "status": 200,
+      "final_url": "https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/sdd-implementer",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md",
+        "site/index.html",
+        "site/skills.html"
+      ]
+    },
+    {
+      "url": "https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/spec-generator",
+      "status": 200,
+      "final_url": "https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/spec-generator",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md",
+        "site/index.html",
+        "site/skills.html"
+      ]
+    },
+    {
+      "url": "https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/spec-verifier",
+      "status": 200,
+      "final_url": "https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/spec-verifier",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md",
+        "site/index.html",
+        "site/skills.html"
+      ]
+    },
+    {
+      "url": "https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/task-planner",
+      "status": 200,
+      "final_url": "https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/task-planner",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md",
+        "site/index.html",
+        "site/skills.html"
+      ]
+    },
+    {
+      "url": "https://github.com/orgs/Knuckles-Team/repositories",
+      "status": 200,
+      "final_url": "https://github.com/orgs/Knuckles-Team/repositories",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md"
+      ]
+    },
+    {
+      "url": "https://img.shields.io/badge/explore-repositories-111827?style=for-the-badge&logo=github",
+      "status": 200,
+      "final_url": "https://img.shields.io/badge/explore-repositories-111827?style=for-the-badge&logo=github",
+      "content_type": "image/svg+xml;charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md"
+      ]
+    },
+    {
+      "url": "https://img.shields.io/badge/platform-documentation-6d5dfc?style=for-the-badge",
+      "status": 200,
+      "final_url": "https://img.shields.io/badge/platform-documentation-6d5dfc?style=for-the-badge",
+      "content_type": "image/svg+xml;charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md"
+      ]
+    },
+    {
+      "url": "https://img.shields.io/badge/start-GraphOS-18a999?style=for-the-badge",
+      "status": 200,
+      "final_url": "https://img.shields.io/badge/start-GraphOS-18a999?style=for-the-badge",
+      "content_type": "image/svg+xml;charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md"
+      ]
+    },
+    {
+      "url": "https://knuckles-team.github.io/.github/skills.html",
+      "status": 200,
+      "final_url": "https://knuckles-team.github.io/.github/skills.html",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md"
+      ]
+    },
+    {
+      "url": "https://knuckles-team.github.io/.github/spec-status.html",
+      "status": 200,
+      "final_url": "https://knuckles-team.github.io/.github/spec-status.html",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md"
+      ]
+    },
+    {
+      "url": "https://knuckles-team.github.io/agent-connector-sdk/",
+      "status": 200,
+      "final_url": "https://knuckles-team.github.io/agent-connector-sdk/",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md"
+      ]
+    },
+    {
+      "url": "https://knuckles-team.github.io/agent-terminal-ui/",
+      "status": 200,
+      "final_url": "https://knuckles-team.github.io/agent-terminal-ui/",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md"
+      ]
+    },
+    {
+      "url": "https://knuckles-team.github.io/agent-utilities/",
+      "status": 200,
+      "final_url": "https://knuckles-team.github.io/agent-utilities/",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md"
+      ]
+    },
+    {
+      "url": "https://knuckles-team.github.io/agent-webui/",
+      "status": 200,
+      "final_url": "https://knuckles-team.github.io/agent-webui/",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md"
+      ]
+    },
+    {
+      "url": "https://knuckles-team.github.io/epistemic-graph/",
+      "status": 200,
+      "final_url": "https://knuckles-team.github.io/epistemic-graph/",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md"
+      ]
+    },
+    {
+      "url": "https://knuckles-team.github.io/epistemic-graph/status/",
+      "status": 200,
+      "final_url": "https://knuckles-team.github.io/epistemic-graph/status/",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md"
+      ]
+    },
+    {
+      "url": "https://knuckles-team.github.io/geniusbot/",
+      "status": 200,
+      "final_url": "https://knuckles-team.github.io/geniusbot/",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md"
+      ]
+    },
+    {
+      "url": "https://knuckles-team.github.io/graph-os/",
+      "status": 200,
+      "final_url": "https://knuckles-team.github.io/graph-os/",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md"
+      ]
+    },
+    {
+      "url": "https://opensource.org/license/mit",
+      "status": 200,
+      "final_url": "https://opensource.org/license/mit",
+      "content_type": "text/html; charset=UTF-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Knuckles-Team/.github/main/profile/assets/runtime-architecture.svg",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/Knuckles-Team/.github/main/profile/assets/runtime-architecture.svg",
+      "content_type": "image/svg+xml",
+      "result": "passed",
+      "sources": [
+        "profile/README.md"
+      ]
+    }
+  ],
+  "relative": [
+    {
+      "source": "site/index.html",
+      "url": "skills.html",
+      "result": "passed"
+    },
+    {
+      "source": "site/index.html",
+      "url": "spec-status.html",
+      "result": "passed"
+    },
+    {
+      "source": "site/skills.html",
+      "url": "index.html",
+      "result": "passed"
+    },
+    {
+      "source": "site/skills.html",
+      "url": "spec-status.html",
+      "result": "passed"
+    }
+  ],
+  "unsupported": [],
+  "summary": {
+    "http": 48,
+    "relative": 4,
+    "failed": 0
+  },
+  "result": "passed",
+  "commit": "5e674839fb10e1aea4e3f11468fe804636fdd8b6",
+  "worktree_changes": []
+}

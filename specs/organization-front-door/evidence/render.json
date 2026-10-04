@@ -1,0 +1,243 @@
+{
+  "commit": "5e674839fb10e1aea4e3f11468fe804636fdd8b6",
+  "captured_at": "2026-10-04T03:41:09.444Z",
+  "browser": "154.0.8037.57",
+  "kind": "actual_merged_commit_and_live_organization",
+  "pages": [
+    {
+      "name": "profile-pinned",
+      "url": "https://github.com/Knuckles-Team/.github/blob/5e674839fb10e1aea4e3f11468fe804636fdd8b6/profile/README.md",
+      "captured_at": "2026-10-04T03:41:09.537Z",
+      "image_responses": [
+        {
+          "url": "https://camo.githubusercontent.com/aa4b20766be04ef3b8675d0369664772786f6e327ec45d87cd5235c2c9dbf539/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f73746172742d47726170684f532d3138613939393f7374796c653d666f722d7468652d6261646765",
+          "status": 200,
+          "sha256": "686f8fde3deb5633bc469211eaff28ab62449601e9e7bfdd2f126fbbcfee0dc9",
+          "bytes": 599
+        },
+        {
+          "url": "https://camo.githubusercontent.com/8d1b841116e8375e1c0d920e42e8e8388f83537f44aef3b4f742186a2ac0b7e7/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f706c6174666f726d2d646f63756d656e746174696f6e2d3664356466633f7374796c653d666f722d7468652d6261646765",
+          "status": 200,
+          "sha256": "3e0f79215b73a6194a1558eafe2f662939f8425f68e475f4153dc64aed2bc9e8",
+          "bytes": 620
+        },
+        {
+          "url": "https://camo.githubusercontent.com/7ce19edfe1d29a7a236de04918f88b561011c522c918b5c05a3b5e8dc5d2c030/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6578706c6f72652d7265706f7369746f726965732d3131313832373f7374796c653d666f722d7468652d6261646765266c6f676f3d676974687562",
+          "status": 200,
+          "sha256": "531744a5f46aefd3d5b15e2a9576d0ce9fd7d27563bfd3b5b9088e76b644f613",
+          "bytes": 1816
+        },
+        {
+          "url": "https://raw.githubusercontent.com/Knuckles-Team/.github/main/profile/assets/runtime-architecture.svg",
+          "status": 200,
+          "sha256": "f1db85379cf8b3e3adcfeb79c7ad7273a8ba27dd49aa80512269a22c7bbe6e7c",
+          "bytes": 5692
+        },
+        {
+          "url": "https://avatars.githubusercontent.com/u/8661571?v=4&size=40",
+          "status": 200,
+          "sha256": "9535688868ba129169dd814291f34ec7fd71efdb3e0848b1143193e2ca280d42",
+          "bytes": 1705
+        }
+      ],
+      "status": 200,
+      "text": "Knuckles-Team agent platform\n\nA governed runtime for building agents, connecting operational systems, and turning every action into durable, explainable knowledge.\n\n  \n\nPublic specification status · Repositories and skills · Contribution guide\n\nFive core projects\n\nThe five core projects are Graph OS, Agent Web UI, Agent Utilities, Epistemic Graph, and Agent Connector SDK. Agent Web UI provides the browser operator surface through Graph OS. MCP, REST, and A2A clients use the same governed Graph OS boundary. Graph OS composes the runtime and delegates agent work to the Agent Utilities control plane. Epistemic Graph commits durable knowledge, evidence, provenance, and reasoning results. Source systems connect through the governed Agent Connector SDK contract.\n\nGraph OS\n\nThe public runtime gateway: MCP, REST, A2A, identity, policy, fleet composition, and WebUI hosting.\n\nDocumentation · Build status\n\n\t\nAgent Web UI\n\nThe browser operator experience for conversations, approvals, tool activity, and graph-backed work.\n\nDocumentation · Build status\n\n\n\nAgent Utilities\n\nThe agent control plane: agents, workflows, evaluation, skills, and governed execution.\n\nDocumentation · Build status\n\n\t\nEpistemic Graph\n\nThe reasoning and durable knowledge engine for graph, RDF, SQL, vectors, time, blobs, evidence, and provenance.\n\nDocumentation · Capability status\n\n\n\nAgent Connector SDK\n\nThe governed source-integration boundary for connector identity, discovery, synchronization, replay, and write-back.\n\nDocumentation · Build status\n\nAdditional operator surfaces\n\nAgent Terminal UI and GeniusBot are additional operator surfaces on the same Graph OS boundary, outside the five core projects. Graph OS also hosts messaging channels.\n\nAgent Terminal UI\n\nThe terminal operator surface for the Graph OS REST interface.\n\nDocumentation · Build status\n\n\t\nGeniusBot\n\nThe desktop cockpit for specialist agents, embedded terminals, tool approvals, and graph-backed exploration.\n\nDocumentation · Build status\n\nStart at the runtime door\n\nGraph OS is the governed runtime entry point. With Python 3.12+ and uv installed, launch the zero-infrastructure local profile:\n\nuvx --from graph-os setup-config generate --profile tiny\nuvx --from graph-os graph-os --transport stdio\n\nThe generated profile starts with local, bounded defaults. Continue with the Graph OS quick start for provider configuration, Agent Web UI hosting, messaging, and authenticated network transports.\n\nFollow the flow\nIf you want to…\tStart here\nRun the platform or connect an MCP/A2A client\tGraph OS documentation\nUse the browser experience\tAgent Web UI documentation\nBuild agents, workflows, evaluations, or skills\tAgent Utilities documentation\nQuery or operate the knowledge engine directly\tEpistemic Graph documentation\nBuild or certify a source connector\tAgent Connector SDK documentation\n\nEvery repository documents its own contract and links back to this same runtime map. The boundaries are deliberate: Graph OS is the door, Agent Utilities controls agent behavior, Epistemic Graph owns durable knowledge and reasoning, Agent Web UI presents the browser surface, and Agent Connector SDK governs source integration.\n\nProject health\n\nBuild and release evidence lives with the component that owns it. Use each repository's Actions page for current CI and its Pages Status or Capabilities section for shipped behavior. Public issues and pull requests are tracked in the owning repository so operational and design discussions retain their architectural context.\n\nThe organization specification report collects owner-native public specs across the core repositories and related public owners. Filter to SPECIFIED to find published work waiting to be built; delivery and acceptance are separate states. The contribution guide links the shared graph-os-development and spec skills.\n\nContribute from a public spec\n\nPick an open requirement in the specification status report, then read its owner repository's spec.md, requirements.md, plan.md, test-spec.md, tasks.md, and status.json. The owner repo defines the implementation; related repository specs describe consumers and interfaces. Bootstrap with graph-os-development, then use universal-skills: spec-generator, task-planner, sdd-implementer, spec-verifier, and sdd-full-lifecycle. The step-by-step guide covers local setup, reuse, tests, pull requests, and public evidence.\n\nAll five core projects are released under the MIT License.",
+      "images": [
+        {
+          "src": "https://camo.githubusercontent.com/8d1b841116e8375e1c0d920e42e8e8388f83537f44aef3b4f742186a2ac0b7e7/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f706c6174666f726d2d646f63756d656e746174696f6e2d3664356466633f7374796c653d666f722d7468652d6261646765",
+          "alt": "Platform documentation",
+          "complete": true,
+          "naturalWidth": 227,
+          "naturalHeight": 28
+        },
+        {
+          "src": "https://camo.githubusercontent.com/aa4b20766be04ef3b8675d0369664772786f6e327ec45d87cd5235c2c9dbf539/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f73746172742d47726170684f532d3138613939393f7374796c653d666f722d7468652d6261646765",
+          "alt": "Run GraphOS",
+          "complete": true,
+          "naturalWidth": 149,
+          "naturalHeight": 28
+        },
+        {
+          "src": "https://camo.githubusercontent.com/7ce19edfe1d29a7a236de04918f88b561011c522c918b5c05a3b5e8dc5d2c030/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6578706c6f72652d7265706f7369746f726965732d3131313832373f7374796c653d666f722d7468652d6261646765266c6f676f3d676974687562",
+          "alt": "GitHub repositories",
+          "complete": true,
+          "naturalWidth": 219,
+          "naturalHeight": 28
+        },
+        {
+          "src": "https://raw.githubusercontent.com/Knuckles-Team/.github/main/profile/assets/runtime-architecture.svg",
+          "alt": "Knuckles-Team platform runtime architecture",
+          "complete": true,
+          "naturalWidth": 283,
+          "naturalHeight": 150
+        }
+      ],
+      "tables": [
+        {
+          "rows": 3,
+          "cells": [
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "rows": 1,
+          "cells": [
+            2
+          ]
+        },
+        {
+          "rows": 6,
+          "cells": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "name": "organization-live",
+      "url": "https://github.com/Knuckles-Team",
+      "captured_at": "2026-10-04T03:41:13.153Z",
+      "image_responses": [
+        {
+          "url": "https://camo.githubusercontent.com/8d1b841116e8375e1c0d920e42e8e8388f83537f44aef3b4f742186a2ac0b7e7/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f706c6174666f726d2d646f63756d656e746174696f6e2d3664356466633f7374796c653d666f722d7468652d6261646765",
+          "status": 200,
+          "sha256": "3e0f79215b73a6194a1558eafe2f662939f8425f68e475f4153dc64aed2bc9e8",
+          "bytes": 620
+        },
+        {
+          "url": "https://camo.githubusercontent.com/aa4b20766be04ef3b8675d0369664772786f6e327ec45d87cd5235c2c9dbf539/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f73746172742d47726170684f532d3138613939393f7374796c653d666f722d7468652d6261646765",
+          "status": 200,
+          "sha256": "686f8fde3deb5633bc469211eaff28ab62449601e9e7bfdd2f126fbbcfee0dc9",
+          "bytes": 599
+        },
+        {
+          "url": "https://camo.githubusercontent.com/7ce19edfe1d29a7a236de04918f88b561011c522c918b5c05a3b5e8dc5d2c030/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6578706c6f72652d7265706f7369746f726965732d3131313832373f7374796c653d666f722d7468652d6261646765266c6f676f3d676974687562",
+          "status": 200,
+          "sha256": "531744a5f46aefd3d5b15e2a9576d0ce9fd7d27563bfd3b5b9088e76b644f613",
+          "bytes": 1816
+        },
+        {
+          "url": "https://raw.githubusercontent.com/Knuckles-Team/.github/main/profile/assets/runtime-architecture.svg",
+          "status": 200,
+          "sha256": "f1db85379cf8b3e3adcfeb79c7ad7273a8ba27dd49aa80512269a22c7bbe6e7c",
+          "bytes": 5692
+        },
+        {
+          "url": "https://avatars.githubusercontent.com/u/8661571?s=70&v=4",
+          "status": 200,
+          "sha256": "f054ff788ee8ae7a3c5b16db05a3c61fb8c555423b4f3f4a359e42e368744e5d",
+          "bytes": 3307
+        },
+        {
+          "url": "https://avatars.githubusercontent.com/u/119072828?s=200&v=4",
+          "status": 200,
+          "sha256": "854348aeef778629c3fb8f8185f56d3c9a1b08cda79ef3a90ab20fb540afaf1c",
+          "bytes": 35574
+        }
+      ],
+      "status": 200,
+      "text": "Knuckles-Team agent platform\n\nA governed runtime for building agents, connecting operational systems, and turning every action into durable, explainable knowledge.\n\n  \n\nPublic specification status · Repositories and skills · Contribution guide\n\nFive core projects\n\nThe five core projects are Graph OS, Agent Web UI, Agent Utilities, Epistemic Graph, and Agent Connector SDK. Agent Web UI provides the browser operator surface through Graph OS. MCP, REST, and A2A clients use the same governed Graph OS boundary. Graph OS composes the runtime and delegates agent work to the Agent Utilities control plane. Epistemic Graph commits durable knowledge, evidence, provenance, and reasoning results. Source systems connect through the governed Agent Connector SDK contract.\n\nGraph OS\n\nThe public runtime gateway: MCP, REST, A2A, identity, policy, fleet composition, and WebUI hosting.\n\nDocumentation · Build status\n\n\t\nAgent Web UI\n\nThe browser operator experience for conversations, approvals, tool activity, and graph-backed work.\n\nDocumentation · Build status\n\n\n\nAgent Utilities\n\nThe agent control plane: agents, workflows, evaluation, skills, and governed execution.\n\nDocumentation · Build status\n\n\t\nEpistemic Graph\n\nThe reasoning and durable knowledge engine for graph, RDF, SQL, vectors, time, blobs, evidence, and provenance.\n\nDocumentation · Capability status\n\n\n\nAgent Connector SDK\n\nThe governed source-integration boundary for connector identity, discovery, synchronization, replay, and write-back.\n\nDocumentation · Build status\n\nAdditional operator surfaces\n\nAgent Terminal UI and GeniusBot are additional operator surfaces on the same Graph OS boundary, outside the five core projects. Graph OS also hosts messaging channels.\n\nAgent Terminal UI\n\nThe terminal operator surface for the Graph OS REST interface.\n\nDocumentation · Build status\n\n\t\nGeniusBot\n\nThe desktop cockpit for specialist agents, embedded terminals, tool approvals, and graph-backed exploration.\n\nDocumentation · Build status\n\nStart at the runtime door\n\nGraph OS is the governed runtime entry point. With Python 3.12+ and uv installed, launch the zero-infrastructure local profile:\n\nuvx --from graph-os setup-config generate --profile tiny\nuvx --from graph-os graph-os --transport stdio\n\nThe generated profile starts with local, bounded defaults. Continue with the Graph OS quick start for provider configuration, Agent Web UI hosting, messaging, and authenticated network transports.\n\nFollow the flow\nIf you want to…\tStart here\nRun the platform or connect an MCP/A2A client\tGraph OS documentation\nUse the browser experience\tAgent Web UI documentation\nBuild agents, workflows, evaluations, or skills\tAgent Utilities documentation\nQuery or operate the knowledge engine directly\tEpistemic Graph documentation\nBuild or certify a source connector\tAgent Connector SDK documentation\n\nEvery repository documents its own contract and links back to this same runtime map. The boundaries are deliberate: Graph OS is the door, Agent Utilities controls agent behavior, Epistemic Graph owns durable knowledge and reasoning, Agent Web UI presents the browser surface, and Agent Connector SDK governs source integration.\n\nProject health\n\nBuild and release evidence lives with the component that owns it. Use each repository's Actions page for current CI and its Pages Status or Capabilities section for shipped behavior. Public issues and pull requests are tracked in the owning repository so operational and design discussions retain their architectural context.\n\nThe organization specification report collects owner-native public specs across the core repositories and related public owners. Filter to SPECIFIED to find published work waiting to be built; delivery and acceptance are separate states. The contribution guide links the shared graph-os-development and spec skills.\n\nContribute from a public spec\n\nPick an open requirement in the specification status report, then read its owner repository's spec.md, requirements.md, plan.md, test-spec.md, tasks.md, and status.json. The owner repo defines the implementation; related repository specs describe consumers and interfaces. Bootstrap with graph-os-development, then use universal-skills: spec-generator, task-planner, sdd-implementer, spec-verifier, and sdd-full-lifecycle. The step-by-step guide covers local setup, reuse, tests, pull requests, and public evidence.\n\nAll five core projects are released under the MIT License.",
+      "images": [
+        {
+          "src": "https://camo.githubusercontent.com/8d1b841116e8375e1c0d920e42e8e8388f83537f44aef3b4f742186a2ac0b7e7/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f706c6174666f726d2d646f63756d656e746174696f6e2d3664356466633f7374796c653d666f722d7468652d6261646765",
+          "alt": "Platform documentation",
+          "complete": true,
+          "naturalWidth": 227,
+          "naturalHeight": 28
+        },
+        {
+          "src": "https://camo.githubusercontent.com/aa4b20766be04ef3b8675d0369664772786f6e327ec45d87cd5235c2c9dbf539/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f73746172742d47726170684f532d3138613939393f7374796c653d666f722d7468652d6261646765",
+          "alt": "Run GraphOS",
+          "complete": true,
+          "naturalWidth": 149,
+          "naturalHeight": 28
+        },
+        {
+          "src": "https://camo.githubusercontent.com/7ce19edfe1d29a7a236de04918f88b561011c522c918b5c05a3b5e8dc5d2c030/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6578706c6f72652d7265706f7369746f726965732d3131313832373f7374796c653d666f722d7468652d6261646765266c6f676f3d676974687562",
+          "alt": "GitHub repositories",
+          "complete": true,
+          "naturalWidth": 219,
+          "naturalHeight": 28
+        },
+        {
+          "src": "https://raw.githubusercontent.com/Knuckles-Team/.github/main/profile/assets/runtime-architecture.svg",
+          "alt": "Knuckles-Team platform runtime architecture",
+          "complete": true,
+          "naturalWidth": 283,
+          "naturalHeight": 150
+        }
+      ],
+      "tables": [
+        {
+          "rows": 3,
+          "cells": [
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "rows": 1,
+          "cells": [
+            2
+          ]
+        },
+        {
+          "rows": 6,
+          "cells": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "name": "index",
+      "url": "https://knuckles-team.github.io/.github/",
+      "captured_at": "2026-10-04T03:41:15.463Z",
+      "image_responses": [],
+      "status": 200,
+      "text": "Graph OS ecosystem\n\nBuild agents and connect source systems through Graph OS, with Epistemic Graph as the durable knowledge engine.\n\nSpecification statusRepositories and skillsContributeOrganization profile\nStart with work waiting to be built\n\nThe public specification report lists owner-native specs, the share of requirements each has delivered, and the requirements still open. Expand a specification to pick one. Each owner repository holds the full design, implementation tasks, and test contract. A status claim needs public evidence; publication alone does not mean implementation or acceptance.\n\nContribute with the shared skills\n\nChoose an unbuilt requirement, read its owner spec.md, plan.md, test-spec.md, tasks.md, and status.json, then bootstrap your environment with graph-os-development. Install universal-skills and use its spec-generator, task-planner, sdd-implementer, spec-verifier, or sdd-full-lifecycle. Reuse owner components, run repository tests and CCCC, jscpd, Dupehound, and KISS checks, submit a pull request, and update status only with public merged and test evidence. Read the full contribution path.\n\nFive core projects\n\nGraph OS is the governed runtime gateway. It hosts Agent Web UI and delegates agent work to Agent Utilities; Epistemic Graph owns durable knowledge, and Agent Connector SDK governs source integration.\n\nGraph OS — runtime and gateway.\nEpistemic Graph — durable knowledge and reasoning.\nAgent Connector SDK — governed connector contracts.\nAgent Utilities — agent orchestration.\nAgent Web UI — browser experience.\nAdditional operator surfaces\n\nAgent Terminal UI and GeniusBot use the same Graph OS boundary and are outside the five core projects.\n\nAgent Terminal UI — terminal operator surface for the Graph OS REST interface.\nGeniusBot — desktop cockpit.\nRelated contributor repositories\nRepository Manager — workspace lifecycle.\nPipelines — shared CI and release workflows.\nEmerald Exchange — exchange integration.\nTunnel Manager — tunnel lifecycle.\nUniversal Skills — shared spec, development, architecture, and verification skills.",
+      "images": [],
+      "tables": []
+    },
+    {
+      "name": "skills",
+      "url": "https://knuckles-team.github.io/.github/skills.html",
+      "captured_at": "2026-10-04T03:41:17.155Z",
+      "image_responses": [],
+      "status": 200,
+      "text": "Graph OS repositories and skills\nEcosystemSpec statusContribute\n\nuniversal-skills distributes the shared contributor skills. The Graph OS package contains the canonical ecosystem development skill and its public bootstrap recipe. The universal-skills entry makes that canonical skill discoverable before Graph OS is installed.\n\nInstall the skill kit with pip install universal-skills and install-skills --all-detected --symlink. Read a chosen repository's AGENTS.md and all five owner spec files before building: spec.md, plan.md, test-spec.md, tasks.md, and status.json. The contribution guide gives the full path from a public checkout to a PR.\n\nWhich skill to use\nStage\tSkill\tUse it for\nOrient and bootstrap\tgraph-os-development\tChoose the owner, clone public sources, reuse existing wiring, and follow repository gates.\nEngine work\tepistemic-graph-development\tApply Epistemic Graph engine and client conventions after finding an engine-owned spec.\nSpecify\tspec-generator\tWrite a complete public owner contract from a feature request.\nDesign\tc4-architecture\tDescribe system boundaries and the components a design reuses.\nPlan and implement\ttask-planner and sdd-implementer\tTurn spec acceptance into ordered changes and implement them.\nTest and verify\tautomated-test-runner and spec-verifier\tRun repository checks and verify design, tests, and public evidence.\nFull sequence\tsdd-full-lifecycle\tCoordinate specification through accepted delivery.\nWhere the code lives\n\nThe organization hub owns the cross-repository map, status report, and governance. Each deliverable is implemented in the repository named by its owner spec. Related specs describe consumers and interfaces; a disputed owner stays unresolved until its contract is reviewed.\n\nFive core projects\n\nGraph OS is the governed runtime gateway. It hosts Agent Web UI and delegates agent work to Agent Utilities; Epistemic Graph owns durable knowledge, and Agent Connector SDK governs source integration.\n\nGraph OS — runtime and gateway.\nAgent Web UI — browser experience.\nAgent Utilities — agent orchestration.\nEpistemic Graph — durable knowledge and reasoning.\nAgent Connector SDK — governed connector contracts.\nAdditional operator surfaces\n\nAgent Terminal UI and GeniusBot use the same Graph OS boundary and are outside the five core projects.\n\nAgent Terminal UI — terminal operator surface for the Graph OS REST interface.\nGeniusBot — desktop cockpit.\nRelated contributor repositories\n\nRepository Manager owns workspace lifecycle; Pipelines owns shared CI and release workflows; Emerald Exchange owns exchange integration; Tunnel Manager owns tunnel lifecycle; and Universal Skills provides shared contributor skills.",
+      "images": [],
+      "tables": [
+        {
+          "rows": 8,
+          "cells": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+        }
+      ]
+    }
+  ],
+  "live_matches_pinned": true,
+  "all_images_load": true,
+  "passed": true
+}
