@@ -28,5 +28,22 @@
     <tr><td>Full sequence</td><td><a href="https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development-workflows/sdd-full-lifecycle">sdd-full-lifecycle</a></td><td>Coordinate specification through accepted delivery.</td></tr>
   </tbody></table>
   <h2>Where the code lives</h2>
-  <p>The <a href="https://github.com/Knuckles-Team/.github">organization hub</a> owns the cross-repository map, status report, and governance. Each deliverable is implemented in the repository named by its <a href="spec-status.html">owner spec</a>. The build queue includes <a href="https://github.com/Knuckles-Team/epistemic-graph">Epistemic Graph</a>, <a href="https://github.com/Knuckles-Team/agent-connector-sdk">Connector SDK</a>, <a href="https://github.com/Knuckles-Team/agent-utilities">Agent Utilities</a>, <a href="https://github.com/Knuckles-Team/graph-os">Graph OS</a>, <a href="https://github.com/Knuckles-Team/agent-webui">Web UI</a>, <a href="https://github.com/Knuckles-Team/repository-manager">Repository Manager</a>, <a href="https://github.com/Knuckles-Team/pipelines">Pipelines</a>, <a href="https://github.com/Knuckles-Team/agent-terminal-ui">Terminal UI</a>, <a href="https://github.com/Knuckles-Team/emerald-exchange">Emerald Exchange</a>, and <a href="https://github.com/Knuckles-Team/tunnel-manager">Tunnel Manager</a>. Related specs describe consumers and interfaces; a disputed owner stays unresolved until its contract is reviewed.</p>
+  <p>The <a href="https://github.com/Knuckles-Team/.github">organization hub</a> owns the cross-repository map, status report, and governance. Each deliverable is implemented in the repository named by its <a href="spec-status.html">owner spec</a>. Related specs describe consumers and interfaces; a disputed owner stays unresolved until its contract is reviewed.</p>
+  <h2>Five core projects</h2>
+  <p>Graph OS is the governed runtime gateway. It hosts Agent Web UI and delegates agent work to Agent Utilities; Epistemic Graph owns durable knowledge, and Agent Connector SDK governs source integration.</p>
+  <ul>
+    <li><a href="https://github.com/Knuckles-Team/graph-os">Graph OS</a> — runtime and gateway.</li>
+    <li><a href="https://github.com/Knuckles-Team/agent-webui">Agent Web UI</a> — browser experience.</li>
+    <li><a href="https://github.com/Knuckles-Team/agent-utilities">Agent Utilities</a> — agent orchestration.</li>
+    <li><a href="https://github.com/Knuckles-Team/epistemic-graph">Epistemic Graph</a> — durable knowledge and reasoning.</li>
+    <li><a href="https://github.com/Knuckles-Team/agent-connector-sdk">Agent Connector SDK</a> — governed connector contracts.</li>
+  </ul>
+  <h2>Additional operator surfaces</h2>
+  <p>Agent Terminal UI and GeniusBot use the same Graph OS boundary and are outside the five core projects.</p>
+  <ul>
+    <li><a href="https://github.com/Knuckles-Team/agent-terminal-ui">Agent Terminal UI</a> — terminal operator surface for the Graph OS REST interface.</li>
+    <li><a href="https://github.com/Knuckles-Team/geniusbot">GeniusBot</a> — desktop cockpit.</li>
+  </ul>
+  <h2>Related contributor repositories</h2>
+  <p><a href="https://github.com/Knuckles-Team/repository-manager">Repository Manager</a> owns workspace lifecycle; <a href="https://github.com/Knuckles-Team/pipelines">Pipelines</a> owns shared CI and release workflows; <a href="https://github.com/Knuckles-Team/emerald-exchange">Emerald Exchange</a> owns exchange integration; <a href="https://github.com/Knuckles-Team/tunnel-manager">Tunnel Manager</a> owns tunnel lifecycle; and <a href="https://github.com/Knuckles-Team/universal-skills">Universal Skills</a> provides shared contributor skills.</p>
 </main></body></html>

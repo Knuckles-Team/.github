@@ -13,9 +13,9 @@
 
 </div>
 
-## One platform, clear responsibilities
+## Five core projects
 
-People use **Agent Web UI**, **Agent Terminal UI**, **Geniusbot**, or Graph OS-hosted messaging channels. MCP, REST, and A2A clients use the same governed **Graph OS** boundary. Graph OS composes the runtime and delegates agent work to the **Agent Utilities** control plane. **Epistemic Graph** commits durable knowledge, evidence, provenance, and reasoning results. Source systems connect through the governed **Agent Connector SDK** contract.
+The five core projects are **Graph OS**, **Agent Web UI**, **Agent Utilities**, **Epistemic Graph**, and **Agent Connector SDK**. Agent Web UI provides the browser operator surface through Graph OS. MCP, REST, and A2A clients use the same governed **Graph OS** boundary. Graph OS composes the runtime and delegates agent work to the **Agent Utilities** control plane. **Epistemic Graph** commits durable knowledge, evidence, provenance, and reasoning results. Source systems connect through the governed **Agent Connector SDK** contract.
 
 <table>
 <tr>
@@ -59,11 +59,29 @@ The reasoning and durable knowledge engine for graph, RDF, SQL, vectors, time, b
 </td>
 </tr>
 <tr>
+<td colspan="2" valign="top">
+
+### [Agent Connector SDK](https://github.com/Knuckles-Team/agent-connector-sdk)
+
+The governed source-integration boundary for connector identity, discovery, synchronization, replay, and write-back.
+
+**[Documentation](https://knuckles-team.github.io/agent-connector-sdk/)** · **[Build status](https://github.com/Knuckles-Team/agent-connector-sdk/actions)**
+
+</td>
+</tr>
+</table>
+
+## Additional operator surfaces
+
+**Agent Terminal UI** and **GeniusBot** are additional operator surfaces on the same Graph OS boundary, outside the five core projects. Graph OS also hosts messaging channels.
+
+<table>
+<tr>
 <td width="50%" valign="top">
 
 ### [Agent Terminal UI](https://github.com/Knuckles-Team/agent-terminal-ui)
 
-The terminal operator experience for agent conversations, durable sessions, tool approvals, and live run monitoring.
+The terminal operator surface for the Graph OS REST interface.
 
 **[Documentation](https://knuckles-team.github.io/agent-terminal-ui/)** · **[Build status](https://github.com/Knuckles-Team/agent-terminal-ui/actions)**
 
@@ -75,17 +93,6 @@ The terminal operator experience for agent conversations, durable sessions, tool
 The desktop cockpit for specialist agents, embedded terminals, tool approvals, and graph-backed exploration.
 
 **[Documentation](https://knuckles-team.github.io/geniusbot/)** · **[Build status](https://github.com/Knuckles-Team/geniusbot/actions)**
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top">
-
-### [Agent Connector SDK](https://github.com/Knuckles-Team/agent-connector-sdk)
-
-The governed source-integration boundary for connector identity, discovery, synchronization, replay, and write-back.
-
-**[Documentation](https://knuckles-team.github.io/agent-connector-sdk/)** · **[Build status](https://github.com/Knuckles-Team/agent-connector-sdk/actions)**
 
 </td>
 </tr>
