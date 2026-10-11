@@ -15,3 +15,8 @@
       `status.json` before marking ORG-FRONT-R001 delivered.
 
 Audit source: `5e674839fb10e1aea4e3f11468fe804636fdd8b6`. See [complete evidence](evidence/audit.json), [test output](evidence/pytest.txt), and [independent review](evidence/independent-review.json).
+
+- [ ] ORG-FRONT-R002.1: add `SPEC_DELIVERY_PAGES` to `scripts/public_spec_report.py`.
+- [ ] ORG-FRONT-R002.2: add `scripts/spec_delivery_links.py` and the marker block in `profile/README.md`.
+- [ ] ORG-FRONT-R002.3: add `test_readme_spec_delivery_links_match_the_single_list` to `tests/test_front_door.py`.
+- [ ] ORG-FRONT-R002.4: add a "Spec delivery" link to each per-repository block in `profile/README.md`.

@@ -83,3 +83,16 @@ def test_audit_never_hides_a_broken_destination(tmp_path):
     result = audit(tmp_path, checker=lambda url: {"url": url, "result": "failed", "status": 404})
     assert result["result"] == "failed"
     assert result["summary"] == {"http": 1, "relative": 3, "failed": 4}
+
+
+# Verifies ORG-FRONT-R002.3.
+def test_readme_spec_delivery_links_match_the_single_list():
+    from scripts import spec_delivery_links
+    from scripts.public_spec_report import SPEC_DELIVERY_PAGES
+
+    text = (ROOT / "profile/README.md").read_text()
+    found = re.findall(r"\]\((https://knuckles-team\.github\.io/[^)/]+/spec-delivery/?[^)]*)\)", text)
+    expected = {f"https://knuckles-team.github.io/{r}/spec-delivery/" for r in SPEC_DELIVERY_PAGES}
+    assert set(found) == expected
+    assert all(re.fullmatch(r"https://knuckles-team\.github\.io/[\w-]+/spec-delivery/", u) for u in found)
+    assert spec_delivery_links.render() in text
