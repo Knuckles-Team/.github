@@ -19,3 +19,13 @@
 
 No step requires a live platform deployment; the front door describes publicly released
 repositories and their relationships, verifiable from the public checkouts alone.
+
+## Spec-delivery links (ORG-FRONT-R002)
+
+The row is the owner-side counterpart of `PIPE-PAGES-R014.5` in `Knuckles-Team/pipelines`.
+
+- Data flow: `SPEC_DELIVERY_PAGES` (`scripts/public_spec_report.py:27`) feeds `render()` in
+  `scripts/spec_delivery_links.py`. `--write` replaces the marker block in `profile/README.md`.
+- Attach point: the block follows the navigation line at `profile/README.md:10`.
+- Single list: the repository tuple `REPOS` and `SPEC_DELIVERY_PAGES` live in one module.
+  The latter should hold only repositories whose page returns HTTP 200.

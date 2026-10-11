@@ -1,6 +1,6 @@
 # Organization front door
 
-**Spec ID:** ORG-FRONT-001. **Requirements:** ORG-FRONT-R001. **Delivery:** landed.
+**Spec ID:** ORG-FRONT-001. **Requirements:** ORG-FRONT-R001, ORG-FRONT-R002. **Delivery:** landed.
 **Acceptance:** accepted.
 
 ## Outcome

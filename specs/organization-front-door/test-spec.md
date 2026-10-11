@@ -29,3 +29,8 @@
 Run the link check and the rendering check in a clean checkout and record the exact commit,
 check output, and pass/fail result in `status.json`. ORG-FRONT-R001 is accepted only when both
 checks pass against the same merged commit; publishing this spec is not itself acceptance.
+
+## Spec-delivery links (ORG-FRONT-R002)
+
+- R002.1 to R002.4: `tests/test_front_door.py::test_readme_spec_delivery_links_match_the_single_list`
+  must pass. It makes no network call. The test compares the README links with `SPEC_DELIVERY_PAGES`.

@@ -38,6 +38,16 @@ REPOS = (
     "tunnel-manager",
     "universal-skills",
 )
+# Repositories whose Pages site serves /spec-delivery/ (checked 200 on 2026-10-11).
+SPEC_DELIVERY_PAGES = (
+    "epistemic-graph",
+    "agent-connector-sdk",
+    "agent-utilities",
+    "graph-os",
+    "agent-webui",
+    "agent-terminal-ui",
+    "geniusbot",
+)
 DELIVERY = frozenset(
     {
         "UNKNOWN",
