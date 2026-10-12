@@ -33,13 +33,32 @@ def sync(target, content, check=False):
     return True
 
 
+def check_published(manifest):
+    """Flag canonical drift and stale published copies; never update repositories."""
+    live_url = "https://raw.githubusercontent.com/Knuckles-Team/epistemic-graph/main/docs/assets/runtime-architecture.svg"
+    with urlopen(live_url, timeout=30) as response:
+        source = response.read()
+    expected = render(source, manifest)
+    clean = True
+    for name, path in manifest["copies"].items():
+        url = f"https://raw.githubusercontent.com/Knuckles-Team/{name}/main/{path}"
+        with urlopen(url, timeout=30) as response:
+            matched = response.read() == expected
+        print(f"{'OK' if matched else 'DRIFT'}: {url}")
+        clean = clean and matched
+    return 0 if clean else 1
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source", type=Path, help="Local canonical SVG (verified against the pinned digest)")
     parser.add_argument("--repo", action="append", metavar="NAME=CHECKOUT", help="Existing compatibility checkout; repeat for multiple repositories")
     parser.add_argument("--check", action="store_true", help="Report drift without writing")
+    parser.add_argument("--check-published", action="store_true", help="Check live EG source and published compatibility copies without writing")
     args = parser.parse_args(argv)
     manifest = json.loads(MANIFEST.read_text())
+    if args.check_published:
+        return check_published(manifest)
     targets = []
     for value in args.repo or [f".github={MANIFEST.parent.parent}"]:
         name, separator, checkout = value.partition("=")

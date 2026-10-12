@@ -28,3 +28,13 @@ canonical SVG instead of downloading it; both modes verify the pinned digest
 before writing. `--check` exits nonzero on drift and never writes.
 Review and commit generated files in their owning repositories. The test suite
 checks the hub copy against the manifest without network access.
+
+## Drift detection
+
+Active image references follow EG's `main` automatically. Compatibility copies
+are pinned snapshots and require the reviewed refresh above. The daily
+[drift workflow](../.github/workflows/runtime-diagram.yml) checks the live EG
+source against the pin, then checks every published compatibility copy. It fails
+on canonical drift, a mismatched copy, or an unavailable source; it never commits
+or merges updates. Run the same check with
+`python scripts/sync_runtime_diagram.py --check-published`.
