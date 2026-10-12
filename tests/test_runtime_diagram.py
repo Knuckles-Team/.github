@@ -47,3 +47,25 @@ def test_profile_uses_the_live_canonical_image():
     text = (ROOT / "profile/README.md").read_text()
     assert 'src="https://raw.githubusercontent.com/Knuckles-Team/epistemic-graph/main/docs/assets/runtime-architecture.svg"' in text
     assert 'src="https://raw.githubusercontent.com/Knuckles-Team/.github/main/profile/assets/runtime-architecture.svg"' not in text
+
+
+@pytest.mark.parametrize("drift", [False, True])
+def test_published_check_detects_stale_copy(monkeypatch, drift):
+    import io
+    from scripts import sync_runtime_diagram as module
+
+    manifest = json.loads(MANIFEST.read_text())
+    copy = (ROOT / manifest["copies"][".github"]).read_bytes()
+    source = copy.split(b"-->\n", 1)[1]
+    replies = iter([source] + [b"stale" if drift else copy] * len(manifest["copies"]))
+    monkeypatch.setattr(module, "urlopen", lambda url, timeout: io.BytesIO(next(replies)))
+    assert module.check_published(manifest) == int(drift)
+
+
+def test_published_check_refuses_changed_canonical_source(monkeypatch):
+    import io
+    from scripts import sync_runtime_diagram as module
+
+    monkeypatch.setattr(module, "urlopen", lambda url, timeout: io.BytesIO(b"new source"))
+    with pytest.raises(ValueError, match="SHA-256"):
+        module.check_published(json.loads(MANIFEST.read_text()))
