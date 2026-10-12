@@ -13,7 +13,7 @@
 Spec delivery: **[epistemic-graph](https://knuckles-team.github.io/epistemic-graph/spec-delivery/)** · **[agent-connector-sdk](https://knuckles-team.github.io/agent-connector-sdk/spec-delivery/)** · **[agent-utilities](https://knuckles-team.github.io/agent-utilities/spec-delivery/)** · **[graph-os](https://knuckles-team.github.io/graph-os/spec-delivery/)** · **[agent-webui](https://knuckles-team.github.io/agent-webui/spec-delivery/)** · **[agent-terminal-ui](https://knuckles-team.github.io/agent-terminal-ui/spec-delivery/)** · **[geniusbot](https://knuckles-team.github.io/geniusbot/spec-delivery/)**
 <!-- spec-delivery:end -->
 
-<img src="https://raw.githubusercontent.com/Knuckles-Team/.github/main/profile/assets/runtime-architecture.svg" alt="Knuckles-Team platform runtime architecture" width="100%">
+<img src="https://raw.githubusercontent.com/Knuckles-Team/epistemic-graph/main/docs/assets/runtime-architecture.svg" alt="Knuckles-Team platform runtime architecture" width="100%">
 
 </div>
 

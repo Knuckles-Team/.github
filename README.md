@@ -20,3 +20,6 @@ when its entry cites an implementing commit on the owner repository's default br
 To render locally, clone the public owner repositories under one directory and run
 `python scripts/public_spec_report.py --checkouts-root <directory> --repo .github=. --output site/spec-status.html`.
 See `python scripts/public_spec_report.py --help` for explicit checkout paths.
+
+The [runtime diagram guide](docs/runtime-diagram.md) defines the maintained SVG source
+and deterministic synchronization of compatibility assets.
