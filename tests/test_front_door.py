@@ -10,8 +10,7 @@ import pytest
 from scripts.check_front_door import PAGES, audit, check_http, check_relative, extract_links
 
 ROOT = Path(__file__).resolve().parents[1]
-CORE = {"graph-os", "agent-webui", "agent-utilities", "epistemic-graph", "epistemic-graph-server", "agent-connector-sdk"}
-ADDITIONAL = {"agent-terminal-ui", "geniusbot"}
+CORE = {"graph-os", "agent-webui", "agent-utilities", "epistemic-graph", "epistemic-graph-server", "agent-connector-sdk", "agent-terminal-ui", "geniusbot"}
 
 
 def repositories(text):
@@ -21,15 +20,16 @@ def repositories(text):
 @pytest.mark.parametrize("name", PAGES)
 def test_component_roles_and_navigation_remain_consistent(name):
     text = (ROOT / name).read_text()
-    core = text.split("Five core projects", 1)[1].split("Additional operator surfaces", 1)[0]
-    additional = text.split("Additional operator surfaces", 1)[1]
+    marker = "Core projects"
+    core = text.split(marker, 1)[1]
     if name.endswith(".html"):
-        additional = additional.split("Related contributor repositories", 1)[0]
+        core = core.split("Related contributor repositories", 1)[0]
     else:
-        additional = additional.split("## Start at the runtime door", 1)[0]
+        core = core.split("## Start at the runtime door", 1)[0]
     assert repositories(core) == CORE
-    assert repositories(additional) == ADDITIONAL
-    assert "Graph OS REST interface" in additional
+    assert "Graph OS REST interface" in core
+    if not name.endswith(".html"):
+        assert len(re.findall(r"<tr>", core)) == 4 and core.count('<td width="50%"') == 8
     assert "spec-status.html" in text
     assert "CONTRIBUTING.md" in text
 
