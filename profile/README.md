@@ -63,7 +63,16 @@ The reasoning and durable knowledge engine for graph, RDF, SQL, vectors, time, b
 </td>
 </tr>
 <tr>
-<td colspan="2" valign="top">
+<td width="50%" valign="top">
+
+### [Epistemic Graph Server](https://github.com/Knuckles-Team/epistemic-graph-server)
+
+Native epistemic-graph server, packaged for PyPI and container images.
+
+**[Documentation](https://knuckles-team.github.io/epistemic-graph-server/)** · **[PyPI](https://pypi.org/project/epistemic-graph-server/)** · **[Spec delivery](https://knuckles-team.github.io/epistemic-graph-server/spec-delivery/)**
+
+</td>
+<td width="50%" valign="top">
 
 ### [Agent Connector SDK](https://github.com/Knuckles-Team/agent-connector-sdk)
 
