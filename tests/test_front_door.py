@@ -10,7 +10,7 @@ import pytest
 from scripts.check_front_door import PAGES, audit, check_http, check_relative, extract_links
 
 ROOT = Path(__file__).resolve().parents[1]
-CORE = {"graph-os", "agent-webui", "agent-utilities", "epistemic-graph", "agent-connector-sdk"}
+CORE = {"graph-os", "agent-webui", "agent-utilities", "epistemic-graph", "epistemic-graph-server", "agent-connector-sdk"}
 ADDITIONAL = {"agent-terminal-ui", "geniusbot"}
 
 
