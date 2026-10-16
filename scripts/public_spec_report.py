@@ -41,7 +41,6 @@ REPOS = (
 # Repositories whose Pages site serves /spec-delivery/ (checked 200 on 2026-10-11).
 SPEC_DELIVERY_PAGES = (
     "epistemic-graph",
-    "epistemic-graph-server",
     "agent-connector-sdk",
     "agent-utilities",
     "graph-os",

@@ -10,7 +10,7 @@
 **[Public specification status](https://knuckles-team.github.io/.github/spec-status.html)** · **[Repositories and skills](https://knuckles-team.github.io/.github/skills.html)** · **[Contribution guide](https://github.com/Knuckles-Team/.github/blob/main/CONTRIBUTING.md)**
 
 <!-- spec-delivery:begin -->
-Spec delivery: **[epistemic-graph](https://knuckles-team.github.io/epistemic-graph/spec-delivery/)** · **[epistemic-graph-server](https://knuckles-team.github.io/epistemic-graph-server/spec-delivery/)** · **[agent-connector-sdk](https://knuckles-team.github.io/agent-connector-sdk/spec-delivery/)** · **[agent-utilities](https://knuckles-team.github.io/agent-utilities/spec-delivery/)** · **[graph-os](https://knuckles-team.github.io/graph-os/spec-delivery/)** · **[agent-webui](https://knuckles-team.github.io/agent-webui/spec-delivery/)** · **[agent-terminal-ui](https://knuckles-team.github.io/agent-terminal-ui/spec-delivery/)** · **[geniusbot](https://knuckles-team.github.io/geniusbot/spec-delivery/)**
+Spec delivery: **[epistemic-graph](https://knuckles-team.github.io/epistemic-graph/spec-delivery/)** · **[agent-connector-sdk](https://knuckles-team.github.io/agent-connector-sdk/spec-delivery/)** · **[agent-utilities](https://knuckles-team.github.io/agent-utilities/spec-delivery/)** · **[graph-os](https://knuckles-team.github.io/graph-os/spec-delivery/)** · **[agent-webui](https://knuckles-team.github.io/agent-webui/spec-delivery/)** · **[agent-terminal-ui](https://knuckles-team.github.io/agent-terminal-ui/spec-delivery/)** · **[geniusbot](https://knuckles-team.github.io/geniusbot/spec-delivery/)**
 <!-- spec-delivery:end -->
 
 <img src="https://raw.githubusercontent.com/Knuckles-Team/epistemic-graph/main/docs/assets/runtime-architecture.svg" alt="Knuckles-Team platform runtime architecture" width="100%">
@@ -19,7 +19,7 @@ Spec delivery: **[epistemic-graph](https://knuckles-team.github.io/epistemic-gra
 
 ## Core projects
 
-The eight core projects are **Graph OS**, **Agent Web UI**, **Epistemic Graph**, **Epistemic Graph Server**, **Agent Utilities**, **Agent Connector SDK**, **Agent Terminal UI**, and **GeniusBot**. **Agent Terminal UI** and **GeniusBot** are further operator surfaces on the same Graph OS boundary. Agent Web UI provides the browser operator surface through Graph OS. MCP, REST, and A2A clients use the same governed **Graph OS** boundary. Graph OS composes the runtime and delegates agent work to the **Agent Utilities** control plane. **Epistemic Graph** commits durable knowledge, evidence, provenance, and reasoning results. Source systems connect through the governed **Agent Connector SDK** contract.
+The seven core projects are **Graph OS**, **Agent Web UI**, **Epistemic Graph**, **Agent Utilities**, **Agent Connector SDK**, **Agent Terminal UI**, and **GeniusBot**. **Agent Terminal UI** and **GeniusBot** are further operator surfaces on the same Graph OS boundary. Agent Web UI provides the browser operator surface through Graph OS. MCP, REST, and A2A clients use the same governed **Graph OS** boundary. Graph OS composes the runtime and delegates agent work to the **Agent Utilities** control plane. **Epistemic Graph** commits durable knowledge, evidence, provenance, and reasoning results. Source systems connect through the governed **Agent Connector SDK** contract.
 
 <table>
 <tr>
@@ -47,22 +47,11 @@ The browser operator experience for conversations, approvals, tool activity, and
 
 ### [Epistemic Graph](https://github.com/Knuckles-Team/epistemic-graph)
 
-The reasoning and durable knowledge engine for graph, RDF, SQL, vectors, time, blobs, evidence, and provenance.
+The reasoning and durable knowledge engine for graph, RDF, SQL, vectors, time, blobs, evidence, and provenance. Publishes `epistemic-graph` and `epistemic-graph-server` (the native server and its container image; [PyPI](https://pypi.org/project/epistemic-graph-server/)).
 
 **[Documentation](https://knuckles-team.github.io/epistemic-graph/)** · **[Capability status](https://knuckles-team.github.io/epistemic-graph/status/)** · **[Spec delivery](https://knuckles-team.github.io/epistemic-graph/spec-delivery/)**
 
 </td>
-<td width="50%" valign="top">
-
-### [Epistemic Graph Server](https://github.com/Knuckles-Team/epistemic-graph-server)
-
-Native epistemic-graph server, packaged for PyPI and container images.
-
-**[Documentation](https://knuckles-team.github.io/epistemic-graph-server/)** · **[PyPI](https://pypi.org/project/epistemic-graph-server/)** · **[Spec delivery](https://knuckles-team.github.io/epistemic-graph-server/spec-delivery/)**
-
-</td>
-</tr>
-<tr>
 <td width="50%" valign="top">
 
 ### [Agent Utilities](https://github.com/Knuckles-Team/agent-utilities)
@@ -72,6 +61,8 @@ The agent control plane: agents, workflows, evaluation, skills, and governed exe
 **[Documentation](https://knuckles-team.github.io/agent-utilities/)** · **[Build status](https://github.com/Knuckles-Team/agent-utilities/actions)** · **[Spec delivery](https://knuckles-team.github.io/agent-utilities/spec-delivery/)**
 
 </td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 
 ### [Agent Connector SDK](https://github.com/Knuckles-Team/agent-connector-sdk)
@@ -81,8 +72,6 @@ The governed source-integration boundary for connector identity, discovery, sync
 **[Documentation](https://knuckles-team.github.io/agent-connector-sdk/)** · **[Build status](https://github.com/Knuckles-Team/agent-connector-sdk/actions)** · **[Spec delivery](https://knuckles-team.github.io/agent-connector-sdk/spec-delivery/)**
 
 </td>
-</tr>
-<tr>
 <td width="50%" valign="top">
 
 ### [Agent Terminal UI](https://github.com/Knuckles-Team/agent-terminal-ui)
@@ -92,6 +81,8 @@ The terminal operator surface for the Graph OS REST interface.
 **[Documentation](https://knuckles-team.github.io/agent-terminal-ui/)** · **[Build status](https://github.com/Knuckles-Team/agent-terminal-ui/actions)** · **[Spec delivery](https://knuckles-team.github.io/agent-terminal-ui/spec-delivery/)**
 
 </td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 
 ### [GeniusBot](https://github.com/Knuckles-Team/geniusbot)
@@ -137,4 +128,4 @@ The [organization specification report](https://knuckles-team.github.io/.github/
 
 Pick an open requirement in the [specification status report](https://knuckles-team.github.io/.github/spec-status.html), then read its owner repository's `spec.md`, `requirements.md`, `plan.md`, `test-spec.md`, `tasks.md`, and `status.json`. The owner repo defines the implementation; related repository specs describe consumers and interfaces. Bootstrap with [`graph-os-development`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/graph-os-development), then use [universal-skills](https://github.com/Knuckles-Team/universal-skills): [`spec-generator`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/spec-generator), [`task-planner`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/task-planner), [`sdd-implementer`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/sdd-implementer), [`spec-verifier`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/spec-verifier), and [`sdd-full-lifecycle`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development-workflows/sdd-full-lifecycle). The [step-by-step guide](https://github.com/Knuckles-Team/.github/blob/main/CONTRIBUTING.md) covers local setup, reuse, tests, pull requests, and public evidence.
 
-All eight core projects are released under the [MIT License](https://opensource.org/license/mit).
+All seven core projects are released under the [MIT License](https://opensource.org/license/mit).
