@@ -21,5 +21,4 @@ To render locally, clone the public owner repositories under one directory and r
 `python scripts/public_spec_report.py --checkouts-root <directory> --repo .github=. --output site/spec-status.html`.
 See `python scripts/public_spec_report.py --help` for explicit checkout paths.
 
-The [runtime diagram guide](docs/runtime-diagram.md) defines the maintained SVG source
-and deterministic synchronization of compatibility assets.
+The runtime diagram is one file, [maintained in Epistemic Graph](https://raw.githubusercontent.com/Knuckles-Team/epistemic-graph/main/docs/assets/runtime-architecture.svg), and referenced by URL.
