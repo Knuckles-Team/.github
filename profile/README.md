@@ -5,12 +5,12 @@
 
 **A governed runtime for building agents, connecting operational systems, and turning every action into durable, explainable knowledge.**
 
-[![Platform documentation](https://img.shields.io/badge/platform-documentation-6d5dfc?style=for-the-badge)](https://knuckles-team.github.io/agent-utilities/) [![Run GraphOS](https://img.shields.io/badge/start-GraphOS-18a999?style=for-the-badge)](https://knuckles-team.github.io/graph-os/) [![GitHub repositories](https://img.shields.io/badge/explore-repositories-111827?style=for-the-badge&logo=github)](https://github.com/orgs/Knuckles-Team/repositories)
+[![Platform documentation](https://img.shields.io/badge/platform-documentation-6d5dfc?style=for-the-badge)](https://knuckles-team.github.io/agent-utilities/) [![Run Arbora](https://img.shields.io/badge/start-Arbora-18a999?style=for-the-badge)](https://knuckles-team.github.io/arbora/) [![GitHub repositories](https://img.shields.io/badge/explore-repositories-111827?style=for-the-badge&logo=github)](https://github.com/orgs/Knuckles-Team/repositories)
 
 **[Public specification status](https://knuckles-team.github.io/.github/spec-status.html)** · **[Repositories and skills](https://knuckles-team.github.io/.github/skills.html)** · **[Contribution guide](https://github.com/Knuckles-Team/.github/blob/main/CONTRIBUTING.md)**
 
 <!-- spec-delivery:begin -->
-Spec delivery: **[epistemic-graph](https://knuckles-team.github.io/epistemic-graph/spec-delivery/)** · **[agent-connector-sdk](https://knuckles-team.github.io/agent-connector-sdk/spec-delivery/)** · **[agent-utilities](https://knuckles-team.github.io/agent-utilities/spec-delivery/)** · **[graph-os](https://knuckles-team.github.io/graph-os/spec-delivery/)** · **[agent-webui](https://knuckles-team.github.io/agent-webui/spec-delivery/)** · **[agent-terminal-ui](https://knuckles-team.github.io/agent-terminal-ui/spec-delivery/)** · **[geniusbot](https://knuckles-team.github.io/geniusbot/spec-delivery/)**
+Spec delivery: **[epistemic-graph](https://knuckles-team.github.io/epistemic-graph/spec-delivery/)** · **[agent-connector-sdk](https://knuckles-team.github.io/agent-connector-sdk/spec-delivery/)** · **[agent-utilities](https://knuckles-team.github.io/agent-utilities/spec-delivery/)** · **[arbora](https://knuckles-team.github.io/arbora/spec-delivery/)** · **[agent-webui](https://knuckles-team.github.io/agent-webui/spec-delivery/)** · **[agent-terminal-ui](https://knuckles-team.github.io/agent-terminal-ui/spec-delivery/)** · **[geniusbot](https://knuckles-team.github.io/geniusbot/spec-delivery/)**
 <!-- spec-delivery:end -->
 
 <img src="https://raw.githubusercontent.com/Knuckles-Team/epistemic-graph/main/docs/assets/runtime-architecture.svg" alt="Knuckles-Team platform runtime architecture" width="100%">
@@ -19,17 +19,17 @@ Spec delivery: **[epistemic-graph](https://knuckles-team.github.io/epistemic-gra
 
 ## Core projects
 
-The seven core projects are **Graph OS**, **Agent Web UI**, **Epistemic Graph**, **Agent Utilities**, **Agent Connector SDK**, **Agent Terminal UI**, and **GeniusBot**. **Agent Terminal UI** and **GeniusBot** are further operator surfaces on the same Graph OS boundary. Agent Web UI provides the browser operator surface through Graph OS. MCP, REST, and A2A clients use the same governed **Graph OS** boundary. Graph OS composes the runtime and delegates agent work to the **Agent Utilities** control plane. **Epistemic Graph** commits durable knowledge, evidence, provenance, and reasoning results. Source systems connect through the governed **Agent Connector SDK** contract.
+The seven core projects are **Arbora**, **Agent Web UI**, **Epistemic Graph**, **Agent Utilities**, **Agent Connector SDK**, **Agent Terminal UI**, and **GeniusBot**. **Agent Terminal UI** and **GeniusBot** are further operator surfaces on the same Arbora boundary. Agent Web UI provides the browser operator surface through Arbora. MCP, REST, and A2A clients use the same governed **Arbora** boundary. Arbora composes the runtime and delegates agent work to the **Agent Utilities** control plane. **Epistemic Graph** commits durable knowledge, evidence, provenance, and reasoning results. Source systems connect through the governed **Agent Connector SDK** contract.
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-### [Graph OS](https://github.com/Knuckles-Team/graph-os)
+### [Arbora](https://github.com/Knuckles-Team/arbora)
 
 The public runtime gateway: MCP, REST, A2A, identity, policy, fleet composition, and WebUI hosting.
 
-**[Documentation](https://knuckles-team.github.io/graph-os/)** · **[Build status](https://github.com/Knuckles-Team/graph-os/actions)** · **[Spec delivery](https://knuckles-team.github.io/graph-os/spec-delivery/)**
+**[Documentation](https://knuckles-team.github.io/arbora/)** · **[Build status](https://github.com/Knuckles-Team/arbora/actions)** · **[Spec delivery](https://knuckles-team.github.io/arbora/spec-delivery/)**
 
 </td>
 <td width="50%" valign="top">
@@ -76,7 +76,7 @@ The governed source-integration boundary for connector identity, discovery, sync
 
 ### [Agent Terminal UI](https://github.com/Knuckles-Team/agent-terminal-ui)
 
-The terminal operator surface for the Graph OS REST interface.
+The terminal operator surface for the Arbora REST interface.
 
 **[Documentation](https://knuckles-team.github.io/agent-terminal-ui/)** · **[Build status](https://github.com/Knuckles-Team/agent-terminal-ui/actions)** · **[Spec delivery](https://knuckles-team.github.io/agent-terminal-ui/spec-delivery/)**
 
@@ -97,35 +97,35 @@ The desktop cockpit for specialist agents, embedded terminals, tool approvals, a
 
 ## Start at the runtime door
 
-Graph OS is the governed runtime entry point. With Python 3.12+ and [`uv`](https://docs.astral.sh/uv/) installed, launch the zero-infrastructure local profile:
+Arbora is the governed runtime entry point. With Python 3.12+ and [`uv`](https://docs.astral.sh/uv/) installed, launch the zero-infrastructure local profile:
 
 ```bash
-uvx --from graph-os setup-config generate --profile tiny
-uvx --from graph-os graph-os --transport stdio
+uvx --from arbora setup-config generate --profile tiny
+uvx --from arbora arbora --transport stdio
 ```
 
-The generated profile starts with local, bounded defaults. Continue with the **[Graph OS quick start](https://knuckles-team.github.io/graph-os/)** for provider configuration, Agent Web UI hosting, messaging, and authenticated network transports.
+The generated profile starts with local, bounded defaults. Continue with the **[Arbora quick start](https://knuckles-team.github.io/arbora/)** for provider configuration, Agent Web UI hosting, messaging, and authenticated network transports.
 
 ## Follow the flow
 
 | If you want to… | Start here |
 |---|---|
-| Run the platform or connect an MCP/A2A client | [Graph OS documentation](https://knuckles-team.github.io/graph-os/) |
+| Run the platform or connect an MCP/A2A client | [Arbora documentation](https://knuckles-team.github.io/arbora/) |
 | Use the browser experience | [Agent Web UI documentation](https://knuckles-team.github.io/agent-webui/) |
 | Build agents, workflows, evaluations, or skills | [Agent Utilities documentation](https://knuckles-team.github.io/agent-utilities/) |
 | Query or operate the knowledge engine directly | [Epistemic Graph documentation](https://knuckles-team.github.io/epistemic-graph/) |
 | Build or certify a source connector | [Agent Connector SDK documentation](https://knuckles-team.github.io/agent-connector-sdk/) |
 
-Every repository documents its own contract and links back to this same runtime map. The boundaries are deliberate: Graph OS is the door, Agent Utilities controls agent behavior, Epistemic Graph owns durable knowledge and reasoning, Agent Web UI presents the browser surface, and Agent Connector SDK governs source integration.
+Every repository documents its own contract and links back to this same runtime map. The boundaries are deliberate: Arbora is the door, Agent Utilities controls agent behavior, Epistemic Graph owns durable knowledge and reasoning, Agent Web UI presents the browser surface, and Agent Connector SDK governs source integration.
 
 ## Project health
 
 Build and release evidence lives with the component that owns it. Use each repository's **Actions** page for current CI and its Pages **Status** or **Capabilities** section for shipped behavior. Public issues and pull requests are tracked in the owning repository so operational and design discussions retain their architectural context.
 
-The [organization specification report](https://knuckles-team.github.io/.github/spec-status.html) collects owner-native public specs across the core repositories and related public owners. Filter to `SPECIFIED` to find published work waiting to be built; delivery and acceptance are separate states. The [contribution guide](https://github.com/Knuckles-Team/.github/blob/main/CONTRIBUTING.md) links the shared `graph-os-development` and spec skills.
+The [organization specification report](https://knuckles-team.github.io/.github/spec-status.html) collects owner-native public specs across the core repositories and related public owners. Filter to `SPECIFIED` to find published work waiting to be built; delivery and acceptance are separate states. The [contribution guide](https://github.com/Knuckles-Team/.github/blob/main/CONTRIBUTING.md) links the shared `arbora-development` and spec skills.
 
 ## Contribute from a public spec
 
-Pick an open requirement in the [specification status report](https://knuckles-team.github.io/.github/spec-status.html), then read its owner repository's `spec.md`, `requirements.md`, `plan.md`, `test-spec.md`, `tasks.md`, and `status.json`. The owner repo defines the implementation; related repository specs describe consumers and interfaces. Bootstrap with [`graph-os-development`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/graph-os-development), then use [universal-skills](https://github.com/Knuckles-Team/universal-skills): [`spec-generator`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/spec-generator), [`task-planner`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/task-planner), [`sdd-implementer`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/sdd-implementer), [`spec-verifier`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/spec-verifier), and [`sdd-full-lifecycle`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development-workflows/sdd-full-lifecycle). The [step-by-step guide](https://github.com/Knuckles-Team/.github/blob/main/CONTRIBUTING.md) covers local setup, reuse, tests, pull requests, and public evidence.
+Pick an open requirement in the [specification status report](https://knuckles-team.github.io/.github/spec-status.html), then read its owner repository's `spec.md`, `requirements.md`, `plan.md`, `test-spec.md`, `tasks.md`, and `status.json`. The owner repo defines the implementation; related repository specs describe consumers and interfaces. Bootstrap with [`arbora-development`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/arbora-development), then use [universal-skills](https://github.com/Knuckles-Team/universal-skills): [`spec-generator`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/spec-generator), [`task-planner`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/task-planner), [`sdd-implementer`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/sdd-implementer), [`spec-verifier`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/spec-verifier), and [`sdd-full-lifecycle`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development-workflows/sdd-full-lifecycle). The [step-by-step guide](https://github.com/Knuckles-Team/.github/blob/main/CONTRIBUTING.md) covers local setup, reuse, tests, pull requests, and public evidence.
 
 All seven core projects are released under the [MIT License](https://opensource.org/license/mit).
