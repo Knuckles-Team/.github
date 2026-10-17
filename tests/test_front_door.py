@@ -10,7 +10,7 @@ import pytest
 from scripts.check_front_door import PAGES, audit, check_http, check_relative, extract_links
 
 ROOT = Path(__file__).resolve().parents[1]
-CORE = {"graph-os", "agent-webui", "agent-utilities", "epistemic-graph", "agent-connector-sdk", "agent-terminal-ui", "geniusbot"}
+CORE = {"arbora", "agent-webui", "agent-utilities", "epistemic-graph", "agent-connector-sdk", "agent-terminal-ui", "geniusbot"}
 
 
 def repositories(text):
@@ -27,7 +27,7 @@ def test_component_roles_and_navigation_remain_consistent(name):
     else:
         core = core.split("## Start at the runtime door", 1)[0]
     assert repositories(core) == CORE
-    assert "Graph OS REST interface" in core
+    assert "Arbora REST interface" in core
     if not name.endswith(".html"):
         assert len(re.findall(r"<tr>", core)) == 4 and core.count('<td width="50%"') == 7
     assert "spec-status.html" in text

@@ -1,4 +1,4 @@
-name: Publish Graph OS specification status
+name: Publish Arbora specification status
 
 on:
   push:
@@ -57,11 +57,11 @@ jobs:
           path: sources/agent-utilities
           fetch-depth: 0
           persist-credentials: false
-      - name: Checkout graph-os
+      - name: Checkout arbora
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          repository: Knuckles-Team/graph-os
-          path: sources/graph-os
+          repository: Knuckles-Team/arbora
+          path: sources/arbora
           fetch-depth: 0
           persist-credentials: false
       - name: Checkout agent-webui

@@ -29,7 +29,7 @@ REPOS = (
     "epistemic-graph",
     "agent-connector-sdk",
     "agent-utilities",
-    "graph-os",
+    "arbora",
     "agent-webui",
     "repository-manager",
     "pipelines",
@@ -43,7 +43,7 @@ SPEC_DELIVERY_PAGES = (
     "epistemic-graph",
     "agent-connector-sdk",
     "agent-utilities",
-    "graph-os",
+    "arbora",
     "agent-webui",
     "agent-terminal-ui",
     "geniusbot",
@@ -352,7 +352,7 @@ def render(
     )
     return f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Graph OS public specification status</title>
+<title>Arbora public specification status</title>
 <style>
 :root {{ color-scheme: light dark; font: 16px system-ui, sans-serif; }} body {{ max-width: 100rem; margin: auto; padding: 1.5rem; }}
 table {{ width: 100%; border-collapse: collapse; }} th,td {{ padding: .5rem; border-bottom: 1px solid #8886; text-align: left; vertical-align: top; }}
@@ -360,7 +360,7 @@ th {{ position: sticky; top: 0; background: Canvas; }} .badge {{ border: 1px sol
 .accepted,.landed,.closed {{ border-color: #18964a; }} .failed,.rejected {{ border-color: #c33; }} .issue {{ display: block; color: #b33; }}
 progress {{ width: 6rem; }} details ul {{ margin: .3rem 0; padding-left: 1.1rem; }} label {{ display: inline-block; margin: .3rem 1rem .3rem 0; }} input,select {{ font: inherit; padding: .3rem; }}
 </style></head><body>
-<main><p><a href="./">Graph OS ecosystem</a> · <a href="https://github.com/Knuckles-Team/.github/blob/main/CONTRIBUTING.md">Contribute</a></p><h1>Graph OS public specification status</h1>
+<main><p><a href="./">Arbora ecosystem</a> · <a href="https://github.com/Knuckles-Team/.github/blob/main/CONTRIBUTING.md">Contribute</a></p><h1>Arbora public specification status</h1>
 <p>Snapshot through {escape(source_time)} from the committed <code>specs/</code> revisions listed below in the public repositories. The repository specs and linked CI results are the evidence; source presence alone cannot establish completion. Missing or unsupported status metadata is shown as UNKNOWN / NOT AUDITED.</p>
 <p><strong>{len(rows)} specs</strong> · Delivery: {escape(count_text)} · Acceptance: {escape(accept_text)}</p>
 <h2>Requirement delivery</h2>

@@ -4,7 +4,7 @@ from scripts.public_spec_report import evaluate_status, render, valid_evidence
 from scripts.requirement_progress import progress, requirement_rows
 
 SHA = "b" * 40
-REPO = "graph-os"
+REPO = "arbora"
 
 
 def proof(kind, commit=SHA):

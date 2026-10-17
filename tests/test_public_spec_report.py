@@ -6,7 +6,7 @@ from pathlib import Path
 from scripts.public_spec_report import committed_specs, evaluate_status, render
 
 SHA = "a" * 40
-REPO = "graph-os"
+REPO = "arbora"
 
 
 def status(**changes):

@@ -1,6 +1,6 @@
-# Graph OS organization hub
+# Arbora organization hub
 
-The [organization profile](profile/README.md) introduces the Graph OS ecosystem.
+The [organization profile](profile/README.md) introduces the Arbora ecosystem.
 The [repositories and skills map](site/skills.html) links the public owners,
 universal-skills kit, and canonical `graph-os-development` instructions.
 The [specification status report](site/spec-status.html) is generated from committed
