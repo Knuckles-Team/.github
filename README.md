@@ -2,7 +2,7 @@
 
 The [organization profile](profile/README.md) introduces the Arbora ecosystem.
 The [repositories and skills map](site/skills.html) links the public owners,
-universal-skills kit, and canonical `graph-os-development` instructions.
+universal-skills kit, and canonical `arbora-development` instructions.
 The [specification status report](site/spec-status.html) is generated from committed
 `specs/*/status.json` in the public owner repositories and this organization hub. It shows, per
 repository and per specification, how many requirements are delivered and which are still open. The [contribution
