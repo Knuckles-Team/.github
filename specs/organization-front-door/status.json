@@ -13,7 +13,11 @@
     "ORG-FRONT-R003",
     "ORG-FRONT-R003.1",
     "ORG-FRONT-R003.2",
-    "ORG-FRONT-R003.3"
+    "ORG-FRONT-R003.3",
+    "ORG-FRONT-R004",
+    "ORG-FRONT-R005",
+    "ORG-FRONT-R006",
+    "ORG-FRONT-R007"
   ],
   "requirements": [
     {
@@ -106,6 +110,34 @@
     {
       "id": "ORG-FRONT-R003.3",
       "title": "The link evidence covers the explorer",
+      "delivery_state": "SPECIFIED",
+      "landed_in": [],
+      "verified_by": []
+    },
+    {
+      "id": "ORG-FRONT-R004",
+      "title": "The status report reads schema version 2 natively",
+      "delivery_state": "SPECIFIED",
+      "landed_in": [],
+      "verified_by": []
+    },
+    {
+      "id": "ORG-FRONT-R005",
+      "title": "The status page shows the state breakdown",
+      "delivery_state": "SPECIFIED",
+      "landed_in": [],
+      "verified_by": []
+    },
+    {
+      "id": "ORG-FRONT-R006",
+      "title": "A root AGENTS.md is the agent front door",
+      "delivery_state": "SPECIFIED",
+      "landed_in": [],
+      "verified_by": []
+    },
+    {
+      "id": "ORG-FRONT-R007",
+      "title": "Agent entry points are wired in",
       "delivery_state": "SPECIFIED",
       "landed_in": [],
       "verified_by": []

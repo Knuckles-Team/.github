@@ -23,3 +23,7 @@ Audit source: `5e674839fb10e1aea4e3f11468fe804636fdd8b6`. See [complete evidence
 - [ ] ORG-FRONT-R003.1: build the explorer in `spec-status-pages.yml` on a 30-minute schedule and on dispatch.
 - [ ] ORG-FRONT-R003.2: point the profile's specification-status links and the runtime diagram at the explorer.
 - [ ] ORG-FRONT-R003.3: regenerate `evidence/links.json` with the explorer URL passing.
+- [ ] ORG-FRONT-R004: the status report reads schema version 2 natively.
+- [ ] ORG-FRONT-R005: the status page shows the state breakdown.
+- [ ] ORG-FRONT-R006: a root agents.md is the agent front door.
+- [ ] ORG-FRONT-R007: agent entry points are wired in.

@@ -96,3 +96,26 @@ def test_readme_spec_delivery_links_match_the_single_list():
     assert set(found) == expected
     assert all(re.fullmatch(r"https://knuckles-team\.github\.io/[\w-]+/spec-delivery/", u) for u in found)
     assert spec_delivery_links.render() in text
+
+
+# Verifies ORG-FRONT-R006.
+def test_agents_md_is_the_agent_front_door():
+    text = (ROOT / "AGENTS.md").read_text()
+    for repo in CORE:
+        assert f"github.com/Knuckles-Team/{repo})" in text
+    for needle in (
+        "reference/ecosystem-boundaries.md", "reference/spec-standard.md", "spec-status.html",
+        "/architecture/", "scripts/bootstrap.sh", "Spec: none (docs)", "Smallest contribution",
+        "SPECIFIED", "LANDED", "VERIFIED", "-R[0-9]{3}", "sdd-full-lifecycle", "spec-generator",
+    ):
+        assert needle in text, needle
+    assert len(re.findall(r"^\d\. ", text.split("## Contribution path", 1)[1].split("##", 1)[0], re.M)) == 6
+    for link in re.findall(r"\]\((?!https?://|#)([^)]+)\)", text):
+        assert (ROOT / link).exists(), link
+
+
+# Verifies ORG-FRONT-R007.
+def test_agent_entry_points_point_at_agents_md():
+    assert (ROOT / "CLAUDE.md").read_text().strip() == "@AGENTS.md"
+    assert "AGENTS.md" in (ROOT / "CONTRIBUTING.md").read_text()[:300]
+    assert "AGENTS.md" in (ROOT / "profile/README.md").read_text()[:300]
