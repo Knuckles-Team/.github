@@ -1,4 +1,4 @@
-name: Publish Arbora specification status
+name: Publish Arbora specification status and architecture explorer
 
 on:
   push:
@@ -9,8 +9,13 @@ on:
       - scripts/requirement_progress.py
       - specs/**
       - .github/workflows/spec-status-pages.yml
+  # The architecture explorer reads every repository's default branch at build
+  # time, so the schedule is what keeps it current; a specs-changed dispatch
+  # from the shared Pages workflow rebuilds sooner when a token is configured.
   schedule:
-    - cron: '17 6 * * *'
+    - cron: '7,37 * * * *'
+  repository_dispatch:
+    types: [specs-changed]
   workflow_dispatch: {}
 
 permissions:
@@ -119,6 +124,24 @@ jobs:
             --checkouts-root sources \
             --repo .github=hub \
             --output hub/site/spec-status.html
+      - name: Checkout architecture explorer generator
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: Knuckles-Team/pipelines
+          ref: main
+          path: generator
+          persist-credentials: false
+          sparse-checkout: |
+            scripts/__init__.py
+            scripts/architecture_explorer
+      - name: Build architecture explorer
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          npm ci --prefix generator/scripts/architecture_explorer --no-audit --no-fund
+          python3 generator/scripts/architecture_explorer/build.py --mode github \
+            --page hub/site/architecture/index.html
       - name: Configure Pages
         uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6
       - name: Upload Pages artifact
