@@ -103,8 +103,10 @@
     {
       "id": "ORG-FRONT-R003.2",
       "title": "The profile sends visitors to the explorer at the top level",
-      "delivery_state": "SPECIFIED",
-      "landed_in": [],
+      "delivery_state": "LANDED",
+      "landed_in": [
+        "a51aacab4e6c"
+      ],
       "verified_by": []
     },
     {
