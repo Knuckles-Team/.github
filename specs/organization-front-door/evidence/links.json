@@ -1,9 +1,9 @@
 {
-  "checked_at": "2026-10-04T03:41:08.262480+00:00",
+  "checked_at": "2026-10-22T17:14:45.720181+00:00",
   "source_sha256": {
-    "profile/README.md": "3d12ab539e1ba16cbf088e2552be20ca2199e809e0b02a622b3497db01f3da12",
-    "site/index.html": "62066660a69eb537016e3c6ce66384b118ffe03726e7ad8acffccf2ed30aa991",
-    "site/skills.html": "56d449b550b7d3cefe7799e59f851db2d7d1149de96ba3880b6739ae65ffe893"
+    "profile/README.md": "e6ff9b749ddb640568cd4cd29d7afb2636547f9bd08cc9e5ee682e88c14c05da",
+    "site/index.html": "9fb3b6e13fd81c68364cd9c639fa4ee8afc7f6a47237486294bd3baadd8f09a8",
+    "site/skills.html": "180220d3f09a156769404a7d2879ff4e4bc0cde01c7a0852dcefdce729ec4f2c"
   },
   "method": "GET, follow redirects, require final HTTP 200; relative destinations must be repository files",
   "http": [
@@ -34,18 +34,6 @@
       "content_type": "text/html; charset=utf-8",
       "result": "passed",
       "sources": [
-        "site/skills.html"
-      ]
-    },
-    {
-      "url": "https://github.com/Knuckles-Team/.github/blob/main/CONTRIBUTING.md",
-      "status": 200,
-      "final_url": "https://github.com/Knuckles-Team/.github/blob/main/CONTRIBUTING.md",
-      "content_type": "text/html; charset=utf-8",
-      "result": "passed",
-      "sources": [
-        "profile/README.md",
-        "site/index.html",
         "site/skills.html"
       ]
     },
@@ -138,6 +126,38 @@
       ]
     },
     {
+      "url": "https://github.com/Knuckles-Team/arbora",
+      "status": 200,
+      "final_url": "https://github.com/Knuckles-Team/arbora",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md",
+        "site/index.html",
+        "site/skills.html"
+      ]
+    },
+    {
+      "url": "https://github.com/Knuckles-Team/arbora/actions",
+      "status": 200,
+      "final_url": "https://github.com/Knuckles-Team/arbora/actions",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md"
+      ]
+    },
+    {
+      "url": "https://github.com/Knuckles-Team/arbora/tree/main/arbora/skills/arbora-development",
+      "status": 200,
+      "final_url": "https://github.com/Knuckles-Team/arbora/tree/main/arbora/skills/arbora-development",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "site/skills.html"
+      ]
+    },
+    {
       "url": "https://github.com/Knuckles-Team/emerald-exchange",
       "status": 200,
       "final_url": "https://github.com/Knuckles-Team/emerald-exchange",
@@ -180,38 +200,6 @@
       "result": "passed",
       "sources": [
         "profile/README.md"
-      ]
-    },
-    {
-      "url": "https://github.com/Knuckles-Team/graph-os",
-      "status": 200,
-      "final_url": "https://github.com/Knuckles-Team/graph-os",
-      "content_type": "text/html; charset=utf-8",
-      "result": "passed",
-      "sources": [
-        "profile/README.md",
-        "site/index.html",
-        "site/skills.html"
-      ]
-    },
-    {
-      "url": "https://github.com/Knuckles-Team/graph-os/actions",
-      "status": 200,
-      "final_url": "https://github.com/Knuckles-Team/graph-os/actions",
-      "content_type": "text/html; charset=utf-8",
-      "result": "passed",
-      "sources": [
-        "profile/README.md"
-      ]
-    },
-    {
-      "url": "https://github.com/Knuckles-Team/graph-os/tree/main/graph_os/skills/graph-os-development",
-      "status": 200,
-      "final_url": "https://github.com/Knuckles-Team/graph-os/tree/main/graph_os/skills/graph-os-development",
-      "content_type": "text/html; charset=utf-8",
-      "result": "passed",
-      "sources": [
-        "site/skills.html"
       ]
     },
     {
@@ -272,6 +260,18 @@
       ]
     },
     {
+      "url": "https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/arbora-development",
+      "status": 200,
+      "final_url": "https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/arbora-development",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md",
+        "site/index.html",
+        "site/skills.html"
+      ]
+    },
+    {
       "url": "https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/automated-test-runner",
       "status": 200,
       "final_url": "https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/automated-test-runner",
@@ -298,18 +298,6 @@
       "content_type": "text/html; charset=utf-8",
       "result": "passed",
       "sources": [
-        "site/skills.html"
-      ]
-    },
-    {
-      "url": "https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/graph-os-development",
-      "status": 200,
-      "final_url": "https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/graph-os-development",
-      "content_type": "text/html; charset=utf-8",
-      "result": "passed",
-      "sources": [
-        "profile/README.md",
-        "site/index.html",
         "site/skills.html"
       ]
     },
@@ -392,9 +380,9 @@
       ]
     },
     {
-      "url": "https://img.shields.io/badge/start-GraphOS-18a999?style=for-the-badge",
+      "url": "https://img.shields.io/badge/start-Arbora-18a999?style=for-the-badge",
       "status": 200,
-      "final_url": "https://img.shields.io/badge/start-GraphOS-18a999?style=for-the-badge",
+      "final_url": "https://img.shields.io/badge/start-Arbora-18a999?style=for-the-badge",
       "content_type": "image/svg+xml;charset=utf-8",
       "result": "passed",
       "sources": [
@@ -402,19 +390,21 @@
       ]
     },
     {
-      "url": "https://knuckles-team.github.io/.github/skills.html",
+      "url": "https://knuckles-team.github.io/.github/architecture/",
       "status": 200,
-      "final_url": "https://knuckles-team.github.io/.github/skills.html",
+      "final_url": "https://knuckles-team.github.io/.github/architecture/",
       "content_type": "text/html; charset=utf-8",
       "result": "passed",
       "sources": [
-        "profile/README.md"
+        "profile/README.md",
+        "site/index.html",
+        "site/skills.html"
       ]
     },
     {
-      "url": "https://knuckles-team.github.io/.github/spec-status.html",
+      "url": "https://knuckles-team.github.io/.github/skills.html",
       "status": 200,
-      "final_url": "https://knuckles-team.github.io/.github/spec-status.html",
+      "final_url": "https://knuckles-team.github.io/.github/skills.html",
       "content_type": "text/html; charset=utf-8",
       "result": "passed",
       "sources": [
@@ -432,9 +422,29 @@
       ]
     },
     {
+      "url": "https://knuckles-team.github.io/agent-connector-sdk/spec-delivery/",
+      "status": 200,
+      "final_url": "https://knuckles-team.github.io/agent-connector-sdk/spec-delivery/",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md"
+      ]
+    },
+    {
       "url": "https://knuckles-team.github.io/agent-terminal-ui/",
       "status": 200,
       "final_url": "https://knuckles-team.github.io/agent-terminal-ui/",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md"
+      ]
+    },
+    {
+      "url": "https://knuckles-team.github.io/agent-terminal-ui/spec-delivery/",
+      "status": 200,
+      "final_url": "https://knuckles-team.github.io/agent-terminal-ui/spec-delivery/",
       "content_type": "text/html; charset=utf-8",
       "result": "passed",
       "sources": [
@@ -452,6 +462,16 @@
       ]
     },
     {
+      "url": "https://knuckles-team.github.io/agent-utilities/spec-delivery/",
+      "status": 200,
+      "final_url": "https://knuckles-team.github.io/agent-utilities/spec-delivery/",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md"
+      ]
+    },
+    {
       "url": "https://knuckles-team.github.io/agent-webui/",
       "status": 200,
       "final_url": "https://knuckles-team.github.io/agent-webui/",
@@ -462,9 +482,49 @@
       ]
     },
     {
+      "url": "https://knuckles-team.github.io/agent-webui/spec-delivery/",
+      "status": 200,
+      "final_url": "https://knuckles-team.github.io/agent-webui/spec-delivery/",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md"
+      ]
+    },
+    {
+      "url": "https://knuckles-team.github.io/arbora/",
+      "status": 200,
+      "final_url": "https://knuckles-team.github.io/arbora/",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md"
+      ]
+    },
+    {
+      "url": "https://knuckles-team.github.io/arbora/spec-delivery/",
+      "status": 200,
+      "final_url": "https://knuckles-team.github.io/arbora/spec-delivery/",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md"
+      ]
+    },
+    {
       "url": "https://knuckles-team.github.io/epistemic-graph/",
       "status": 200,
       "final_url": "https://knuckles-team.github.io/epistemic-graph/",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md"
+      ]
+    },
+    {
+      "url": "https://knuckles-team.github.io/epistemic-graph/spec-delivery/",
+      "status": 200,
+      "final_url": "https://knuckles-team.github.io/epistemic-graph/spec-delivery/",
       "content_type": "text/html; charset=utf-8",
       "result": "passed",
       "sources": [
@@ -492,9 +552,9 @@
       ]
     },
     {
-      "url": "https://knuckles-team.github.io/graph-os/",
+      "url": "https://knuckles-team.github.io/geniusbot/spec-delivery/",
       "status": 200,
-      "final_url": "https://knuckles-team.github.io/graph-os/",
+      "final_url": "https://knuckles-team.github.io/geniusbot/spec-delivery/",
       "content_type": "text/html; charset=utf-8",
       "result": "passed",
       "sources": [
@@ -512,9 +572,19 @@
       ]
     },
     {
-      "url": "https://raw.githubusercontent.com/Knuckles-Team/.github/main/profile/assets/runtime-architecture.svg",
+      "url": "https://pypi.org/project/epistemic-graph-server/",
       "status": 200,
-      "final_url": "https://raw.githubusercontent.com/Knuckles-Team/.github/main/profile/assets/runtime-architecture.svg",
+      "final_url": "https://pypi.org/project/epistemic-graph-server/",
+      "content_type": "text/html; charset=utf-8",
+      "result": "passed",
+      "sources": [
+        "profile/README.md"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Knuckles-Team/epistemic-graph/main/docs/assets/runtime-architecture.svg",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/Knuckles-Team/epistemic-graph/main/docs/assets/runtime-architecture.svg",
       "content_type": "image/svg+xml",
       "result": "passed",
       "sources": [
@@ -524,6 +594,21 @@
   ],
   "relative": [
     {
+      "source": "AGENTS.md",
+      "url": "AGENTS.md",
+      "result": "passed"
+    },
+    {
+      "source": "AGENTS.md",
+      "url": "CONTRIBUTING.md",
+      "result": "passed"
+    },
+    {
+      "source": "AGENTS.md",
+      "url": "CONTRIBUTING.md",
+      "result": "passed"
+    },
+    {
       "source": "site/index.html",
       "url": "skills.html",
       "result": "passed"
@@ -531,6 +616,11 @@
     {
       "source": "site/index.html",
       "url": "spec-status.html",
+      "result": "passed"
+    },
+    {
+      "source": "AGENTS.md",
+      "url": "CONTRIBUTING.md",
       "result": "passed"
     },
     {
@@ -546,11 +636,11 @@
   ],
   "unsupported": [],
   "summary": {
-    "http": 48,
-    "relative": 4,
+    "http": 55,
+    "relative": 8,
     "failed": 0
   },
   "result": "passed",
-  "commit": "5e674839fb10e1aea4e3f11468fe804636fdd8b6",
+  "commit": "a51aacab4e6c0e92dc5f5421db81becd3a956ba3",
   "worktree_changes": []
 }
