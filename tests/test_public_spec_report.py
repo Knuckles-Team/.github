@@ -95,3 +95,72 @@ def test_uncommitted_manifest_cannot_advance_status(tmp_path: Path):
     _, rows = committed_specs(repo, REPO)
     assert len(rows) == 1
     assert (rows[0]["delivery"], rows[0]["acceptance"]) == ("UNKNOWN", "NOT_AUDITED")
+
+
+def v2_manifest(**changes):
+    base = {
+        "schema_version": 2, "spec_id": "S-001", "owner_repo": REPO,
+        "delivery_state": "VERIFIED", "requirement_ids": ["S-R001", "S-R002"],
+        "requirements": [
+            {"id": "S-R001", "title": "a", "delivery_state": "VERIFIED",
+             "landed_in": ["abc1234"], "verified_by": ["tests/t.py::a"]},
+            {"id": "S-R002", "title": "b", "delivery_state": "RETIRED",
+             "landed_in": [], "verified_by": []},
+        ],
+    }
+    base.update(changes)
+    return base
+
+
+def test_v2_manifest_is_read_natively():
+    row = evaluate_status(REPO, "s", "specs/s/spec.md", v2_manifest())
+    assert (row["delivery"], row["problem"]) == ("VERIFIED", "")
+    assert evaluate_status(REPO, "s", "specs/s/spec.md",
+                           v2_manifest(delivery_state="BUILT"))["delivery"] == "UNKNOWN"
+
+
+def git_repo(tmp_path: Path, manifest: dict) -> Path:
+    import json
+    repo = tmp_path / REPO
+    (repo / "specs" / "s").mkdir(parents=True)
+    run = lambda *a: subprocess.run(["git", "-C", str(repo), *a], check=True, capture_output=True)
+    run("init", "-q", "-b", "main")
+    run("config", "user.email", "t@example.com")
+    run("config", "user.name", "Test")
+    (repo / "specs/s/spec.md").write_text("# s\n")
+    run("add", "--", "specs/s/spec.md")
+    run("commit", "-qm", "spec")
+    sha = run("rev-parse", "--short", "HEAD").stdout.decode().strip()
+    for r in manifest["requirements"]:
+        if r["landed_in"]:
+            r["landed_in"] = [sha]
+    (repo / "specs/s/status.json").write_text(json.dumps(manifest))
+    run("add", "--", "specs/s/status.json")
+    run("commit", "-qm", "status")
+    run("update-ref", "refs/remotes/origin/main", "HEAD")
+    return repo
+
+
+def test_v2_committed_specs_counts_verified_and_demotes_off_main(tmp_path: Path):
+    from scripts.requirement_progress import progress
+    _, rows = committed_specs(git_repo(tmp_path, v2_manifest()), REPO)
+    assert rows[0]["delivery"] == "VERIFIED" and rows[0]["acceptance"] == "ACCEPTED"
+    done = progress(rows[0]["requirements"])
+    assert (done["verified"], done["retired"], done["percent"]) == (1, 1, 100)
+    page = render({REPO: SHA}, rows)
+    assert "VERIFIED 1" in page and "RETIRED 1" in page and "1/1 (100%)" in page
+
+    bad = v2_manifest()
+    bad["requirements"][0]["landed_in"] = ["deadbee"]
+    other = tmp_path / "other"
+    other.mkdir()
+    repo = git_repo(other, bad)
+    import json
+    m = json.loads((repo / "specs/s/status.json").read_text())
+    m["requirements"][0]["landed_in"] = ["deadbee"]
+    (repo / "specs/s/status.json").write_text(json.dumps(m))
+    subprocess.run(["git", "-C", str(repo), "add", "--", "specs/s/status.json"], check=True)
+    subprocess.run(["git", "-C", str(repo), "commit", "-qm", "bad"], check=True)
+    subprocess.run(["git", "-C", str(repo), "update-ref", "refs/remotes/origin/main", "HEAD"], check=True)
+    _, rows = committed_specs(repo, REPO)
+    assert rows[0]["delivery"] == "UNKNOWN" and "default branch" in rows[0]["problem"]

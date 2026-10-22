@@ -1,3 +1,5 @@
+> **For AI agents → [AGENTS.md](https://github.com/Knuckles-Team/.github/blob/main/AGENTS.md)**
+
 
 <div align="center">
 

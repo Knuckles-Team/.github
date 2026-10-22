@@ -16,6 +16,7 @@ from urllib.error import HTTPError, URLError
 from urllib.parse import unquote, urlsplit
 from urllib.request import Request, urlopen
 
+SELF_BLOB = "https://github.com/Knuckles-Team/.github/blob/main/"
 PAGES = ("profile/README.md", "site/index.html", "site/skills.html")
 
 
@@ -77,7 +78,11 @@ def audit(root: Path, *, checker=check_http) -> dict:
     for name, content in sources.items():
         for url in extract_links(content.decode("utf-8")):
             parts = urlsplit(url)
-            if parts.scheme in {"http", "https"}:
+            if url.startswith(SELF_BLOB):
+                # Files of this repository are checked in the checkout, so a new
+                # file can be linked in the pull request that adds it.
+                relative.append(check_relative(root, "AGENTS.md", url[len(SELF_BLOB):]))
+            elif parts.scheme in {"http", "https"}:
                 urls.setdefault(url, []).append(name)
             elif not parts.scheme and not parts.netloc:
                 relative.append(check_relative(root, name, url))

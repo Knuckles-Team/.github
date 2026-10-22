@@ -1,5 +1,7 @@
 # Contributing to Arbora
 
+> **For AI agents:** start at [AGENTS.md](AGENTS.md). This guide is the human path.
+
 You can contribute using public GitHub repositories and a development environment
 you control. The normal spec, build, and pull request path requires no private
 service or live deployment. Start here even if you have

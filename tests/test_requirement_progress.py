@@ -30,7 +30,7 @@ def rows(*entries, on_main=lambda sha: True):
 def test_ids_without_an_entry_are_specified_and_open():
     found = rows()
     assert [(row["id"], row["state"]) for row in found] == [("GRAPHOS-R009", "SPECIFIED")]
-    assert progress(found) == {"total": 1, "delivered": 0, "in_progress": 0, "percent": 0}
+    assert progress(found)["total"] == 1 and progress(found)["delivered"] == 0 and progress(found)["percent"] == 0
 
 
 def test_landed_needs_a_merged_commit_on_the_default_branch():
@@ -76,3 +76,46 @@ def test_report_shows_delivered_share_and_open_requirements():
     assert "1/2 (50%)" in page
     assert "GRAPHOS-R009" in page
     assert "<b>route</b>" not in page
+
+
+def v2(*entries, on_main=lambda sha: True):
+    data = {
+        "schema_version": 2,
+        "requirement_ids": [e["id"] for e in entries],
+        "requirements": list(entries),
+    }
+    return requirement_rows(REPO, data, valid_evidence, on_main)
+
+
+def entry(ident, state, landed=("abc1234",), tests=("t::a",)):
+    return {"id": ident, "title": ident, "delivery_state": state,
+            "landed_in": list(landed), "verified_by": list(tests)}
+
+
+def test_v2_verified_and_landed_count_as_delivered():
+    found = v2(entry("X-R1", "VERIFIED"), entry("X-R2", "LANDED", tests=()),
+               entry("X-R3", "SPECIFIED", landed=(), tests=()))
+    assert [r["state"] for r in found] == ["VERIFIED", "LANDED", "SPECIFIED"]
+    done = progress(found)
+    assert (done["verified"], done["landed"], done["specified"]) == (1, 1, 1)
+    assert (done["delivered"], done["total"], done["percent"]) == (2, 3, 66)
+
+
+def test_v2_sha_off_main_or_missing_demotes_with_a_reason():
+    off = v2(entry("X-R1", "LANDED"), on_main=lambda sha: False)[0]
+    assert off["state"] == "UNKNOWN" and "default branch" in off["problem"]
+    none = v2(entry("X-R1", "LANDED", landed=()))[0]
+    assert none["state"] == "UNKNOWN" and "landed_in" in none["problem"]
+    bad = v2(entry("X-R1", "LANDED", landed=("not-a-sha",)))[0]
+    assert bad["state"] == "UNKNOWN"
+
+
+def test_v2_verified_needs_tests_and_unknown_states_are_rejected():
+    assert v2(entry("X-R1", "VERIFIED", tests=()))[0]["state"] == "UNKNOWN"
+    assert v2(entry("X-R1", "BUILT"))[0]["state"] == "UNKNOWN"
+
+
+def test_v2_retired_is_closed_and_leaves_the_denominator():
+    found = v2(entry("X-R1", "RETIRED", landed=(), tests=()), entry("X-R2", "VERIFIED"))
+    done = progress(found)
+    assert (done["retired"], done["total"], done["delivered"], done["percent"]) == (1, 1, 1, 100)

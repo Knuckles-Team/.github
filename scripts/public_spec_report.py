@@ -48,7 +48,7 @@ SPEC_DELIVERY_PAGES = (
     "agent-terminal-ui",
     "geniusbot",
 )
-DELIVERY = frozenset(
+V1_DELIVERY = frozenset(
     {
         "UNKNOWN",
         "SPECIFIED",
@@ -60,6 +60,8 @@ DELIVERY = frozenset(
         "REJECTED",
     }
 )
+V2_DELIVERY = frozenset({"SPECIFIED", "LANDED", "VERIFIED", "RETIRED"})
+DELIVERY = V1_DELIVERY | V2_DELIVERY
 ACCEPTANCE = frozenset({"NOT_AUDITED", "PENDING", "ACCEPTED", "FAILED"})
 SHA = re.compile(r"[0-9a-f]{40}\Z")
 PUBLIC_URL = re.compile(
@@ -124,7 +126,8 @@ def committed_specs(repo: Path, owner_repo: str) -> tuple[str, list[dict[str, An
         else:
             problem = "No committed status.json"
         row = evaluate_status(owner_repo, slug, spec_path, manifest, problem)
-        if row["delivery"] in {"LANDED", "CLOSED"}:
+        v2 = isinstance(manifest, dict) and manifest.get("schema_version") == 2
+        if not v2 and row["delivery"] in {"LANDED", "CLOSED"}:
             merged = next(
                 item for item in row["evidence"] if item["kind"] == "merged_head"
             )
@@ -135,8 +138,22 @@ def committed_specs(repo: Path, owner_repo: str) -> tuple[str, list[dict[str, An
         row["requirements"] = requirement_rows(
             owner_repo, manifest, valid_evidence, lambda sha: on_main(repo, sha)
         )
+        if v2:
+            demote_v2(row)
         rows.append(row)
     return revision, rows
+
+
+def demote_v2(row: dict[str, Any]) -> None:
+    """A spec-level LANDED or VERIFIED claim must survive its own rows."""
+    if row["delivery"] not in {"LANDED", "VERIFIED"}:
+        return
+    failed = [item for item in row["requirements"] if item["state"] == "UNKNOWN"]
+    if failed:
+        row["delivery"] = "UNKNOWN"
+        row["problem"] = f"{len(failed)} requirement claim(s) lack proof: {failed[0]['problem']}"
+    elif row["delivery"] == "VERIFIED":
+        row["acceptance"] = "ACCEPTED"
 
 
 def valid_evidence(item: Any) -> bool:
@@ -161,6 +178,24 @@ def valid_evidence(item: Any) -> bool:
     )
 
 
+def evaluate_status_v2(row: dict[str, Any], manifest: dict[str, Any]) -> dict[str, Any]:
+    spec_id = manifest.get("spec_id")
+    ids = manifest.get("requirement_ids")
+    if not isinstance(spec_id, str) or not spec_id.strip():
+        row["problem"] = "Missing spec_id"
+        return row
+    row["spec_id"] = spec_id
+    if not isinstance(ids, list) or not all(isinstance(v, str) for v in ids):
+        row["problem"] = "Invalid requirement_ids"
+        return row
+    row["requirement_ids"] = ids
+    if manifest.get("delivery_state") not in V2_DELIVERY:
+        row["problem"] = "Unsupported spec delivery_state"
+        return row
+    row["delivery"] = manifest["delivery_state"]
+    return row
+
+
 def evaluate_status(
     repo: str,
     slug: str,
@@ -182,9 +217,12 @@ def evaluate_status(
     }
     if manifest is None:
         return row
-    if manifest.get("schema_version") != 1 or manifest.get("owner_repo") != repo:
+    version = manifest.get("schema_version")
+    if version not in {1, 2} or manifest.get("owner_repo") != repo:
         row["problem"] = "Unsupported schema version or owner mismatch"
         return row
+    if version == 2:
+        return evaluate_status_v2(row, manifest)
     spec_id = manifest.get("spec_id")
     requirement_ids = manifest.get("requirement_ids")
     delivery = manifest.get("delivery_state")
@@ -201,7 +239,7 @@ def evaluate_status(
         return row
     row["requirement_ids"] = requirement_ids
     if (
-        delivery not in DELIVERY
+        delivery not in V1_DELIVERY
         or acceptance not in ACCEPTANCE
         or not isinstance(evidence, list)
     ):
@@ -257,6 +295,14 @@ def evaluate_status(
     return row
 
 
+def breakdown(done: dict[str, int]) -> str:
+    return (
+        f"SPECIFIED {done['specified']} · LANDED {done['landed']} · "
+        f"VERIFIED {done['verified']} · RETIRED {done['retired']}"
+        + (f" · UNKNOWN {done['unknown']}" if done["unknown"] else "")
+    )
+
+
 def progress_cell(row: dict[str, Any]) -> str:
     """Delivered count, percentage, and the requirements still open."""
     done = progress(row["requirements"])
@@ -265,7 +311,7 @@ def progress_cell(row: dict[str, Any]) -> str:
         f"{' — ' + escape(item['title']) if item['title'] else ''}"
         f"{' (' + escape(item['problem']) + ')' if item['problem'] else ''}</li>"
         for item in row["requirements"]
-        if item["state"] not in {"LANDED", "CLOSED"}
+        if item["state"] not in {"LANDED", "VERIFIED", "CLOSED", "RETIRED"}
     )
     detail = (
         f"<details><summary>{done['total'] - done['delivered']} open</summary>"
@@ -275,7 +321,8 @@ def progress_cell(row: dict[str, Any]) -> str:
     )
     return (
         f'<progress max="{done["total"] or 1}" value="{done["delivered"]}"></progress> '
-        f"{done['delivered']}/{done['total']} ({done['percent']}%){detail}"
+        f"{done['delivered']}/{done['total']} ({done['percent']}%)"
+        f'<br><small>{breakdown(done)}</small>{detail}'
     )
 
 
@@ -290,19 +337,24 @@ def repo_summary(rows: list[dict[str, Any]]) -> str:
         everything.extend(owned)
         done = progress(owned)
         lines.append(
-            f"<tr><td>{escape(repo)}</td><td>{done['delivered']}</td>"
-            f"<td>{done['in_progress']}</td><td>{done['total']}</td>"
+            f"<tr><td>{escape(repo)}</td><td>{done['specified']}</td>"
+            f"<td>{done['landed']}</td><td>{done['verified']}</td>"
+            f"<td>{done['retired']}</td><td>{done['unknown']}</td>"
+            f"<td>{done['delivered']}</td><td>{done['total']}</td>"
             f"<td>{done['percent']}%</td></tr>"
         )
     done = progress(everything)
     lines.append(
-        f"<tr><th>All repositories</th><th>{done['delivered']}</th>"
-        f"<th>{done['in_progress']}</th><th>{done['total']}</th>"
+        f"<tr><th>All repositories</th><th>{done['specified']}</th>"
+        f"<th>{done['landed']}</th><th>{done['verified']}</th>"
+        f"<th>{done['retired']}</th><th>{done['unknown']}</th>"
+        f"<th>{done['delivered']}</th><th>{done['total']}</th>"
         f"<th>{done['percent']}%</th></tr>"
     )
     return (
-        "<table><thead><tr><th>Repository</th><th>Delivered</th><th>Building or built</th>"
-        "<th>Requirements</th><th>Complete</th></tr></thead>"
+        "<table><thead><tr><th>Repository</th><th>Specified</th><th>Landed</th><th>Verified</th>"
+        "<th>Retired</th><th>Unknown</th><th>Delivered (landed + verified)</th>"
+        "<th>Active requirements</th><th>Complete</th></tr></thead>"
         f"<tbody>{''.join(lines)}</tbody></table>"
     )
 
@@ -364,14 +416,13 @@ progress {{ width: 6rem; }} details ul {{ margin: .3rem 0; padding-left: 1.1rem;
 <p>Snapshot through {escape(source_time)} from the committed <code>specs/</code> revisions listed below in the public repositories. The repository specs and linked CI results are the evidence; source presence alone cannot establish completion. Missing or unsupported status metadata is shown as UNKNOWN / NOT AUDITED.</p>
 <p><strong>{len(rows)} specs</strong> · Delivery: {escape(count_text)} · Acceptance: {escape(accept_text)}</p>
 <h2>Requirement delivery</h2>
-<p>A requirement counts as delivered only when its status entry cites an implementing commit that is on the owner repository's default branch. Everything else is still open, whatever its label.</p>
+<p>A requirement counts as delivered (LANDED or VERIFIED) only when its status entry cites an implementing commit in <code>landed_in</code> that is on the owner repository's default branch; VERIFIED also needs <code>verified_by</code> test ids. RETIRED requirements are closed and leave the percentage. Everything else is still open, whatever its label.</p>
 {repo_summary(rows)}
 <h2>Specifications</h2>
 <p>To find work ready for contributors, open a specification's remaining requirements below. Each linked owner spec supplies its design, tasks, test contract, and a <code>requirements.md</code> that defines every ID.</p>
 <details><summary>State legend and evidence rules</summary>
-<p><strong>Delivery:</strong> UNKNOWN = no supported status claim; SPECIFIED = build contract is published; BUILDING = public implementation work exists; BUILT = implementation exists with public commit evidence; LANDED = exact implementation commit is on default branch; CLOSED = work closed with a merged-head record; DEFERRED/REJECTED = public disposition decision.</p>
-<p><strong>Acceptance:</strong> NOT AUDITED = no verified acceptance decision; PENDING = review is open; ACCEPTED = merged-head tests plus consumer or release proof at the same commit; FAILED = linked failed test. Delivery and acceptance are independent.</p>
-<p><strong>Requirements:</strong> each ID in a status manifest may carry its own delivery state and evidence. LANDED or CLOSED needs a merged-head commit on the default branch; BUILDING or BUILT needs a public implementation commit. A claim without that proof is shown as UNKNOWN and does not count.</p>
+<p><strong>Delivery (schema version 2):</strong> SPECIFIED = build contract published, not built; LANDED = at least one <code>landed_in</code> commit is on the owner's default branch; VERIFIED = landed and at least one <code>verified_by</code> test id is recorded; RETIRED = closed without delivery, excluded from the percentage. Percent delivered = (LANDED + VERIFIED) / (all requirements minus RETIRED). A claim whose evidence fails (for example a commit not on the default branch) is shown as UNKNOWN with the reason and does not count. Older version 1 manifests (BUILDING, BUILT, CLOSED, DEFERRED, REJECTED, merged-head evidence) are still read.</p>
+<p><strong>Acceptance:</strong> NOT AUDITED = no verified acceptance decision; PENDING = review is open; ACCEPTED = merged-head tests plus consumer or release proof at the same commit (version 1) or a spec whose requirements are all proven and VERIFIED (version 2); FAILED = linked failed test. Delivery and acceptance are independent.</p>
 <p>This report validates the shape of public evidence and exact commit references. Human reviewers must still evaluate whether linked tests satisfy every requirement.</p></details>
 <label>Search <input id="search" type="search" placeholder="Spec, repo, requirement"></label>
 <label>Repository <select id="repo"><option value="">All</option>{"".join(f'<option value="{escape(repo)}">{escape(repo)}</option>' for repo in REPOS)}</select></label>
