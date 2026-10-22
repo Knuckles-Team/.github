@@ -29,3 +29,16 @@ The row is the owner-side counterpart of `PIPE-PAGES-R014.5` in `Knuckles-Team/p
 - Attach point: the block follows the navigation line at `profile/README.md:10`.
 - Single list: the repository tuple `REPOS` and `SPEC_DELIVERY_PAGES` live in one module.
   The latter should hold only repositories whose page returns HTTP 200.
+
+## Canonical architecture explorer (ORG-FRONT-R003)
+
+The row is the owner-side counterpart of `PIPE-PAGES-R042` in `Knuckles-Team/pipelines`.
+
+- Build: `spec-status-pages.yml` sparse-checks out `scripts/architecture_explorer` from pipelines
+  `main` and runs `build.py --mode github --page hub/site/architecture/index.html` before upload.
+- Currency: the cron `7,37 * * * *` rebuilds every 30 minutes; `repository_dispatch:
+  specs-changed` rebuilds sooner when the shared Pages workflow holds a dispatch token. The
+  concurrency group cancels a superseded build.
+- Links: the profile, `README.md` and the site point to the bare explorer URL; per-repository
+  pages elsewhere deep-link to their own node. `spec-status.html` keeps building for the site pages
+  and `CONTRIBUTING.md` that still link it.

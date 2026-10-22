@@ -34,3 +34,12 @@ checks pass against the same merged commit; publishing this spec is not itself a
 
 - R002.1 to R002.4: `tests/test_front_door.py::test_readme_spec_delivery_links_match_the_single_list`
   must pass. It makes no network call. The test compares the README links with `SPEC_DELIVERY_PAGES`.
+
+## Canonical architecture explorer (ORG-FRONT-R003)
+
+- R003.1: `tests/test_architecture_explorer_site.py::test_site_workflow_builds_the_explorer_on_a_schedule`
+  reads the workflow and makes no network call.
+- R003.2: `tests/test_front_door.py::test_front_door_links_the_explorer_at_the_top_level` reads the
+  profile and README.
+- R003.3: `python scripts/check_front_door.py` checks the live explorer URL; the recorded result is
+  `evidence/links.json`.

@@ -20,3 +20,6 @@ Audit source: `5e674839fb10e1aea4e3f11468fe804636fdd8b6`. See [complete evidence
 - [ ] ORG-FRONT-R002.2: add `scripts/spec_delivery_links.py` and the marker block in `profile/README.md`.
 - [ ] ORG-FRONT-R002.3: add `test_readme_spec_delivery_links_match_the_single_list` to `tests/test_front_door.py`.
 - [ ] ORG-FRONT-R002.4: add a "Spec delivery" link to each per-repository block in `profile/README.md`.
+- [ ] ORG-FRONT-R003.1: build the explorer in `spec-status-pages.yml` on a 30-minute schedule and on dispatch.
+- [ ] ORG-FRONT-R003.2: point the profile's specification-status links and the runtime diagram at the explorer.
+- [ ] ORG-FRONT-R003.3: regenerate `evidence/links.json` with the explorer URL passing.
