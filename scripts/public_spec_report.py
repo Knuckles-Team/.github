@@ -37,6 +37,7 @@ REPOS = (
     "emerald-exchange",
     "tunnel-manager",
     "universal-skills",
+    "geniusbot",
 )
 # Repositories whose Pages site serves /spec-delivery/ (checked 200 on 2026-10-11).
 SPEC_DELIVERY_PAGES = (
@@ -477,7 +478,7 @@ def main() -> int:
             parser.error(f"unknown repository {name}")
         paths[name] = Path(path)
     if set(paths) != set(REPOS):
-        parser.error("provide --checkouts-root or all twelve --repo NAME=PATH values")
+        parser.error(f"provide --checkouts-root or all {len(REPOS)} --repo NAME=PATH values")
     revisions: dict[str, str] = {}
     source_times: list[datetime] = []
     rows: list[dict[str, Any]] = []

@@ -164,3 +164,15 @@ def test_v2_committed_specs_counts_verified_and_demotes_off_main(tmp_path: Path)
     subprocess.run(["git", "-C", str(repo), "update-ref", "refs/remotes/origin/main", "HEAD"], check=True)
     _, rows = committed_specs(repo, REPO)
     assert rows[0]["delivery"] == "UNKNOWN" and "default branch" in rows[0]["problem"]
+
+
+def test_every_reported_repo_is_checked_out_by_the_pages_workflow():
+    """A repo in REPOS but not checked out (or the reverse) drops off the page."""
+    from scripts.public_spec_report import REPOS
+
+    assert "geniusbot" in REPOS
+    workflow = Path(".github/workflows/spec-status-pages.yml").read_text()
+    for name in REPOS:
+        if name == ".github":
+            continue
+        assert f"repository: Knuckles-Team/{name}\n" in workflow, name
