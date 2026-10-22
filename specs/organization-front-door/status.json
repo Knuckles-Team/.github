@@ -9,7 +9,11 @@
     "ORG-FRONT-R002.1",
     "ORG-FRONT-R002.2",
     "ORG-FRONT-R002.3",
-    "ORG-FRONT-R002.4"
+    "ORG-FRONT-R002.4",
+    "ORG-FRONT-R003",
+    "ORG-FRONT-R003.1",
+    "ORG-FRONT-R003.2",
+    "ORG-FRONT-R003.3"
   ],
   "requirements": [
     {
@@ -25,7 +29,7 @@
     {
       "id": "ORG-FRONT-R002",
       "title": "The organisation README links every repository's spec-delivery page",
-      "delivery_state": "SPECIFIED",
+      "delivery_state": "LANDED",
       "landed_in": [],
       "verified_by": [],
       "rollup_of": [
@@ -38,27 +42,70 @@
     {
       "id": "ORG-FRONT-R002.1",
       "title": "One list names the repositories with a page",
-      "delivery_state": "SPECIFIED",
-      "landed_in": [],
+      "delivery_state": "LANDED",
+      "landed_in": [
+        "ed08a12df8ab"
+      ],
       "verified_by": []
     },
     {
       "id": "ORG-FRONT-R002.2",
       "title": "A generated block renders the section",
-      "delivery_state": "SPECIFIED",
-      "landed_in": [],
+      "delivery_state": "LANDED",
+      "landed_in": [
+        "ed08a12df8ab"
+      ],
       "verified_by": []
     },
     {
       "id": "ORG-FRONT-R002.3",
       "title": "The README links match the list",
-      "delivery_state": "SPECIFIED",
-      "landed_in": [],
+      "delivery_state": "LANDED",
+      "landed_in": [
+        "ed08a12df8ab"
+      ],
       "verified_by": []
     },
     {
       "id": "ORG-FRONT-R002.4",
       "title": "Each repository block links its page",
+      "delivery_state": "LANDED",
+      "landed_in": [
+        "ed08a12df8ab"
+      ],
+      "verified_by": []
+    },
+    {
+      "id": "ORG-FRONT-R003",
+      "title": "The organization site serves the canonical architecture explorer",
+      "delivery_state": "SPECIFIED",
+      "landed_in": [],
+      "verified_by": [],
+      "rollup_of": [
+        "ORG-FRONT-R003.1",
+        "ORG-FRONT-R003.2",
+        "ORG-FRONT-R003.3"
+      ]
+    },
+    {
+      "id": "ORG-FRONT-R003.1",
+      "title": "The site workflow builds the explorer and keeps it current",
+      "delivery_state": "LANDED",
+      "landed_in": [
+        "81c2e87cacaa"
+      ],
+      "verified_by": []
+    },
+    {
+      "id": "ORG-FRONT-R003.2",
+      "title": "The profile sends visitors to the explorer at the top level",
+      "delivery_state": "SPECIFIED",
+      "landed_in": [],
+      "verified_by": []
+    },
+    {
+      "id": "ORG-FRONT-R003.3",
+      "title": "The link evidence covers the explorer",
       "delivery_state": "SPECIFIED",
       "landed_in": [],
       "verified_by": []
