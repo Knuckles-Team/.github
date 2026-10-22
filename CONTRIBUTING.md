@@ -11,7 +11,9 @@ The [repositories and skills map](https://knuckles-team.github.io/.github/skills
 shows which public repository owns each kind of work and which shared skill to
 use at each stage.
 
-1. Open the [specification status report](https://knuckles-team.github.io/.github/spec-status.html)
+1. Open the [Arbora Architecture Explorer](https://knuckles-team.github.io/.github/architecture/),
+   which shows every spec row with its status on the part of the architecture it builds,
+   or the [specification status report](https://knuckles-team.github.io/.github/spec-status.html),
    and expand a specification's open requirements. Choose one that is `SPECIFIED`
    (not started) or `BUILDING`. The owner repository named on that row is the
    authority for it; its `requirements.md` defines the ID and how it is verified.

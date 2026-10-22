@@ -10,6 +10,7 @@ import pytest
 from scripts.check_front_door import PAGES, audit, check_http, check_relative, extract_links
 
 ROOT = Path(__file__).resolve().parents[1]
+EXPLORER = "https://knuckles-team.github.io/.github/architecture/"
 CORE = {"arbora", "agent-webui", "agent-utilities", "epistemic-graph", "agent-connector-sdk", "agent-terminal-ui", "geniusbot"}
 
 
@@ -30,8 +31,24 @@ def test_component_roles_and_navigation_remain_consistent(name):
     assert "Arbora REST interface" in core
     if not name.endswith(".html"):
         assert len(re.findall(r"<tr>", core)) == 4 and core.count('<td width="50%"') == 7
-    assert "spec-status.html" in text
+    assert EXPLORER in text
+    if name.endswith(".html"):
+        assert "spec-status.html" in text
     assert "CONTRIBUTING.md" in text
+
+
+def test_front_door_links_the_explorer_at_the_top_level():
+    """ORG-FRONT-R003.2: the profile sends visitors to the bare explorer URL, never spec-status.html."""
+    profile = (ROOT / "profile/README.md").read_text()
+    assert "spec-status.html" not in profile
+    assert profile.count(EXPLORER + ")") >= 4
+    assert re.search(r"github\.io/\.github/architecture/#", profile) is None
+    assert "Explore the live architecture" in profile
+    assert "`SPECIFIED` rows are open work" in profile
+    diagram = 'src="https://raw.githubusercontent.com/Knuckles-Team/epistemic-graph/main/docs/assets/runtime-architecture.svg"'
+    assert f'<a href="{EXPLORER}"><img {diagram}' in profile
+    readme = (ROOT / "README.md").read_text()
+    assert f"[Explore the live architecture]({EXPLORER})" in readme
 
 
 def test_nested_badge_html_and_markdown_references_are_all_checked():

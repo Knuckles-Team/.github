@@ -10,7 +10,8 @@
 - Confirm Agent Terminal UI and GeniusBot appear as additional operator surfaces and are not
   counted among the "five core projects."
 - Confirm `site/index.html` and `site/skills.html` list a consistent component set and both
-  link to `spec-status.html` and this repository's `CONTRIBUTING.md`.
+  link to the architecture explorer, `spec-status.html` and this repository's `CONTRIBUTING.md`;
+  the profile links the bare explorer URL and no longer links `spec-status.html`.
 
 ## Link check
 

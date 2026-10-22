@@ -30,8 +30,10 @@ Every outbound link on the front-door pages — badges, component cards, navigat
 "Follow the flow" and "Contribute from a public spec" tables in `profile/README.md` — must
 resolve: a GitHub repository, branch, or file path that exists, or a GitHub Pages documentation
 URL that serves content. `site/index.html` and `site/skills.html` list the same component set
-and link back to `spec-status.html` and this repository's `CONTRIBUTING.md`, so a visitor
-reaches the same contribution path from any of the three entry pages.
+and link the Arbora Architecture Explorer (`https://knuckles-team.github.io/.github/architecture/`,
+opened at the top level), `spec-status.html` and this repository's `CONTRIBUTING.md`. The profile
+links the explorer wherever it names specification status, so a visitor reaches the same
+contribution path from any of the three entry pages.
 
 ## Architecture and contribution rules
 
