@@ -27,3 +27,4 @@ Audit source: `5e674839fb10e1aea4e3f11468fe804636fdd8b6`. See [complete evidence
 - [ ] ORG-FRONT-R005: the status page shows the state breakdown.
 - [ ] ORG-FRONT-R006: a root agents.md is the agent front door.
 - [ ] ORG-FRONT-R007: agent entry points are wired in.
+- [ ] ORG-FRONT-R008: a plain-text pointer serves agents.

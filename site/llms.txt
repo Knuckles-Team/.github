@@ -1,0 +1,13 @@
+# Knuckles-Team organization front door: how to find the project map and contribute.
+Front door: https://knuckles-team.github.io/.github/
+Architecture explorer: https://knuckles-team.github.io/.github/architecture/
+Contribution guide: https://github.com/Knuckles-Team/.github/blob/main/CONTRIBUTING.md
+Skills: https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills
+Spec details JSON: https://knuckles-team.github.io/.github/architecture/spec-details/<repo>/<family>.json
+
+How to contribute:
+1. Start at the front door, https://knuckles-team.github.io/.github/.
+2. Read the contribution guide, https://github.com/Knuckles-Team/.github/blob/main/CONTRIBUTING.md.
+3. Pick an open (SPECIFIED) row here. Expand it to read its requirement and design, and open its specs/<family>/ folder.
+4. Set up with the arbora-development skill from universal-skills, https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills/arbora-development.
+5. Build it, run the repo's gates, and open a PR whose commit carries a Spec: trailer with the row ID.
