@@ -15,8 +15,8 @@ guide](CONTRIBUTING.md) points contributors to the owner-native design, tasks,
 tests, and reusable development skills.
 
 The [Pages workflow](.github/workflows/spec-status-pages.yml) rebuilds the explorer and the report
-from public `main` branches every 30 minutes, on each hub change, on a `specs-changed`
-repository dispatch, and on manual dispatch.
+from public `main` branches on every merge to a core repository's main branch, and at least
+every 30 minutes, and also on each hub change and on manual dispatch.
 The report is a snapshot with source revisions, not a live CI feed. `SPECIFIED`
 is the build queue; `LANDED` and `ACCEPTED` require separate public evidence.
 Each requirement ID is defined in its owner spec's `requirements.md` and carries its own

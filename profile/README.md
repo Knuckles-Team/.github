@@ -126,7 +126,7 @@ Every repository documents its own contract and links back to this same runtime 
 
 Build and release evidence lives with the component that owns it. Use each repository's **Actions** page for current CI and its Pages **Status** or **Capabilities** section for shipped behavior. Public issues and pull requests are tracked in the owning repository so operational and design discussions retain their architectural context.
 
-The [Arbora Architecture Explorer](https://knuckles-team.github.io/.github/architecture/) shows every spec row of the core repositories, the connectors and the desktop client with its status, placed on the part of the architecture it builds, and is rebuilt from each default branch every 30 minutes. `SPECIFIED` rows are open work waiting to be built; delivery and acceptance are separate states. The [contribution guide](https://github.com/Knuckles-Team/.github/blob/main/CONTRIBUTING.md) links the shared `arbora-development` and spec skills.
+The [Arbora Architecture Explorer](https://knuckles-team.github.io/.github/architecture/) shows every spec row of the core repositories, the connectors and the desktop client with its status, placed on the part of the architecture it builds, and is rebuilt on every merge to a core repository's main branch, and at least every 30 minutes. `SPECIFIED` rows are open work waiting to be built; delivery and acceptance are separate states. The [contribution guide](https://github.com/Knuckles-Team/.github/blob/main/CONTRIBUTING.md) links the shared `arbora-development` and spec skills.
 
 ## Contribute from a public spec
 
