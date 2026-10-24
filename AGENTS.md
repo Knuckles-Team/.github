@@ -65,10 +65,10 @@ Full text: [spec-standard.md](https://github.com/Knuckles-Team/pipelines/blob/ma
 ## Skills
 
 The [universal-skills](https://github.com/Knuckles-Team/universal-skills) spec-driven development skills:
-[sdd-full-lifecycle](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development-workflows/sdd-full-lifecycle),
-[spec-generator](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/spec-generator),
-[sdd-implementer](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/sdd-implementer),
-[spec-verifier](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/spec-verifier).
+[sdd-full-lifecycle](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills/sdd-full-lifecycle),
+[spec-generator](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills/spec-generator),
+[sdd-implementer](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills/sdd-implementer),
+[spec-verifier](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills/spec-verifier).
 
 ## Working in this repository
 
