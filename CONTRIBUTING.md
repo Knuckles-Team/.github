@@ -30,7 +30,7 @@ use at each stage.
    Check that repository's setup instructions and CI workflow for the exact
    commands and required checks. Some repositories also run bootstrap from a
    Claude Code SessionStart hook.
-   Use [`arbora-development`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/arbora-development)
+   Use [`arbora-development`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills/arbora-development)
    to bootstrap a local ecosystem environment and find the established code,
    wiring, interfaces, and components to reuse.
 4. Install [universal-skills](https://github.com/Knuckles-Team/universal-skills)
@@ -51,11 +51,11 @@ use at each stage.
 Use the public [universal-skills kit](https://github.com/Knuckles-Team/universal-skills)
 to install the same workflows used by maintainers:
 
-- [`arbora-development`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/arbora-development) for ecosystem boundaries, a local development environment, and reuse of existing components;
-- [`spec-generator`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/spec-generator) to turn a proposal into a complete owner-native spec;
-- [`task-planner`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/task-planner) and [`sdd-implementer`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/sdd-implementer) to build from the spec;
-- [`spec-verifier`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development/spec-verifier) to review its evidence and acceptance;
-- [`sdd-full-lifecycle`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/development-workflows/sdd-full-lifecycle) to coordinate the sequence.
+- [`arbora-development`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills/arbora-development) for ecosystem boundaries, a local development environment, and reuse of existing components;
+- [`spec-generator`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills/spec-generator) to turn a proposal into a complete owner-native spec;
+- [`task-planner`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills/task-planner) and [`sdd-implementer`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills/sdd-implementer) to build from the spec;
+- [`spec-verifier`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills/spec-verifier) to review its evidence and acceptance;
+- [`sdd-full-lifecycle`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills/sdd-full-lifecycle) to coordinate the sequence.
 
 The canonical development skill also ships with
 [Arbora](https://github.com/Knuckles-Team/arbora/tree/main/arbora/skills/arbora-development).
