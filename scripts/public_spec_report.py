@@ -37,6 +37,7 @@ REPOS = (
     "emerald-exchange",
     "tunnel-manager",
     "universal-skills",
+    "skill-graphs",
     "geniusbot",
 )
 # Repositories whose Pages site serves /spec-delivery/ (checked 200 on 2026-10-11).
