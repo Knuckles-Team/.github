@@ -118,6 +118,13 @@ jobs:
           path: sources/universal-skills
           fetch-depth: 0
           persist-credentials: false
+      - name: Checkout skill-graphs
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: Knuckles-Team/skill-graphs
+          path: sources/skill-graphs
+          fetch-depth: 0
+          persist-credentials: false
       - name: Checkout geniusbot
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
