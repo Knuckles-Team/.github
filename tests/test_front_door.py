@@ -7,7 +7,7 @@ from urllib.error import HTTPError, URLError
 
 import pytest
 
-from scripts.check_front_door import PAGES, audit, check_http, check_relative, extract_links
+from scripts.check_front_door import PAGES, SELF_BLOB, audit, check_http, check_relative, extract_links
 
 ROOT = Path(__file__).resolve().parents[1]
 EXPLORER = "https://knuckles-team.github.io/.github/architecture/"
@@ -136,3 +136,17 @@ def test_agent_entry_points_point_at_agents_md():
     assert (ROOT / "CLAUDE.md").read_text().strip() == "@AGENTS.md"
     assert "AGENTS.md" in (ROOT / "CONTRIBUTING.md").read_text()[:300]
     assert "AGENTS.md" in (ROOT / "profile/README.md").read_text()[:300]
+
+
+# Verifies ORG-FRONT-R008.
+def test_site_llms_txt_points_agents_at_the_front_door_and_contribution_path():
+    text = (ROOT / "site" / "llms.txt").read_text()
+    front_door = "https://knuckles-team.github.io/.github/"
+    for needle in (
+        front_door, EXPLORER, f"{SELF_BLOB}CONTRIBUTING.md",
+        "https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills",
+        f"{EXPLORER}spec-details/<repo>/<family>.json", "arbora-development", "Spec: trailer",
+    ):
+        assert needle in text, needle
+    assert len(re.findall(r"^\d\. ", text, re.M)) == 5
+    assert (ROOT / "CONTRIBUTING.md").is_file()
