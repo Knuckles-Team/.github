@@ -11,6 +11,13 @@ except ImportError:  # direct script invocation
 README = Path(__file__).resolve().parents[1] / "profile/README.md"
 BEGIN = "<!-- spec-delivery:begin -->"
 END = "<!-- spec-delivery:end -->"
+DISPLAY_NAMES = {
+    "agent-webui": "Overstory",
+    "agent-terminal-ui": "Tuig",
+    "agent-connector-sdk": "Scion SDK",
+    "agent-utilities": "Trellis",
+    "geniusbot": "Axil Desk",
+}
 
 
 def url(repo):
@@ -18,7 +25,7 @@ def url(repo):
 
 
 def render():
-    links = " · ".join(f"**[{repo}]({url(repo)})**" for repo in SPEC_DELIVERY_PAGES)
+    links = " · ".join(f"**[{DISPLAY_NAMES.get(repo, repo)}]({url(repo)})**" for repo in SPEC_DELIVERY_PAGES)
     return f"{BEGIN}\nSpec delivery: {links}\n{END}"
 
 

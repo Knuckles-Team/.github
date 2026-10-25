@@ -42,3 +42,14 @@ The row is the owner-side counterpart of `PIPE-PAGES-R042` in `Knuckles-Team/pip
 - Links: the profile, `README.md` and the site point to the bare explorer URL; per-repository
   pages elsewhere deep-link to their own node. `spec-status.html` keeps building for the site pages
   and `CONTRIBUTING.md` that still link it.
+
+## 2026-10-25 display-brand amendment
+
+The profile, agent front door and hand-authored site entry points display
+the five approved product display names documented in `AGENTS.md`. Axil Desk
+is the desktop GUI. The spec-delivery link generator renders those labels
+with unchanged repository
+URLs. Epistemic Graph and Arbora retain their names; package/import names,
+repository slugs, spec prefixes and the `tuig` command remain unchanged.
+The architecture explorer still comes from the canonical pipelines generator;
+no generated architecture or spec-status output is hand-edited.
