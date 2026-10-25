@@ -155,10 +155,14 @@ jobs:
             scripts/__init__.py
             scripts/architecture_explorer
             pipelines_hooks/__init__.py
+            pipelines_hooks/core/__init__.py
+            pipelines_hooks/core/repositories.py
             pipelines_hooks/specs/__init__.py
             pipelines_hooks/specs/ids.py
             pipelines_hooks/specs/priority.py
             pipelines_hooks/specs/requirements_doc.py
+      - name: Validate architecture explorer imports
+        run: python3 generator/scripts/architecture_explorer/build.py --help
       - name: Build architecture explorer
         env:
           GITHUB_TOKEN: ${{ github.token }}
