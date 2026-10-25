@@ -15,7 +15,7 @@ DISPLAY_NAMES = {
     "agent-webui": "Overstory",
     "agent-terminal-ui": "Tuig",
     "agent-connector-sdk": "Scion SDK",
-    "agent-utilities": "Trellis",
+    "agent-utilities": "Meristem",
     "geniusbot": "Axil Desk",
 }
 
