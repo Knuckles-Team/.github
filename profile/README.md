@@ -12,7 +12,7 @@
 **[Live architecture and spec status](https://knuckles-team.github.io/.github/architecture/)** · **[Repositories and skills](https://knuckles-team.github.io/.github/skills.html)** · **[Contribution guide](https://github.com/Knuckles-Team/.github/blob/main/CONTRIBUTING.md)**
 
 <!-- spec-delivery:begin -->
-Spec delivery: **[epistemic-graph](https://knuckles-team.github.io/epistemic-graph/spec-delivery/)** · **[Scion SDK](https://knuckles-team.github.io/agent-connector-sdk/spec-delivery/)** · **[Meristem](https://knuckles-team.github.io/agent-utilities/spec-delivery/)** · **[arbora](https://knuckles-team.github.io/arbora/spec-delivery/)** · **[Overstory](https://knuckles-team.github.io/agent-webui/spec-delivery/)** · **[Tuig](https://knuckles-team.github.io/agent-terminal-ui/spec-delivery/)** · **[Axil Desk](https://knuckles-team.github.io/geniusbot/spec-delivery/)**
+Spec delivery: **[epistemic-graph](https://knuckles-team.github.io/epistemic-graph/spec-delivery/)** · **[Scion SDK](https://knuckles-team.github.io/agent-connector-sdk/spec-delivery/)** · **[Meristem](https://knuckles-team.github.io/agent-utilities/spec-delivery/)** · **[arbora](https://knuckles-team.github.io/arbora/spec-delivery/)** · **[Overstory](https://knuckles-team.github.io/agent-webui/spec-delivery/)** · **[Tuig](https://knuckles-team.github.io/agent-terminal-ui/spec-delivery/)** · **[Axil](https://knuckles-team.github.io/geniusbot/spec-delivery/)**
 <!-- spec-delivery:end -->
 
 <a href="https://knuckles-team.github.io/.github/architecture/"><img src="https://raw.githubusercontent.com/Knuckles-Team/epistemic-graph/main/docs/assets/runtime-architecture.svg" alt="Knuckles-Team platform runtime architecture" width="100%"></a>
@@ -23,7 +23,7 @@ Spec delivery: **[epistemic-graph](https://knuckles-team.github.io/epistemic-gra
 
 ## Core projects
 
-The seven core projects are **Arbora**, **Overstory**, **Epistemic Graph**, **Meristem**, **Scion SDK**, **Tuig**, and **Axil Desk**. **Tuig** and **Axil Desk** are further operator surfaces on the same Arbora boundary. Overstory provides the browser operator surface through Arbora. MCP, REST, and A2A clients use the same governed **Arbora** boundary. Arbora composes the runtime and delegates agent work to the **Meristem** control plane. **Epistemic Graph** commits durable knowledge, evidence, provenance, and reasoning results. Source systems connect through the governed **Scion SDK** contract.
+The seven core projects are **Arbora**, **Overstory**, **Epistemic Graph**, **Meristem**, **Scion SDK**, **Tuig**, and **Axil**. **Tuig** and **Axil** are further operator surfaces on the same Arbora boundary. Overstory provides the browser operator surface through Arbora. MCP, REST, and A2A clients use the same governed **Arbora** boundary. Arbora composes the runtime and delegates agent work to the **Meristem** control plane. **Epistemic Graph** commits durable knowledge, evidence, provenance, and reasoning results. Source systems connect through the governed **Scion SDK** contract.
 
 <table>
 <tr>
@@ -89,7 +89,7 @@ The terminal operator surface for the Arbora REST interface.
 <tr>
 <td width="50%" valign="top">
 
-### [Axil Desk](https://github.com/Knuckles-Team/geniusbot)
+### [Axil](https://github.com/Knuckles-Team/geniusbot)
 
 The desktop GUI for specialist agents, embedded terminals, tool approvals, and graph-backed exploration.
 

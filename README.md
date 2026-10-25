@@ -4,7 +4,7 @@ The [organization profile](profile/README.md) introduces the Arbora ecosystem.
 
 The product family is **Overstory** (browser UI), **Tuig** (terminal UI / CLI),
 **Scion SDK** (connector contracts), **Meristem** (in-run agent harness), and
-**Axil Desk** (desktop GUI), alongside **Arbora** and **Epistemic Graph**.
+**Axil** (desktop GUI), alongside **Arbora** and **Epistemic Graph**.
 These are display names: repository URLs, package/import identifiers and spec
 prefixes stay unchanged. The Tuig command remains `tuig`.
 
