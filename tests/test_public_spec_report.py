@@ -170,9 +170,26 @@ def test_every_reported_repo_is_checked_out_by_the_pages_workflow():
     """A repo in REPOS but not checked out (or the reverse) drops off the page."""
     from scripts.public_spec_report import REPOS
 
-    assert "geniusbot" in REPOS
+    assert "axil" in REPOS
     workflow = Path(".github/workflows/spec-status-pages.yml").read_text()
     for name in REPOS:
         if name == ".github":
             continue
         assert f"repository: Knuckles-Team/{name}\n" in workflow, name
+
+
+def test_renamed_repositories_keep_the_workflow_checkout_paths():
+    """Canonical report owners resolve to the existing checkout locations."""
+    from scripts.public_spec_report import REPOS, SPEC_DELIVERY_PAGES
+
+    renamed = {
+        "epistemic-graph": "medulla", "agent-utilities": "meristem",
+        "agent-connector-sdk": "scion-sdk", "agent-webui": "overstory",
+        "agent-terminal-ui": "tuig", "geniusbot": "axil",
+    }
+    workflow = Path(".github/workflows/spec-status-pages.yml").read_text()
+    for old, new in renamed.items():
+        assert new in REPOS and new in SPEC_DELIVERY_PAGES
+        assert old not in REPOS and old not in SPEC_DELIVERY_PAGES
+        assert f"repository: Knuckles-Team/{new}\n          path: sources/{old}\n" in workflow
+        assert f"--repo {new}=sources/{old} " in workflow
