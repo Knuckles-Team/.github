@@ -159,6 +159,7 @@ def test_site_llms_txt_points_agents_at_the_front_door_and_contribution_path():
 def test_product_display_names_keep_repository_links(name):
     text = (ROOT / name).read_text()
     brands = {
+        "epistemic-graph": "Medulla",
         "agent-webui": "Overstory",
         "agent-terminal-ui": "Tuig",
         "agent-connector-sdk": "Scion SDK",
@@ -171,13 +172,13 @@ def test_product_display_names_keep_repository_links(name):
             assert f'<a href="{url}">{brand}</a>' in text
         else:
             assert f"[{brand}]({url})" in text
-    assert "Epistemic Graph" in text or "epistemic-graph" in text
+    assert "Medulla" in text or "epistemic-graph" in text
     assert "Arbora" in text or "arbora" in text
 
 
 def test_hub_readme_introduces_the_display_brand_family():
     text = (ROOT / "README.md").read_text()
-    for brand in ("Overstory", "Tuig", "Scion SDK", "Meristem", "Axil", "Arbora", "Epistemic Graph"):
+    for brand in ("Overstory", "Tuig", "Scion SDK", "Meristem", "Axil", "Arbora", "Medulla"):
         assert f"**{brand}**" in text
     assert "`tuig`" in text
     assert "package/import identifiers" in text
