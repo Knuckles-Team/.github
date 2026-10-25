@@ -7,15 +7,15 @@
 
 **A governed runtime for building agents, connecting operational systems, and turning every action into durable, explainable knowledge.**
 
-[![Platform documentation](https://img.shields.io/badge/platform-documentation-6d5dfc?style=for-the-badge)](https://knuckles-team.github.io/agent-utilities/) [![Run Arbora](https://img.shields.io/badge/start-Arbora-18a999?style=for-the-badge)](https://knuckles-team.github.io/arbora/) [![GitHub repositories](https://img.shields.io/badge/explore-repositories-111827?style=for-the-badge&logo=github)](https://github.com/orgs/Knuckles-Team/repositories)
+[![Platform documentation](https://img.shields.io/badge/platform-documentation-6d5dfc?style=for-the-badge)](https://knuckles-team.github.io/meristem/) [![Run Arbora](https://img.shields.io/badge/start-Arbora-18a999?style=for-the-badge)](https://knuckles-team.github.io/arbora/) [![GitHub repositories](https://img.shields.io/badge/explore-repositories-111827?style=for-the-badge&logo=github)](https://github.com/orgs/Knuckles-Team/repositories)
 
 **[Live architecture and spec status](https://knuckles-team.github.io/.github/architecture/)** · **[Repositories and skills](https://knuckles-team.github.io/.github/skills.html)** · **[Contribution guide](https://github.com/Knuckles-Team/.github/blob/main/CONTRIBUTING.md)**
 
 <!-- spec-delivery:begin -->
-Spec delivery: **[Medulla](https://knuckles-team.github.io/epistemic-graph/spec-delivery/)** · **[Scion SDK](https://knuckles-team.github.io/agent-connector-sdk/spec-delivery/)** · **[Meristem](https://knuckles-team.github.io/agent-utilities/spec-delivery/)** · **[arbora](https://knuckles-team.github.io/arbora/spec-delivery/)** · **[Overstory](https://knuckles-team.github.io/agent-webui/spec-delivery/)** · **[Tuig](https://knuckles-team.github.io/agent-terminal-ui/spec-delivery/)** · **[Axil](https://knuckles-team.github.io/geniusbot/spec-delivery/)**
+Spec delivery: **[Medulla](https://knuckles-team.github.io/medulla/spec-delivery/)** · **[Scion SDK](https://knuckles-team.github.io/scion-sdk/spec-delivery/)** · **[Meristem](https://knuckles-team.github.io/meristem/spec-delivery/)** · **[arbora](https://knuckles-team.github.io/arbora/spec-delivery/)** · **[Overstory](https://knuckles-team.github.io/overstory/spec-delivery/)** · **[Tuig](https://knuckles-team.github.io/tuig/spec-delivery/)** · **[Axil](https://knuckles-team.github.io/axil/spec-delivery/)**
 <!-- spec-delivery:end -->
 
-<a href="https://knuckles-team.github.io/.github/architecture/"><img src="https://raw.githubusercontent.com/Knuckles-Team/epistemic-graph/main/docs/assets/runtime-architecture.svg" alt="Knuckles-Team platform runtime architecture" width="100%"></a>
+<a href="https://knuckles-team.github.io/.github/architecture/"><img src="https://raw.githubusercontent.com/Knuckles-Team/medulla/main/docs/assets/runtime-architecture.svg" alt="Knuckles-Team platform runtime architecture" width="100%"></a>
 
 **[Explore the live architecture](https://knuckles-team.github.io/.github/architecture/)**
 
@@ -38,62 +38,62 @@ The public runtime gateway: MCP, REST, A2A, identity, policy, fleet composition,
 </td>
 <td width="50%" valign="top">
 
-### [Overstory](https://github.com/Knuckles-Team/agent-webui)
+### [Overstory](https://github.com/Knuckles-Team/overstory)
 
 The browser operator experience for conversations, approvals, tool activity, and graph-backed work.
 
-**[Documentation](https://knuckles-team.github.io/agent-webui/)** · **[Build status](https://github.com/Knuckles-Team/agent-webui/actions)** · **[Spec delivery](https://knuckles-team.github.io/agent-webui/spec-delivery/)**
+**[Documentation](https://knuckles-team.github.io/overstory/)** · **[Build status](https://github.com/Knuckles-Team/overstory/actions)** · **[Spec delivery](https://knuckles-team.github.io/overstory/spec-delivery/)**
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-### [Medulla](https://github.com/Knuckles-Team/epistemic-graph)
+### [Medulla](https://github.com/Knuckles-Team/medulla)
 
 The reasoning and durable knowledge engine for graph, RDF, SQL, vectors, time, blobs, evidence, and provenance. Publishes `epistemic-graph` and `epistemic-graph-server` (Medulla Stem, the native server and its container image; [PyPI](https://pypi.org/project/epistemic-graph-server/)).
 
-**[Documentation](https://knuckles-team.github.io/epistemic-graph/)** · **[Capability status](https://knuckles-team.github.io/epistemic-graph/status/)** · **[Spec delivery](https://knuckles-team.github.io/epistemic-graph/spec-delivery/)**
+**[Documentation](https://knuckles-team.github.io/medulla/)** · **[Capability status](https://knuckles-team.github.io/medulla/status/)** · **[Spec delivery](https://knuckles-team.github.io/medulla/spec-delivery/)**
 
 </td>
 <td width="50%" valign="top">
 
-### [Meristem](https://github.com/Knuckles-Team/agent-utilities)
+### [Meristem](https://github.com/Knuckles-Team/meristem)
 
 The agent control plane: agents, workflows, evaluation, skills, and governed execution.
 
-**[Documentation](https://knuckles-team.github.io/agent-utilities/)** · **[Build status](https://github.com/Knuckles-Team/agent-utilities/actions)** · **[Spec delivery](https://knuckles-team.github.io/agent-utilities/spec-delivery/)**
+**[Documentation](https://knuckles-team.github.io/meristem/)** · **[Build status](https://github.com/Knuckles-Team/meristem/actions)** · **[Spec delivery](https://knuckles-team.github.io/meristem/spec-delivery/)**
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-### [Scion SDK](https://github.com/Knuckles-Team/agent-connector-sdk)
+### [Scion SDK](https://github.com/Knuckles-Team/scion-sdk)
 
 The governed source-integration boundary for connector identity, discovery, synchronization, replay, and write-back.
 
-**[Documentation](https://knuckles-team.github.io/agent-connector-sdk/)** · **[Build status](https://github.com/Knuckles-Team/agent-connector-sdk/actions)** · **[Spec delivery](https://knuckles-team.github.io/agent-connector-sdk/spec-delivery/)**
+**[Documentation](https://knuckles-team.github.io/scion-sdk/)** · **[Build status](https://github.com/Knuckles-Team/scion-sdk/actions)** · **[Spec delivery](https://knuckles-team.github.io/scion-sdk/spec-delivery/)**
 
 </td>
 <td width="50%" valign="top">
 
-### [Tuig](https://github.com/Knuckles-Team/agent-terminal-ui)
+### [Tuig](https://github.com/Knuckles-Team/tuig)
 
 The terminal operator surface for the Arbora REST interface.
 
-**[Documentation](https://knuckles-team.github.io/agent-terminal-ui/)** · **[Build status](https://github.com/Knuckles-Team/agent-terminal-ui/actions)** · **[Spec delivery](https://knuckles-team.github.io/agent-terminal-ui/spec-delivery/)**
+**[Documentation](https://knuckles-team.github.io/tuig/)** · **[Build status](https://github.com/Knuckles-Team/tuig/actions)** · **[Spec delivery](https://knuckles-team.github.io/tuig/spec-delivery/)**
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-### [Axil](https://github.com/Knuckles-Team/geniusbot)
+### [Axil](https://github.com/Knuckles-Team/axil)
 
 The desktop GUI for specialist agents, embedded terminals, tool approvals, and graph-backed exploration.
 
-**[Documentation](https://knuckles-team.github.io/geniusbot/)** · **[Build status](https://github.com/Knuckles-Team/geniusbot/actions)** · **[Spec delivery](https://knuckles-team.github.io/geniusbot/spec-delivery/)**
+**[Documentation](https://knuckles-team.github.io/axil/)** · **[Build status](https://github.com/Knuckles-Team/axil/actions)** · **[Spec delivery](https://knuckles-team.github.io/axil/spec-delivery/)**
 
 </td>
 </tr>
@@ -115,10 +115,10 @@ The generated profile starts with local, bounded defaults. Continue with the **[
 | If you want to… | Start here |
 |---|---|
 | Run the platform or connect an MCP/A2A client | [Arbora documentation](https://knuckles-team.github.io/arbora/) |
-| Use the browser experience | [Overstory documentation](https://knuckles-team.github.io/agent-webui/) |
-| Build agents, workflows, evaluations, or skills | [Meristem documentation](https://knuckles-team.github.io/agent-utilities/) |
-| Query or operate the knowledge engine directly | [Medulla documentation](https://knuckles-team.github.io/epistemic-graph/) |
-| Build or certify a source connector | [Scion SDK documentation](https://knuckles-team.github.io/agent-connector-sdk/) |
+| Use the browser experience | [Overstory documentation](https://knuckles-team.github.io/overstory/) |
+| Build agents, workflows, evaluations, or skills | [Meristem documentation](https://knuckles-team.github.io/meristem/) |
+| Query or operate the knowledge engine directly | [Medulla documentation](https://knuckles-team.github.io/medulla/) |
+| Build or certify a source connector | [Scion SDK documentation](https://knuckles-team.github.io/scion-sdk/) |
 
 Every repository documents its own contract and links back to this same runtime map. The boundaries are deliberate: Arbora is the door, Meristem controls agent behavior, Medulla owns durable knowledge and reasoning, Overstory presents the browser surface, and Scion SDK governs source integration.
 

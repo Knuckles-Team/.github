@@ -41,24 +41,24 @@ jobs:
         with:
           path: hub
           persist-credentials: false
-      - name: Checkout epistemic-graph
+      - name: Checkout medulla
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          repository: Knuckles-Team/epistemic-graph
+          repository: Knuckles-Team/medulla
           path: sources/epistemic-graph
           fetch-depth: 0
           persist-credentials: false
-      - name: Checkout agent-connector-sdk
+      - name: Checkout scion-sdk
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          repository: Knuckles-Team/agent-connector-sdk
+          repository: Knuckles-Team/scion-sdk
           path: sources/agent-connector-sdk
           fetch-depth: 0
           persist-credentials: false
-      - name: Checkout agent-utilities
+      - name: Checkout meristem
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          repository: Knuckles-Team/agent-utilities
+          repository: Knuckles-Team/meristem
           path: sources/agent-utilities
           fetch-depth: 0
           persist-credentials: false
@@ -69,10 +69,10 @@ jobs:
           path: sources/arbora
           fetch-depth: 0
           persist-credentials: false
-      - name: Checkout agent-webui
+      - name: Checkout overstory
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          repository: Knuckles-Team/agent-webui
+          repository: Knuckles-Team/overstory
           path: sources/agent-webui
           fetch-depth: 0
           persist-credentials: false
@@ -90,10 +90,10 @@ jobs:
           path: sources/pipelines
           fetch-depth: 0
           persist-credentials: false
-      - name: Checkout agent-terminal-ui
+      - name: Checkout tuig
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          repository: Knuckles-Team/agent-terminal-ui
+          repository: Knuckles-Team/tuig
           path: sources/agent-terminal-ui
           fetch-depth: 0
           persist-credentials: false
@@ -125,10 +125,10 @@ jobs:
           path: sources/skill-graphs
           fetch-depth: 0
           persist-credentials: false
-      - name: Checkout geniusbot
+      - name: Checkout axil
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          repository: Knuckles-Team/geniusbot
+          repository: Knuckles-Team/axil
           path: sources/geniusbot
           fetch-depth: 0
           persist-credentials: false
@@ -137,6 +137,12 @@ jobs:
           python hub/scripts/public_spec_report.py \
             --checkouts-root sources \
             --repo .github=hub \
+            --repo medulla=sources/epistemic-graph \
+            --repo meristem=sources/agent-utilities \
+            --repo scion-sdk=sources/agent-connector-sdk \
+            --repo overstory=sources/agent-webui \
+            --repo tuig=sources/agent-terminal-ui \
+            --repo axil=sources/geniusbot \
             --output hub/site/spec-status.html
       - name: Checkout architecture explorer generator
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1

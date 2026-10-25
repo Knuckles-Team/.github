@@ -11,7 +11,7 @@ from scripts.check_front_door import PAGES, SELF_BLOB, audit, check_http, check_
 
 ROOT = Path(__file__).resolve().parents[1]
 EXPLORER = "https://knuckles-team.github.io/.github/architecture/"
-CORE = {"arbora", "agent-webui", "agent-utilities", "epistemic-graph", "agent-connector-sdk", "agent-terminal-ui", "geniusbot"}
+CORE = {"arbora", "overstory", "meristem", "medulla", "scion-sdk", "tuig", "axil"}
 
 
 def repositories(text):
@@ -45,7 +45,7 @@ def test_front_door_links_the_explorer_at_the_top_level():
     assert re.search(r"github\.io/\.github/architecture/#", profile) is None
     assert "Explore the live architecture" in profile
     assert "`SPECIFIED` rows are open work" in profile
-    diagram = 'src="https://raw.githubusercontent.com/Knuckles-Team/epistemic-graph/main/docs/assets/runtime-architecture.svg"'
+    diagram = 'src="https://raw.githubusercontent.com/Knuckles-Team/medulla/main/docs/assets/runtime-architecture.svg"'
     assert f'<a href="{EXPLORER}"><img {diagram}' in profile
     readme = (ROOT / "README.md").read_text()
     assert f"[Explore the live architecture]({EXPLORER})" in readme
@@ -159,12 +159,12 @@ def test_site_llms_txt_points_agents_at_the_front_door_and_contribution_path():
 def test_product_display_names_keep_repository_links(name):
     text = (ROOT / name).read_text()
     brands = {
-        "epistemic-graph": "Medulla",
-        "agent-webui": "Overstory",
-        "agent-terminal-ui": "Tuig",
-        "agent-connector-sdk": "Scion SDK",
-        "agent-utilities": "Meristem",
-        "geniusbot": "Axil",
+        "medulla": "Medulla",
+        "overstory": "Overstory",
+        "tuig": "Tuig",
+        "scion-sdk": "Scion SDK",
+        "meristem": "Meristem",
+        "axil": "Axil",
     }
     for repo, brand in brands.items():
         url = f"https://github.com/Knuckles-Team/{repo}"
@@ -172,7 +172,7 @@ def test_product_display_names_keep_repository_links(name):
             assert f'<a href="{url}">{brand}</a>' in text
         else:
             assert f"[{brand}]({url})" in text
-    assert "Medulla" in text or "epistemic-graph" in text
+    assert "Medulla" in text or "medulla" in text
     assert "Arbora" in text or "arbora" in text
 
 
@@ -182,3 +182,16 @@ def test_hub_readme_introduces_the_display_brand_family():
         assert f"**{brand}**" in text
     assert "`tuig`" in text
     assert "package/import identifiers" in text
+
+
+# Verifies ORG-FRONT-R002 and ORG-FRONT-R006.
+@pytest.mark.parametrize("name", [*PAGES, "README.md", "AGENTS.md"])
+def test_front_doors_use_canonical_repository_and_pages_urls(name):
+    text = (ROOT / name).read_text()
+    retired = (
+        "epistemic-graph", "agent-utilities", "agent-connector-sdk",
+        "agent-webui", "agent-terminal-ui", "geniusbot",
+    )
+    for host in ("github.com/Knuckles-Team", "raw.githubusercontent.com/Knuckles-Team", "knuckles-team.github.io"):
+        for slug in retired:
+            assert f"https://{host}/{slug}" not in text

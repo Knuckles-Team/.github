@@ -11,18 +11,18 @@ action as durable knowledge. Every requirement lives in the owning repository's 
 
 ## Core repositories and ownership
 
-Display names below do not rename repositories, packages, imports or spec prefixes.
+Links below use the canonical repository names; packages, imports and spec prefixes remain unchanged.
 Tuig runs as `tuig`; Axil is the desktop GUI.
 
 | Repository | Owns |
 |---|---|
-| [Medulla](https://github.com/Knuckles-Team/epistemic-graph) | Facts, records, storage, query, retrieval, reasoning |
+| [Medulla](https://github.com/Knuckles-Team/medulla) | Facts, records, storage, query, retrieval, reasoning |
 | [arbora](https://github.com/Knuckles-Team/arbora) | Admission, auth, served operations, MCP and A2A serving |
-| [Scion SDK](https://github.com/Knuckles-Team/agent-connector-sdk) | Connector contracts, transports, client adapters |
-| [Meristem](https://github.com/Knuckles-Team/agent-utilities) | The in-run harness: run loop, context, fan-out, sandbox |
-| [Overstory](https://github.com/Knuckles-Team/agent-webui) | The browser operator surface |
-| [Tuig](https://github.com/Knuckles-Team/agent-terminal-ui) | The terminal operator surface |
-| [Axil](https://github.com/Knuckles-Team/geniusbot) | The desktop operator surface |
+| [Scion SDK](https://github.com/Knuckles-Team/scion-sdk) | Connector contracts, transports, client adapters |
+| [Meristem](https://github.com/Knuckles-Team/meristem) | The in-run harness: run loop, context, fan-out, sandbox |
+| [Overstory](https://github.com/Knuckles-Team/overstory) | The browser operator surface |
+| [Tuig](https://github.com/Knuckles-Team/tuig) | The terminal operator surface |
+| [Axil](https://github.com/Knuckles-Team/axil) | The desktop operator surface |
 
 Supporting repositories: [pipelines](https://github.com/Knuckles-Team/pipelines) (gates, spec
 standard), [universal-skills](https://github.com/Knuckles-Team/universal-skills) (skills), and

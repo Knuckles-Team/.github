@@ -26,29 +26,29 @@ except ImportError:  # direct script invocation from the workflow
 
 REPOS = (
     ".github",
-    "epistemic-graph",
-    "agent-connector-sdk",
-    "agent-utilities",
+    "medulla",
+    "scion-sdk",
+    "meristem",
     "arbora",
-    "agent-webui",
+    "overstory",
     "repository-manager",
     "pipelines",
-    "agent-terminal-ui",
+    "tuig",
     "emerald-exchange",
     "tunnel-manager",
     "universal-skills",
     "skill-graphs",
-    "geniusbot",
+    "axil",
 )
-# Repositories whose Pages site serves /spec-delivery/ (checked 200 on 2026-10-11).
+# Canonical repositories whose Pages site serves /spec-delivery/.
 SPEC_DELIVERY_PAGES = (
-    "epistemic-graph",
-    "agent-connector-sdk",
-    "agent-utilities",
+    "medulla",
+    "scion-sdk",
+    "meristem",
     "arbora",
-    "agent-webui",
-    "agent-terminal-ui",
-    "geniusbot",
+    "overstory",
+    "tuig",
+    "axil",
 )
 V1_DELIVERY = frozenset(
     {

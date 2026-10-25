@@ -35,6 +35,8 @@ checks pass against the same merged commit; publishing this spec is not itself a
 
 - R002.1 to R002.4: `tests/test_front_door.py::test_readme_spec_delivery_links_match_the_single_list`
   must pass. It makes no network call. The test compares the README links with `SPEC_DELIVERY_PAGES`.
+- `tests/test_front_door.py::test_front_doors_use_canonical_repository_and_pages_urls`
+  rejects retired repository and Pages URLs after repository renames without changing package names.
 
 ## Canonical architecture explorer (ORG-FRONT-R003)
 
@@ -48,7 +50,8 @@ checks pass against the same merged commit; publishing this spec is not itself a
 ## Agent contributability (ORG-FRONT-R004 to R007)
 
 - ORG-FRONT-R004: `tests/test_requirement_progress.py::test_v2_verified_and_landed_count_as_delivered`, `::test_v2_sha_off_main_or_missing_demotes_with_a_reason`, `::test_v2_verified_needs_tests_and_unknown_states_are_rejected`, `::test_v2_retired_is_closed_and_leaves_the_denominator`; `tests/test_public_spec_report.py::test_v2_committed_specs_counts_verified_and_demotes_off_main`. No network call.
-- ORG-FRONT-R005: `tests/test_public_spec_report.py::test_v2_committed_specs_counts_verified_and_demotes_off_main` (rendered page); `tests/test_public_spec_report.py::test_every_reported_repo_is_checked_out_by_the_pages_workflow` (every reported repository, including geniusbot, is checked out). No network call.
+- ORG-FRONT-R005: `tests/test_public_spec_report.py::test_v2_committed_specs_counts_verified_and_demotes_off_main` (rendered page); `tests/test_public_spec_report.py::test_every_reported_repo_is_checked_out_by_the_pages_workflow` (every reported repository, including Axil, is checked out). No network call.
+- ORG-FRONT-R005: `tests/test_public_spec_report.py::test_renamed_repositories_keep_the_workflow_checkout_paths` checks canonical report owners and their explicit existing checkout paths. No network call.
 - ORG-FRONT-R006: `tests/test_front_door.py::test_agents_md_is_the_agent_front_door`. No network call.
 - ORG-FRONT-R007: `tests/test_front_door.py::test_agent_entry_points_point_at_agents_md`. No network call.
 - ORG-FRONT-R008: `tests/test_front_door.py::test_site_llms_txt_points_agents_at_the_front_door_and_contribution_path`. No network call.

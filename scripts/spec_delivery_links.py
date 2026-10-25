@@ -12,12 +12,12 @@ README = Path(__file__).resolve().parents[1] / "profile/README.md"
 BEGIN = "<!-- spec-delivery:begin -->"
 END = "<!-- spec-delivery:end -->"
 DISPLAY_NAMES = {
-    "epistemic-graph": "Medulla",
-    "agent-webui": "Overstory",
-    "agent-terminal-ui": "Tuig",
-    "agent-connector-sdk": "Scion SDK",
-    "agent-utilities": "Meristem",
-    "geniusbot": "Axil",
+    "medulla": "Medulla",
+    "overstory": "Overstory",
+    "tuig": "Tuig",
+    "scion-sdk": "Scion SDK",
+    "meristem": "Meristem",
+    "axil": "Axil",
 }
 
 
