@@ -16,7 +16,7 @@ Tuig runs as `tuig`; Axil is the desktop GUI.
 
 | Repository | Owns |
 |---|---|
-| [epistemic-graph](https://github.com/Knuckles-Team/epistemic-graph) | Facts, records, storage, query, retrieval, reasoning |
+| [Medulla](https://github.com/Knuckles-Team/epistemic-graph) | Facts, records, storage, query, retrieval, reasoning |
 | [arbora](https://github.com/Knuckles-Team/arbora) | Admission, auth, served operations, MCP and A2A serving |
 | [Scion SDK](https://github.com/Knuckles-Team/agent-connector-sdk) | Connector contracts, transports, client adapters |
 | [Meristem](https://github.com/Knuckles-Team/agent-utilities) | The in-run harness: run loop, context, fan-out, sandbox |

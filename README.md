@@ -4,7 +4,7 @@ The [organization profile](profile/README.md) introduces the Arbora ecosystem.
 
 The product family is **Overstory** (browser UI), **Tuig** (terminal UI / CLI),
 **Scion SDK** (connector contracts), **Meristem** (in-run agent harness), and
-**Axil** (desktop GUI), alongside **Arbora** and **Epistemic Graph**.
+**Axil** (desktop GUI), alongside **Arbora** and **Medulla**.
 These are display names: repository URLs, package/import identifiers and spec
 prefixes stay unchanged. The Tuig command remains `tuig`.
 
@@ -34,5 +34,5 @@ To render locally, clone the public owner repositories under one directory and r
 `python scripts/public_spec_report.py --checkouts-root <directory> --repo .github=. --output site/spec-status.html`.
 See `python scripts/public_spec_report.py --help` for explicit checkout paths.
 
-The runtime diagram is one file, [maintained in Epistemic Graph](https://raw.githubusercontent.com/Knuckles-Team/epistemic-graph/main/docs/assets/runtime-architecture.svg), and referenced by URL.
+The runtime diagram is one file, [maintained in Medulla](https://raw.githubusercontent.com/Knuckles-Team/epistemic-graph/main/docs/assets/runtime-architecture.svg), and referenced by URL.
 Every page that shows it links the explorer: [Explore the live architecture](https://knuckles-team.github.io/.github/architecture/).
