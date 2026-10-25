@@ -162,7 +162,7 @@ def test_product_display_names_keep_repository_links(name):
         "agent-webui": "Overstory",
         "agent-terminal-ui": "Tuig",
         "agent-connector-sdk": "Scion SDK",
-        "agent-utilities": "Trellis",
+        "agent-utilities": "Meristem",
         "geniusbot": "Axil Desk",
     }
     for repo, brand in brands.items():
@@ -177,7 +177,7 @@ def test_product_display_names_keep_repository_links(name):
 
 def test_hub_readme_introduces_the_display_brand_family():
     text = (ROOT / "README.md").read_text()
-    for brand in ("Overstory", "Tuig", "Scion SDK", "Trellis", "Axil Desk", "Arbora", "Epistemic Graph"):
+    for brand in ("Overstory", "Tuig", "Scion SDK", "Meristem", "Axil Desk", "Arbora", "Epistemic Graph"):
         assert f"**{brand}**" in text
     assert "`tuig`" in text
     assert "package/import identifiers" in text
