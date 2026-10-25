@@ -16,7 +16,7 @@ DISPLAY_NAMES = {
     "agent-terminal-ui": "Tuig",
     "agent-connector-sdk": "Scion SDK",
     "agent-utilities": "Meristem",
-    "geniusbot": "Axil Desk",
+    "geniusbot": "Axil",
 }
 
 
