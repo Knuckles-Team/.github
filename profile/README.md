@@ -12,7 +12,7 @@
 **[Live architecture and spec status](https://knuckles-team.github.io/.github/architecture/)** · **[Repositories and skills](https://knuckles-team.github.io/.github/skills.html)** · **[Contribution guide](https://github.com/Knuckles-Team/.github/blob/main/CONTRIBUTING.md)**
 
 <!-- spec-delivery:begin -->
-Spec delivery: **[epistemic-graph](https://knuckles-team.github.io/epistemic-graph/spec-delivery/)** · **[agent-connector-sdk](https://knuckles-team.github.io/agent-connector-sdk/spec-delivery/)** · **[agent-utilities](https://knuckles-team.github.io/agent-utilities/spec-delivery/)** · **[arbora](https://knuckles-team.github.io/arbora/spec-delivery/)** · **[agent-webui](https://knuckles-team.github.io/agent-webui/spec-delivery/)** · **[agent-terminal-ui](https://knuckles-team.github.io/agent-terminal-ui/spec-delivery/)** · **[geniusbot](https://knuckles-team.github.io/geniusbot/spec-delivery/)**
+Spec delivery: **[epistemic-graph](https://knuckles-team.github.io/epistemic-graph/spec-delivery/)** · **[Scion SDK](https://knuckles-team.github.io/agent-connector-sdk/spec-delivery/)** · **[Trellis](https://knuckles-team.github.io/agent-utilities/spec-delivery/)** · **[arbora](https://knuckles-team.github.io/arbora/spec-delivery/)** · **[Overstory](https://knuckles-team.github.io/agent-webui/spec-delivery/)** · **[Tuig](https://knuckles-team.github.io/agent-terminal-ui/spec-delivery/)** · **[Axil Desk](https://knuckles-team.github.io/geniusbot/spec-delivery/)**
 <!-- spec-delivery:end -->
 
 <a href="https://knuckles-team.github.io/.github/architecture/"><img src="https://raw.githubusercontent.com/Knuckles-Team/epistemic-graph/main/docs/assets/runtime-architecture.svg" alt="Knuckles-Team platform runtime architecture" width="100%"></a>
@@ -23,7 +23,7 @@ Spec delivery: **[epistemic-graph](https://knuckles-team.github.io/epistemic-gra
 
 ## Core projects
 
-The seven core projects are **Arbora**, **Agent Web UI**, **Epistemic Graph**, **Agent Utilities**, **Agent Connector SDK**, **Agent Terminal UI**, and **GeniusBot**. **Agent Terminal UI** and **GeniusBot** are further operator surfaces on the same Arbora boundary. Agent Web UI provides the browser operator surface through Arbora. MCP, REST, and A2A clients use the same governed **Arbora** boundary. Arbora composes the runtime and delegates agent work to the **Agent Utilities** control plane. **Epistemic Graph** commits durable knowledge, evidence, provenance, and reasoning results. Source systems connect through the governed **Agent Connector SDK** contract.
+The seven core projects are **Arbora**, **Overstory**, **Epistemic Graph**, **Trellis**, **Scion SDK**, **Tuig**, and **Axil Desk**. **Tuig** and **Axil Desk** are further operator surfaces on the same Arbora boundary. Overstory provides the browser operator surface through Arbora. MCP, REST, and A2A clients use the same governed **Arbora** boundary. Arbora composes the runtime and delegates agent work to the **Trellis** control plane. **Epistemic Graph** commits durable knowledge, evidence, provenance, and reasoning results. Source systems connect through the governed **Scion SDK** contract.
 
 <table>
 <tr>
@@ -38,7 +38,7 @@ The public runtime gateway: MCP, REST, A2A, identity, policy, fleet composition,
 </td>
 <td width="50%" valign="top">
 
-### [Agent Web UI](https://github.com/Knuckles-Team/agent-webui)
+### [Overstory](https://github.com/Knuckles-Team/agent-webui)
 
 The browser operator experience for conversations, approvals, tool activity, and graph-backed work.
 
@@ -58,7 +58,7 @@ The reasoning and durable knowledge engine for graph, RDF, SQL, vectors, time, b
 </td>
 <td width="50%" valign="top">
 
-### [Agent Utilities](https://github.com/Knuckles-Team/agent-utilities)
+### [Trellis](https://github.com/Knuckles-Team/agent-utilities)
 
 The agent control plane: agents, workflows, evaluation, skills, and governed execution.
 
@@ -69,7 +69,7 @@ The agent control plane: agents, workflows, evaluation, skills, and governed exe
 <tr>
 <td width="50%" valign="top">
 
-### [Agent Connector SDK](https://github.com/Knuckles-Team/agent-connector-sdk)
+### [Scion SDK](https://github.com/Knuckles-Team/agent-connector-sdk)
 
 The governed source-integration boundary for connector identity, discovery, synchronization, replay, and write-back.
 
@@ -78,7 +78,7 @@ The governed source-integration boundary for connector identity, discovery, sync
 </td>
 <td width="50%" valign="top">
 
-### [Agent Terminal UI](https://github.com/Knuckles-Team/agent-terminal-ui)
+### [Tuig](https://github.com/Knuckles-Team/agent-terminal-ui)
 
 The terminal operator surface for the Arbora REST interface.
 
@@ -89,9 +89,9 @@ The terminal operator surface for the Arbora REST interface.
 <tr>
 <td width="50%" valign="top">
 
-### [GeniusBot](https://github.com/Knuckles-Team/geniusbot)
+### [Axil Desk](https://github.com/Knuckles-Team/geniusbot)
 
-The desktop cockpit for specialist agents, embedded terminals, tool approvals, and graph-backed exploration.
+The desktop GUI for specialist agents, embedded terminals, tool approvals, and graph-backed exploration.
 
 **[Documentation](https://knuckles-team.github.io/geniusbot/)** · **[Build status](https://github.com/Knuckles-Team/geniusbot/actions)** · **[Spec delivery](https://knuckles-team.github.io/geniusbot/spec-delivery/)**
 
@@ -108,19 +108,19 @@ uvx --from arbora setup-config generate --profile tiny
 uvx --from arbora arbora --transport stdio
 ```
 
-The generated profile starts with local, bounded defaults. Continue with the **[Arbora quick start](https://knuckles-team.github.io/arbora/)** for provider configuration, Agent Web UI hosting, messaging, and authenticated network transports.
+The generated profile starts with local, bounded defaults. Continue with the **[Arbora quick start](https://knuckles-team.github.io/arbora/)** for provider configuration, Overstory hosting, messaging, and authenticated network transports.
 
 ## Follow the flow
 
 | If you want to… | Start here |
 |---|---|
 | Run the platform or connect an MCP/A2A client | [Arbora documentation](https://knuckles-team.github.io/arbora/) |
-| Use the browser experience | [Agent Web UI documentation](https://knuckles-team.github.io/agent-webui/) |
-| Build agents, workflows, evaluations, or skills | [Agent Utilities documentation](https://knuckles-team.github.io/agent-utilities/) |
+| Use the browser experience | [Overstory documentation](https://knuckles-team.github.io/agent-webui/) |
+| Build agents, workflows, evaluations, or skills | [Trellis documentation](https://knuckles-team.github.io/agent-utilities/) |
 | Query or operate the knowledge engine directly | [Epistemic Graph documentation](https://knuckles-team.github.io/epistemic-graph/) |
-| Build or certify a source connector | [Agent Connector SDK documentation](https://knuckles-team.github.io/agent-connector-sdk/) |
+| Build or certify a source connector | [Scion SDK documentation](https://knuckles-team.github.io/agent-connector-sdk/) |
 
-Every repository documents its own contract and links back to this same runtime map. The boundaries are deliberate: Arbora is the door, Agent Utilities controls agent behavior, Epistemic Graph owns durable knowledge and reasoning, Agent Web UI presents the browser surface, and Agent Connector SDK governs source integration.
+Every repository documents its own contract and links back to this same runtime map. The boundaries are deliberate: Arbora is the door, Trellis controls agent behavior, Epistemic Graph owns durable knowledge and reasoning, Overstory presents the browser surface, and Scion SDK governs source integration.
 
 ## Project health
 

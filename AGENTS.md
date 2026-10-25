@@ -11,15 +11,18 @@ action as durable knowledge. Every requirement lives in the owning repository's 
 
 ## Core repositories and ownership
 
+Display names below do not rename repositories, packages, imports or spec prefixes.
+Tuig runs as `tuig`; Axil Desk is the desktop GUI.
+
 | Repository | Owns |
 |---|---|
 | [epistemic-graph](https://github.com/Knuckles-Team/epistemic-graph) | Facts, records, storage, query, retrieval, reasoning |
 | [arbora](https://github.com/Knuckles-Team/arbora) | Admission, auth, served operations, MCP and A2A serving |
-| [agent-connector-sdk](https://github.com/Knuckles-Team/agent-connector-sdk) | Connector contracts, transports, client adapters |
-| [agent-utilities](https://github.com/Knuckles-Team/agent-utilities) | The in-run harness: run loop, context, fan-out, sandbox |
-| [agent-webui](https://github.com/Knuckles-Team/agent-webui) | The browser operator surface |
-| [agent-terminal-ui](https://github.com/Knuckles-Team/agent-terminal-ui) | The terminal operator surface |
-| [geniusbot](https://github.com/Knuckles-Team/geniusbot) | The desktop operator surface |
+| [Scion SDK](https://github.com/Knuckles-Team/agent-connector-sdk) | Connector contracts, transports, client adapters |
+| [Trellis](https://github.com/Knuckles-Team/agent-utilities) | The in-run harness: run loop, context, fan-out, sandbox |
+| [Overstory](https://github.com/Knuckles-Team/agent-webui) | The browser operator surface |
+| [Tuig](https://github.com/Knuckles-Team/agent-terminal-ui) | The terminal operator surface |
+| [Axil Desk](https://github.com/Knuckles-Team/geniusbot) | The desktop operator surface |
 
 Supporting repositories: [pipelines](https://github.com/Knuckles-Team/pipelines) (gates, spec
 standard), [universal-skills](https://github.com/Knuckles-Team/universal-skills) (skills), and

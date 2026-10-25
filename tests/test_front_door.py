@@ -113,6 +113,8 @@ def test_readme_spec_delivery_links_match_the_single_list():
     assert set(found) == expected
     assert all(re.fullmatch(r"https://knuckles-team\.github\.io/[\w-]+/spec-delivery/", u) for u in found)
     assert spec_delivery_links.render() in text
+    for repo, brand in spec_delivery_links.DISPLAY_NAMES.items():
+        assert f"**[{brand}]({spec_delivery_links.url(repo)})**" in spec_delivery_links.render()
 
 
 # Verifies ORG-FRONT-R006.
@@ -150,3 +152,32 @@ def test_site_llms_txt_points_agents_at_the_front_door_and_contribution_path():
         assert needle in text, needle
     assert len(re.findall(r"^\d\. ", text, re.M)) == 5
     assert (ROOT / "CONTRIBUTING.md").is_file()
+
+
+# Verifies ORG-FRONT-R002 and ORG-FRONT-R006.
+@pytest.mark.parametrize("name", [*PAGES, "AGENTS.md"])
+def test_product_display_names_keep_repository_links(name):
+    text = (ROOT / name).read_text()
+    brands = {
+        "agent-webui": "Overstory",
+        "agent-terminal-ui": "Tuig",
+        "agent-connector-sdk": "Scion SDK",
+        "agent-utilities": "Trellis",
+        "geniusbot": "Axil Desk",
+    }
+    for repo, brand in brands.items():
+        url = f"https://github.com/Knuckles-Team/{repo}"
+        if name.endswith(".html"):
+            assert f'<a href="{url}">{brand}</a>' in text
+        else:
+            assert f"[{brand}]({url})" in text
+    assert "Epistemic Graph" in text or "epistemic-graph" in text
+    assert "Arbora" in text or "arbora" in text
+
+
+def test_hub_readme_introduces_the_display_brand_family():
+    text = (ROOT / "README.md").read_text()
+    for brand in ("Overstory", "Tuig", "Scion SDK", "Trellis", "Axil Desk", "Arbora", "Epistemic Graph"):
+        assert f"**{brand}**" in text
+    assert "`tuig`" in text
+    assert "package/import identifiers" in text
