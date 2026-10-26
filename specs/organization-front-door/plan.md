@@ -53,3 +53,16 @@ URLs. Epistemic Graph and Arbora retain their names; package/import names,
 repository slugs, spec prefixes and the `tuig` command remain unchanged.
 The architecture explorer still comes from the canonical pipelines generator;
 no generated architecture or spec-status output is hand-edited.
+
+## 2026-10-26 canonical source-chart invocation amendment (ORG-FRONT-R003.1)
+
+The actual organization workflow, distinct from the reusable repository Pages
+workflow, must opt into the pipelines source-family configuration when building
+the canonical explorer. Retain the existing read token and deployment permissions;
+add the shared alias/error/trailer import closure and the same pinned networkx
+3.6.1 scoring dependency as the qualified generator. Smoke-import the render path
+before network capture. Missing or invalid source charts fail the build before
+artifact upload; never substitute a frozen study or silently serve evidence-only
+as a qualified priority/dependency release. The scoped source-family and no-activity
+limitations remain those of the generator. Verify the served same-build receipt
+only after successful canonical deployment; do not hand-edit generated site files.
