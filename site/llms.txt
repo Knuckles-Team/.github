@@ -5,6 +5,16 @@ Contribution guide: https://github.com/Knuckles-Team/.github/blob/main/CONTRIBUT
 Skills: https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills
 Spec details JSON: https://knuckles-team.github.io/.github/architecture/spec-details/<repo>/<family>.json
 
+Projects and roles:
+- Medulla (formerly epistemic-graph): the knowledge engine. One engine, one server executable (medulla-server), package medulla. No synced second database; external stores are connector sources read as virtual graphs.
+- Arbora (formerly graph-os): the one door. Served operations, admission, authentication, MCP and A2A serving, registry.
+- Meristem (formerly agent-utilities): the in-run harness. It applies decisions it receives and holds no store.
+- Scion SDK (formerly agent-connector-sdk): connector contracts and transports.
+- Overstory (browser), Tuig (terminal), Axil (desktop): operator surfaces that reach data through Arbora.
+- Spec ID prefixes: MEDULLA-, ARBORA-, MERISTEM-, SCION-, OVERSTORY-, TUIG-, AXIL-, CONN-<REPO>-, PIPE-.
+- Rust serde types are the source of truth. No generated API contracts are committed. Spec status is computed at read time.
+- The ecosystem is developed inside Medulla as changesets, a code graph, and requirement records, served through Arbora MCP.
+
 How to contribute:
 1. Start at the front door, https://knuckles-team.github.io/.github/.
 2. Read the contribution guide, https://github.com/Knuckles-Team/.github/blob/main/CONTRIBUTING.md.
