@@ -5,48 +5,27 @@
 You can contribute using public GitHub repositories and a development environment
 you control. The normal spec, build, and pull request path requires no private
 service or live deployment. Start here even if you have
-never worked in this ecosystem:
+never worked in this ecosystem.
 
 The [repositories and skills map](https://knuckles-team.github.io/.github/skills.html)
 shows which public repository owns each kind of work and which shared skill to
 use at each stage.
 
-1. Open the [Arbora Architecture Explorer](https://knuckles-team.github.io/.github/architecture/),
-   which shows every spec row with its status on the part of the architecture it builds,
-   or the [specification status report](https://knuckles-team.github.io/.github/spec-status.html),
-   and expand a specification's open requirements. Choose one that is `SPECIFIED`
-   (not started) or `BUILDING`. The owner repository named on that row is the
-   authority for it; its `requirements.md` defines the ID and how it is verified.
-   The report also shows each published spec's separate delivery and acceptance states.
-2. Open the **owner spec** and read `spec.md`, `plan.md`, `test-spec.md`,
-   `tasks.md`, and `status.json` together. These describe the desired behavior,
-   architecture, test cases, work slices, and evidence. If any part is missing,
-   propose it in the owner repository before treating the spec as build-ready.
-   A **related spec** in another repository describes a consumer or interface;
-   it does not take ownership from the component that owns the behavior.
-3. Read that repository's `AGENTS.md`, contribution guide, and local setup.
-   Repositories that provide `scripts/bootstrap.sh` use it to install their
-   pinned toolchains, locked dependencies, and git hooks from a fresh clone.
-   Check that repository's setup instructions and CI workflow for the exact
-   commands and required checks. Some repositories also run bootstrap from a
-   Claude Code SessionStart hook.
-   Use [`arbora-development`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills/arbora-development)
-   to bootstrap a local ecosystem environment and find the established code,
-   wiring, interfaces, and components to reuse.
-4. Install [universal-skills](https://github.com/Knuckles-Team/universal-skills)
-   (`pip install universal-skills`, then `install-skills --all-detected --symlink`)
-   and make the skills available to your coding agent. Use the map below to
-   choose the right skill. You may use [GitHub Spec Kit](https://github.com/github/spec-kit)
-   for the same owner-native artifacts; review generated diffs before combining
-   generators.
-5. Implement the owner spec and its consumer contracts in their respective
-   repositories. Run the repository's focused tests and configured CCCC,
-   `jscpd`, Dupehound, and KISS checks. Record any unavailable check as a gap;
-   do not claim it passed.
-6. Open a pull request against the owner repository, link the spec and affected
-   consumer specs, and provide test evidence. Update `status.json` only with
-   public merged commits and test or consumer evidence. A merged pull request
-   establishes delivery, while acceptance needs its own receipts.
+The contribution path is spec-driven. Each step names its skill and the files it writes:
+
+1. **Constitution.** Read the [constitution](https://github.com/Knuckles-Team/pipelines/blob/main/.specify/memory/constitution.md). Every plan checks against it.
+2. **Route.** Pick the owner repository with the [ecosystem boundaries](https://github.com/Knuckles-Team/pipelines/blob/main/reference/ecosystem-boundaries.md) and [`arbora-development`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills/arbora-development). Choose an open (`SPECIFIED`) row in [Canopy](https://knuckles-team.github.io/.github/architecture/).
+3. **Specify.** [`spec-intake-wizard`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills/spec-intake-wizard) and [`spec-generator`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills/spec-generator) write `specs/<id>/spec.md`: user stories, Given/When/Then scenarios, and `FR-` and `SC-` labels mapped to row IDs.
+4. **Clarify.** Resolve every `[NEEDS CLARIFICATION]` marker in `spec.md` before you plan.
+5. **Plan.** [`spec-generator`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills/spec-generator) writes `plan.md`. Add `contracts/` for cross-repository seams, `data-model.md`, `quickstart.md`, and `research.md` when unknowns remain.
+6. **Tasks.** [`task-planner`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills/task-planner) writes `tasks.md`. Each line reads `- [ ] T001 [P] [US1] <ROW-ID>`.
+7. **Analyze and checklist.** [`spec-verifier`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills/spec-verifier) checks consistency and writes `checklists/requirements.md`.
+8. **Implement.** [`sdd-implementer`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills/sdd-implementer) builds each task. Run the repository gates.
+9. **Land.** Open a pull request whose commits carry a `Spec: <ROW-ID>` trailer and a bound test. Do not edit `status.json` by hand.
+10. **Release.** Landed rows ship in the next release bundle.
+
+Standards: [constitution](https://github.com/Knuckles-Team/pipelines/blob/main/.specify/memory/constitution.md), [spec standard](https://github.com/Knuckles-Team/pipelines/blob/main/reference/spec-standard.md), [spec templates](https://github.com/Knuckles-Team/pipelines/tree/main/specs/_template), and [Canopy](https://knuckles-team.github.io/.github/architecture/). Install the skills with `pip install universal-skills`, then `install-skills --all-detected --symlink`.
+You may use [GitHub Spec Kit](https://github.com/github/spec-kit) for the same artifacts; review generated diffs before combining generators. Record any unavailable check as a gap; do not claim it passed.
 
 Use the public [universal-skills kit](https://github.com/Knuckles-Team/universal-skills)
 to install the same workflows used by maintainers:
