@@ -125,7 +125,7 @@ def test_agents_md_is_the_agent_front_door():
     for needle in (
         "reference/ecosystem-boundaries.md", "reference/spec-standard.md", "spec-status.html",
         "/architecture/", "scripts/bootstrap.sh", "Spec: none (docs)", "Smallest contribution",
-        "SPECIFIED", "LANDED", "VERIFIED", "-R[0-9]{3}", "sdd-full-lifecycle", "spec-generator",
+        "SPECIFIED", "LANDED", "VERIFIED", "-R[0-9]{3}", "sdd-full-lifecycle", "speckit-specify",
     ):
         assert needle in text, needle
     assert len(re.findall(r"^\d+\. ", text.split("## Contribution path", 1)[1].split("##", 1)[0], re.M)) == 10
