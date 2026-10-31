@@ -15,11 +15,11 @@ The contribution path is spec-driven. Each step names its skill and the files it
 
 1. **Constitution.** Read the [constitution](https://github.com/Knuckles-Team/pipelines/blob/main/.specify/memory/constitution.md). Every plan checks against it.
 2. **Route.** Pick the owner repository with the [ecosystem boundaries](https://github.com/Knuckles-Team/pipelines/blob/main/reference/ecosystem-boundaries.md) and [`arbora-development`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills/arbora-development). Choose an open (`SPECIFIED`) row in [Canopy](https://knuckles-team.github.io/.github/architecture/).
-3. **Specify.** [`spec-intake-wizard`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills/spec-intake-wizard) and [`spec-generator`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills/spec-generator) write `specs/<id>/spec.md`: user stories, Given/When/Then scenarios, and `FR-` and `SC-` labels mapped to row IDs.
+3. **Specify.** [`speckit-specify`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills/speckit-specify) and [`speckit-clarify`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills/speckit-clarify) write `specs/<id>/spec.md`: user stories, Given/When/Then scenarios, and `FR-` and `SC-` labels mapped to row IDs.
 4. **Clarify.** Resolve every `[NEEDS CLARIFICATION]` marker in `spec.md` before you plan.
-5. **Plan.** [`spec-generator`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills/spec-generator) writes `plan.md`. Add `contracts/` for cross-repository seams, `data-model.md`, `quickstart.md`, and `research.md` when unknowns remain.
-6. **Tasks.** [`task-planner`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills/task-planner) writes `tasks.md`. Each line reads `- [ ] T001 [P] [US1] <ROW-ID>`.
-7. **Analyze and checklist.** [`spec-verifier`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills/spec-verifier) checks consistency and writes `checklists/requirements.md`.
+5. **Plan.** [`speckit-plan`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills/speckit-plan) writes `plan.md`. Add `contracts/` for cross-repository seams, `data-model.md`, `quickstart.md`, and `research.md` when unknowns remain.
+6. **Tasks.** [`speckit-tasks`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills/speckit-tasks) writes `tasks.md`. Each line reads `- [ ] T001 [P] [US1] <ROW-ID>`.
+7. **Analyze and checklist.** [`speckit-analyze`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills/speckit-analyze) checks consistency and writes `checklists/requirements.md`.
 8. **Implement.** [`sdd-implementer`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills/sdd-implementer) builds each task. Run the repository gates.
 9. **Land.** Open a pull request whose commits carry a `Spec: <ROW-ID>` trailer and a bound test. Do not edit `status.json` by hand.
 10. **Release.** Landed rows ship in the next release bundle.
@@ -31,9 +31,9 @@ Use the public [universal-skills kit](https://github.com/Knuckles-Team/universal
 to install the same workflows used by maintainers:
 
 - [`arbora-development`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills/arbora-development) for ecosystem boundaries, a local development environment, and reuse of existing components;
-- [`spec-generator`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills/spec-generator) to turn a proposal into a complete owner-native spec;
-- [`task-planner`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills/task-planner) and [`sdd-implementer`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills/sdd-implementer) to build from the spec;
-- [`spec-verifier`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills/spec-verifier) to review its evidence and acceptance;
+- [`speckit-specify`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills/speckit-specify) to turn a proposal into a complete owner-native spec;
+- [`speckit-tasks`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills/speckit-tasks) and [`sdd-implementer`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills/sdd-implementer) to build from the spec;
+- [`speckit-analyze`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills/speckit-analyze) to review its evidence and acceptance;
 - [`sdd-full-lifecycle`](https://github.com/Knuckles-Team/universal-skills/tree/main/universal_skills/skills/sdd-full-lifecycle) to coordinate the sequence.
 
 The canonical development skill also ships with
