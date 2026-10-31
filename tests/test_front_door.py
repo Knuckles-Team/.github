@@ -128,7 +128,7 @@ def test_agents_md_is_the_agent_front_door():
         "SPECIFIED", "LANDED", "VERIFIED", "-R[0-9]{3}", "sdd-full-lifecycle", "spec-generator",
     ):
         assert needle in text, needle
-    assert len(re.findall(r"^\d\. ", text.split("## Contribution path", 1)[1].split("##", 1)[0], re.M)) == 6
+    assert len(re.findall(r"^\d+\. ", text.split("## Contribution path", 1)[1].split("##", 1)[0], re.M)) == 10
     for link in re.findall(r"\]\((?!https?://|#)([^)]+)\)", text):
         assert (ROOT / link).exists(), link
 
@@ -150,7 +150,7 @@ def test_site_llms_txt_points_agents_at_the_front_door_and_contribution_path():
         f"{EXPLORER}spec-details/<repo>/<family>.json", "arbora-development", "Spec: trailer",
     ):
         assert needle in text, needle
-    assert len(re.findall(r"^\d\. ", text, re.M)) == 5
+    assert len(re.findall(r"^\d+\. ", text, re.M)) == 10
     assert (ROOT / "CONTRIBUTING.md").is_file()
 
 
