@@ -28,3 +28,13 @@ Audit source: `5e674839fb10e1aea4e3f11468fe804636fdd8b6`. See [complete evidence
 - [ ] ORG-FRONT-R006: a root agents.md is the agent front door.
 - [ ] ORG-FRONT-R007: agent entry points are wired in.
 - [ ] ORG-FRONT-R008: a plain-text pointer serves agents.
+
+- [ ] T001 [P] [US1] ORG-FRONT-R009.1 Model. Add `read_status_documents(repo, head)` to `scripts/public_spec_report.py`. Bound to tests/test_public_spec_report.py::test_status_documents_are_generated_from_the_head_commit.
+- [ ] T002 [P] [US1] ORG-FRONT-R009.2 Behavior. Replace the manifest lookup in `committed_specs`. Bound to tests/test_public_spec_report.py::test_spec_without_a_committed_manifest_is_evaluated_from_generated_status.
+- [ ] T003 [P] [US1] ORG-FRONT-R009.3 Wiring. Move the `Checkout architecture explorer generator` step before `Render from public committed specs` in the site workflow. Bound to tests/test_architecture_explorer_site.py::test_render_step_follows_the_generator_checkout_and_sets_pythonpath.
+- [ ] T004 [P] [US1] ORG-FRONT-R009.4 Refusal. When the generator cannot run for a repository, the render fails with the typed finding `status-uncomputable` and the repository name. Bound to tests/test_public_spec_report.py::test_a_shallow_checkout_fails_the_render_with_status_uncomputable.
+- [ ] T005 [P] [US1] ORG-FRONT-R009.5 Evidence. Each repository block states the head commit it computed and the generator commit it used. Bound to tests/test_public_spec_report.py::test_page_states_computed_head_and_generator_commit_and_no_missing_manifest_text.
+- [ ] T006 [P] [US1] ORG-FRONT-R009.6 Hot-path proof. Use entry point `python scripts/public_spec_report.py --repo X=<fixture> --output <file>` on a real temporary Git repository. Bound to tests/test_public_spec_report.py::test_cli_renders_landed_state_for_a_repository_without_committed_status.
+- [ ] T007 [P] [US1] ORG-FRONT-R010.1 Wiring. Add `releases` to the sparse checkout of the generator in the site workflow. Bound to tests/test_architecture_explorer_site.py::test_workflow_checks_out_releases_for_the_explorer.
+- [ ] T008 [P] [US1] ORG-FRONT-R010.2 Evidence. The upload step publishes `architecture/export/rows.json` and `architecture/export/rows.md` with the page. Bound to tests/test_architecture_explorer_site.py::test_workflow_verifies_the_export_files_before_upload.
+- [ ] T009 [P] [US1] ORG-FRONT-R010.3 Behavior. `site/llms.txt` names the export URLs and the Canopy hash forms `#row=`, `#part=`, `#mode=`, `#filter=` and `#release=`. Bound to tests/test_front_door.py::test_site_llms_txt_names_the_canopy_export_and_hash_forms.
