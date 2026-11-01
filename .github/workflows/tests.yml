@@ -25,3 +25,19 @@ jobs:
         run: python -m pytest -q tests
       - name: Front-door links and images
         run: python scripts/check_front_door.py
+
+  ci-required:
+    name: CI required
+    if: always()
+    needs: [pytest]
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Fail on any failed or cancelled job (skipped is fine)
+        env:
+          RESULTS: ${{ join(needs.*.result, ' ') }}
+        run: |
+          echo "needed job results: $RESULTS"
+          for r in $RESULTS; do
+            case "$r" in failure|cancelled) echo "::error::a required job ended $r"; exit 1;; esac
+          done
