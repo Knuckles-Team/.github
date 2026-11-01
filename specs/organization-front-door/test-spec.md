@@ -28,7 +28,7 @@
 ## Acceptance evidence
 
 Run the link check and the rendering check in a clean checkout and record the exact commit,
-check output, and pass/fail result in `status.json`. ORG-FRONT-R001 is accepted only when both
+check output, and pass/fail result in the evidence directory. ORG-FRONT-R001 is accepted only when both
 checks pass against the same merged commit; publishing this spec is not itself acceptance.
 
 ## Spec-delivery links (ORG-FRONT-R002)
@@ -69,3 +69,13 @@ checks pass against the same merged commit; publishing this spec is not itself a
 - T-ORG-FRONT-R010.1: ORG-FRONT-R010.1 | Test: `tests/test_architecture_explorer_site.py::test_workflow_checks_out_releases_for_the_explorer`. Add `releases` to the sparse checkout of the generator in the site workflow.
 - T-ORG-FRONT-R010.2: ORG-FRONT-R010.2 | Test: `tests/test_architecture_explorer_site.py::test_workflow_verifies_the_export_files_before_upload`. The upload step publishes `architecture/export/rows.json` and `architecture/export/rows.md` with the page.
 - T-ORG-FRONT-R010.3: ORG-FRONT-R010.3 | Test: `tests/test_front_door.py::test_site_llms_txt_names_the_canopy_export_and_hash_forms`. `site/llms.txt` names the export URLs and the Canopy hash forms `#row=`, `#part=`, `#mode=`, `#filter=` and `#release=`.
+
+## Row entries for the earlier children
+
+- T-ORG-FRONT-R002.1: ORG-FRONT-R002.1 | Test: `tests/test_front_door.py::test_readme_spec_delivery_links_match_the_single_list`.
+- T-ORG-FRONT-R002.2: ORG-FRONT-R002.2 | Test: `tests/test_front_door.py::test_readme_spec_delivery_links_match_the_single_list`.
+- T-ORG-FRONT-R002.3: ORG-FRONT-R002.3 | Test: `tests/test_front_door.py::test_readme_spec_delivery_links_match_the_single_list`.
+- T-ORG-FRONT-R002.4: ORG-FRONT-R002.4 | Test: `tests/test_front_door.py::test_readme_spec_delivery_links_match_the_single_list`.
+- T-ORG-FRONT-R003.1: ORG-FRONT-R003.1 | Test: `tests/test_architecture_explorer_site.py::test_site_workflow_builds_the_explorer_on_a_schedule`.
+- T-ORG-FRONT-R003.2: ORG-FRONT-R003.2 | Test: `tests/test_front_door.py::test_front_door_links_the_explorer_at_the_top_level`.
+- T-ORG-FRONT-R003.3: ORG-FRONT-R003.3 | Test: `tests/test_front_door.py::test_audit_never_hides_a_broken_destination`.

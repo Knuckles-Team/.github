@@ -53,7 +53,7 @@ The path is spec-driven. Skills come from [universal-skills](https://github.com/
 9. **Land.** Open a pull request whose commits carry a `Spec: <ROW-ID>` trailer and a bound test. Do not edit `status.json` by hand.
 10. **Release.** Landed rows ship in the next release bundle.
 
-Standards: [constitution](https://github.com/Knuckles-Team/pipelines/blob/main/.specify/memory/constitution.md), [spec standard](https://github.com/Knuckles-Team/pipelines/blob/main/reference/spec-standard.md), [spec templates](https://github.com/Knuckles-Team/pipelines/tree/main/specs/_template), and [Canopy](https://knuckles-team.github.io/.github/architecture/). Install the skills with `pip install universal-skills`, then `install-skills --all-detected --symlink`.
+Standards: [constitution](https://github.com/Knuckles-Team/pipelines/blob/main/.specify/memory/constitution.md), [spec standard](https://github.com/Knuckles-Team/pipelines/blob/main/reference/spec-standard.md), [spec templates](https://github.com/Knuckles-Team/pipelines/tree/main/.specify/templates), and [Canopy](https://knuckles-team.github.io/.github/architecture/). Install the skills with `pip install universal-skills`, then `install-skills --all-detected --symlink`.
 
 ## Smallest contribution
 

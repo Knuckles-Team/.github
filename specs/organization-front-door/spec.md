@@ -1,7 +1,31 @@
-# Organization front door
+# ORG-FRONT — Organization front door
 
-**Spec ID:** ORG-FRONT-001. **Requirements:** ORG-FRONT-R001, ORG-FRONT-R002. **Delivery:** landed.
+**Spec ID:** ORG-FRONT. **Requirements:** ORG-FRONT-R001, ORG-FRONT-R002. **Delivery:** landed.
 **Acceptance:** accepted.
+
+## User Scenarios and Testing
+
+### User Story 1 - Understand the platform from the front door (Priority: P1)
+
+A visitor lands on the organization profile or the Pages site and wants to learn what the platform is, which repositories compose it and where to start.
+
+**Independent Test**: Open `profile/README.md`, `site/index.html` and `site/skills.html`, then run `python scripts/check_front_door.py`.
+
+**Acceptance Scenarios**:
+
+1. **Given** a visitor on the organization profile, **When** they read the component table, **Then** they see the five core repositories and the dependency direction in present tense.
+2. **Given** any outbound link on a front-door page, **When** the link checker runs, **Then** the link resolves with HTTP 200.
+
+### Edge Cases
+
+- A linked Pages site that is not yet published must fail the link check and must not be listed.
+- A relative link that escapes the repository must fail the check.
+- A repository without a spec-delivery page must not appear in the generated links.
+
+### Assumptions
+
+- The pipelines generator is the single source of computed spec status.
+- GitHub Pages serves the published site from this repository.
 
 ## Outcome
 
@@ -55,4 +79,4 @@ Audited source: [`5e674839fb10e1aea4e3f11468fe804636fdd8b6`](https://github.com/
 **LANDED** requires the exact merged front-door content. **ACCEPTED** requires both checks in
 `test-spec.md` passing against that commit, linked in the evidence section above.
 
-Requirement IDs are defined in [requirements.md](requirements.md); delivery state per ID is in `status.json`.
+Requirement IDs are defined in [requirements.md](requirements.md); delivery state per ID is computed at read time and never committed.

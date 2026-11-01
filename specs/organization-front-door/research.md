@@ -1,4 +1,4 @@
-# ORG-FRONT-001 — Research
+# ORG-FRONT — Research
 
 ## Resolved unknowns
 
