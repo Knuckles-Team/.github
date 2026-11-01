@@ -1,4 +1,4 @@
-# ORG-FRONT-001 — Implementation plan
+# ORG-FRONT — Implementation plan
 
 Governing spec: [spec.md](spec.md). Rows: [requirements.md](requirements.md).
 

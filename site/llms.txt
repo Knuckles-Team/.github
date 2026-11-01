@@ -29,5 +29,5 @@ How to contribute (spec-driven; the Spec: trailer on each commit carries the row
 
 Constitution: https://github.com/Knuckles-Team/pipelines/blob/main/.specify/memory/constitution.md
 Spec standard: https://github.com/Knuckles-Team/pipelines/blob/main/reference/spec-standard.md
-Spec templates: https://github.com/Knuckles-Team/pipelines/tree/main/specs/_template
+Spec templates: https://github.com/Knuckles-Team/pipelines/tree/main/.specify/templates
 Ecosystem boundaries: https://github.com/Knuckles-Team/pipelines/blob/main/reference/ecosystem-boundaries.md

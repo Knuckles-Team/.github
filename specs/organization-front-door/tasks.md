@@ -1,33 +1,21 @@
 # Work items
 
-- [x] Audit `profile/README.md` against the shipped repositories and correct any stale name,
-      responsibility, or dependency-direction description, keeping the five-core-repository
-      framing consistent with the component cards (ORG-FRONT-R001).
-- [x] Audit `site/index.html` and `site/skills.html` against `profile/README.md` for the same
-      component set, names, and responsibilities, and reconcile any mismatch (ORG-FRONT-R001).
-- [x] Build or run a link checker against every `http(s)://` and relative link in
-      `profile/README.md`, `site/index.html`, and `site/skills.html`; fix or remove any link
-      that does not resolve (ORG-FRONT-R001).
-- [x] Render `profile/README.md` through a GitHub-compatible Markdown renderer and confirm the
-      component table, architecture image, and badges display correctly (ORG-FRONT-R001).
-- [x] Run this repository's test suite (`pytest`) and applicable language linters against any
-      changed script, and record the exact commit, check output, and pass/fail result in
-      `status.json` before marking ORG-FRONT-R001 delivered.
+- [x] T101 [P] [US1] ORG-FRONT-R001 Audit `profile/README.md`, `site/index.html` and `site/skills.html` against the shipped repositories. Reconcile every name, responsibility and link, and keep the five-core-repository framing consistent. Bound to tests/test_front_door.py::test_component_roles_and_navigation_remain_consistent.
 
 Audit source: `5e674839fb10e1aea4e3f11468fe804636fdd8b6`. See [complete evidence](evidence/audit.json), [test output](evidence/pytest.txt), and [independent review](evidence/independent-review.json).
 
-- [ ] ORG-FRONT-R002.1: add `SPEC_DELIVERY_PAGES` to `scripts/public_spec_report.py`.
-- [ ] ORG-FRONT-R002.2: add `scripts/spec_delivery_links.py` and the marker block in `profile/README.md`.
-- [ ] ORG-FRONT-R002.3: add `test_readme_spec_delivery_links_match_the_single_list` to `tests/test_front_door.py`.
-- [ ] ORG-FRONT-R002.4: add a "Spec delivery" link to each per-repository block in `profile/README.md`.
-- [ ] ORG-FRONT-R003.1: build the explorer in `spec-status-pages.yml` on a 30-minute schedule and on dispatch.
-- [ ] ORG-FRONT-R003.2: point the profile's specification-status links and the runtime diagram at the explorer.
-- [ ] ORG-FRONT-R003.3: regenerate `evidence/links.json` with the explorer URL passing.
-- [ ] ORG-FRONT-R004: the status report reads schema version 2 natively.
-- [ ] ORG-FRONT-R005: the status page shows the state breakdown.
-- [ ] ORG-FRONT-R006: a root agents.md is the agent front door.
-- [ ] ORG-FRONT-R007: agent entry points are wired in.
-- [ ] ORG-FRONT-R008: a plain-text pointer serves agents.
+- [x] T010 [P] [US1] ORG-FRONT-R002.1 Model. Add `SPEC_DELIVERY_PAGES` to `scripts/public_spec_report.py`. Bound to tests/test_front_door.py::test_readme_spec_delivery_links_match_the_single_list.
+- [x] T011 [P] [US1] ORG-FRONT-R002.2 Wiring. Add `scripts/spec_delivery_links.py` and the marker block in `profile/README.md`. Bound to tests/test_front_door.py::test_readme_spec_delivery_links_match_the_single_list.
+- [x] T012 [P] [US1] ORG-FRONT-R002.3 Behavior. Add `test_readme_spec_delivery_links_match_the_single_list` to `tests/test_front_door.py`. Bound to tests/test_front_door.py::test_readme_spec_delivery_links_match_the_single_list.
+- [x] T013 [P] [US1] ORG-FRONT-R002.4 Behavior. Add a "Spec delivery" link to each per-repository block in `profile/README.md`. Bound to tests/test_front_door.py::test_readme_spec_delivery_links_match_the_single_list.
+- [x] T014 [P] [US1] ORG-FRONT-R003.1 Wiring. Build the explorer in `spec-status-pages.yml` on a 30-minute schedule and on dispatch. Bound to tests/test_architecture_explorer_site.py::test_site_workflow_builds_the_explorer_on_a_schedule.
+- [x] T015 [P] [US1] ORG-FRONT-R003.2 Behavior. Point the profile's specification-status links and the runtime diagram at the explorer. Bound to tests/test_front_door.py::test_front_door_links_the_explorer_at_the_top_level.
+- [x] T016 [P] [US1] ORG-FRONT-R003.3 Evidence. Regenerate `evidence/links.json` with the explorer URL passing. Bound to scripts/check_front_door.py::main.
+- [x] T017 [P] [US1] ORG-FRONT-R004 Behavior. The status report reads schema version 2 natively. Bound to tests/test_requirement_progress.py::test_v2_verified_and_landed_count_as_delivered.
+- [x] T018 [P] [US1] ORG-FRONT-R005 Behavior. The status page shows the state breakdown. Bound to tests/test_public_spec_report.py::test_v2_committed_specs_counts_verified_and_demotes_off_main.
+- [x] T019 [P] [US1] ORG-FRONT-R006 Behavior. A root `AGENTS.md` is the agent front door. Bound to tests/test_front_door.py::test_agents_md_is_the_agent_front_door.
+- [x] T020 [P] [US1] ORG-FRONT-R007 Wiring. Agent entry points are wired in. Bound to tests/test_front_door.py::test_agent_entry_points_point_at_agents_md.
+- [x] T021 [P] [US1] ORG-FRONT-R008 Behavior. A plain-text pointer serves agents. Bound to tests/test_front_door.py::test_site_llms_txt_points_agents_at_the_front_door_and_contribution_path.
 
 - [ ] T001 [P] [US1] ORG-FRONT-R009.1 Model. Add `read_status_documents(repo, head)` to `scripts/public_spec_report.py`. Bound to tests/test_public_spec_report.py::test_status_documents_are_generated_from_the_head_commit.
 - [ ] T002 [P] [US1] ORG-FRONT-R009.2 Behavior. Replace the manifest lookup in `committed_specs`. Bound to tests/test_public_spec_report.py::test_spec_without_a_committed_manifest_is_evaluated_from_generated_status.

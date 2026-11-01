@@ -1,4 +1,4 @@
-# ORG-FRONT-001 — Requirements quality checklist
+# ORG-FRONT — Requirements quality checklist
 
 ## Content quality
 
