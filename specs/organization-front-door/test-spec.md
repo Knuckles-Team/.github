@@ -79,3 +79,4 @@ checks pass against the same merged commit; publishing this spec is not itself a
 - T-ORG-FRONT-R003.1: ORG-FRONT-R003.1 | Test: `tests/test_architecture_explorer_site.py::test_site_workflow_builds_the_explorer_on_a_schedule`.
 - T-ORG-FRONT-R003.2: ORG-FRONT-R003.2 | Test: `tests/test_front_door.py::test_front_door_links_the_explorer_at_the_top_level`.
 - T-ORG-FRONT-R003.3: ORG-FRONT-R003.3 | Test: `tests/test_front_door.py::test_audit_never_hides_a_broken_destination`.
+- T-ORG-FRONT-R011: ORG-FRONT-R011 | Test: `tests/test_front_door.py::test_tests_workflow_emits_the_single_required_check`. The `ci-required` job is named `CI required`, runs always and needs `pytest`.

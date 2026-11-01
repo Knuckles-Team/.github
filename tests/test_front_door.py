@@ -195,3 +195,12 @@ def test_front_doors_use_canonical_repository_and_pages_urls(name):
     for host in ("github.com/Knuckles-Team", "raw.githubusercontent.com/Knuckles-Team", "knuckles-team.github.io"):
         for slug in retired:
             assert f"https://{host}/{slug}" not in text
+
+
+def test_tests_workflow_emits_the_single_required_check() -> None:
+    text = (ROOT / ".github" / "workflows" / "tests.yml").read_text(encoding="utf-8")
+    job = text.split("  ci-required:", 1)[1]
+    assert "name: CI required" in job
+    assert "if: always()" in job
+    assert "needs: [pytest]" in job
+    assert "failure|cancelled" in job
