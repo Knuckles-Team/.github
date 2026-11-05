@@ -165,3 +165,4 @@ none
 ## Cross-repo seams
 
 - Release manifests and export files: PIPE-PAGES-R056.3 and PIPE-PAGES-R057.3 in the pipelines repository consume ORG-FRONT-R010.1 and ORG-FRONT-R010.2. The contract is [canopy-publishing.md](contracts/canopy-publishing.md).
+- Generated status documents: PIPE-GATES-R027 in the pipelines repository owns `generate_at`, which ORG-FRONT-R009.1 reads. The contract is [status-documents.md](contracts/status-documents.md).
