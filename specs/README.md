@@ -11,7 +11,7 @@ rules and track owner-native receipts; it cannot declare a component accepted on
 
 ## Specifications
 
-- [`crossrepo-authority-governance`](crossrepo-authority-governance/spec.md) — ORG-AUTH-001:
+- [`crossrepo-authority-governance`](crossrepo-authority-governance/spec.md) — ORG-AUTH:
   ORG-AUTH-R001–ORG-AUTH-R005, the duplicate-authority register.
 - [`organization-front-door`](organization-front-door/spec.md) — ORG-FRONT:
   ORG-FRONT-R001, the organization README and site front door.
