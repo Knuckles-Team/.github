@@ -53,7 +53,7 @@ The browser operator experience (formerly agent-webui) for conversations, approv
 
 The reasoning and durable knowledge engine (formerly epistemic-graph) for graph, RDF, SQL, vectors, time, blobs, evidence, and provenance. Writes use concurrent writers with version checks, mandatory provenance, and contradiction records. Memory decays and consolidates natively. Ships as one engine with one server executable (`medulla-server`) and the `medulla` package. Medulla keeps no synced second database. External stores stay connector sources, read as virtual graphs.
 
-**[Documentation](https://knuckles-team.github.io/medulla/)** · **[Capability status](https://knuckles-team.github.io/medulla/status/)** · **[Spec delivery](https://knuckles-team.github.io/medulla/spec-delivery/)**
+**[Documentation](https://knuckles-team.github.io/medulla/)** · **[Spec delivery](https://knuckles-team.github.io/medulla/spec-delivery/)**
 
 </td>
 <td width="50%" valign="top">
