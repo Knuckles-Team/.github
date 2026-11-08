@@ -24,6 +24,13 @@ The contribution path is spec-driven. Each step names its skill and the files it
 9. **Land.** Open a pull request whose commits carry a `Spec: <ROW-ID>` trailer and a bound test. Do not edit `status.json` by hand.
 10. **Release.** Landed rows ship in the next release bundle.
 
+Writing rules for specs and commits:
+
+- Specs use the repository glossary. Each glossary term maps to a class of the spec-driven-development ontology, so a spec ingests into the graph. Define no term outside the glossary.
+- Write spec prose in MEDULLA-STE-Lite: sentences of 20 words or fewer, the active voice, and `must`, `should` or `may` as the only modals.
+- Put the `Spec:` trailer directly above `Co-Authored-By`, with no blank line between them. A blank line leaves no trailer and the check fails.
+- A contract change ships with its consumers in the same release train. A producer does not tag until each consumer's tests pass against the candidate.
+
 Standards: [constitution](https://github.com/Knuckles-Team/pipelines/blob/main/.specify/memory/constitution.md), [spec standard](https://github.com/Knuckles-Team/pipelines/blob/main/reference/spec-standard.md), [spec templates](https://github.com/Knuckles-Team/pipelines/tree/main/.specify/templates), and [Canopy](https://knuckles-team.github.io/.github/architecture/). Install the skills with `pip install universal-skills`, then `install-skills --all-detected --symlink`.
 You may use [GitHub Spec Kit](https://github.com/github/spec-kit) for the same artifacts; review generated diffs before combining generators. Record any unavailable check as a gap; do not claim it passed.
 
