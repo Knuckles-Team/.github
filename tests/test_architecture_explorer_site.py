@@ -31,16 +31,9 @@ def test_architecture_sparse_checkout_covers_imports_before_network_build():
     assert [line.strip() for line in sparse.splitlines()] == [
         "scripts/__init__.py",
         "scripts/architecture_explorer",
-        "pipelines_hooks/__init__.py",
-        "pipelines_hooks/core/__init__.py",
-        "pipelines_hooks/core/repositories.py",
-        "pipelines_hooks/core/errors.py",
-        "pipelines_hooks/specs/__init__.py",
-        "pipelines_hooks/specs/ids.py",
-        "pipelines_hooks/specs/aliases.py",
-        "pipelines_hooks/specs/trailer_ids.py",
-        "pipelines_hooks/specs/priority.py",
-        "pipelines_hooks/specs/requirements_doc.py",
+        "pipelines_hooks",
+        "releases",
+        ".specify/templates",
     ]
     smoke = "      - name: Validate architecture explorer imports\n"
     assert smoke in text
@@ -48,7 +41,25 @@ def test_architecture_sparse_checkout_covers_imports_before_network_build():
         'PYTHONPATH=generator python3 -c "from scripts.architecture_explorer.story_render import prepare_models"'
         in text
     )
+    assert (
+        'PYTHONPATH=generator python3 -c "from pipelines_hooks.specs.plan_conformance import template_text"'
+        in text
+    )
     assert text.index(smoke) < text.index("      - name: Build architecture explorer\n")
+
+
+def test_workflow_checks_out_releases_for_the_explorer():
+    """ORG-FRONT-R010.1: the explorer build reads release manifests from releases/ and fails without it."""
+    text = WORKFLOW.read_text()
+    checkout = text.split(
+        "      - name: Checkout architecture explorer generator\n", 1
+    )[1]
+    sparse = checkout.split("          sparse-checkout: |\n", 1)[1].split(
+        "      - name:", 1
+    )[0]
+    entries = [line.strip() for line in sparse.splitlines()]
+    assert "releases" in entries
+    assert ".specify/templates" in entries
 
 
 def test_canonical_build_requires_same_capture_source_chart_before_upload():

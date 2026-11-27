@@ -154,22 +154,16 @@ jobs:
           sparse-checkout: |
             scripts/__init__.py
             scripts/architecture_explorer
-            pipelines_hooks/__init__.py
-            pipelines_hooks/core/__init__.py
-            pipelines_hooks/core/repositories.py
-            pipelines_hooks/core/errors.py
-            pipelines_hooks/specs/__init__.py
-            pipelines_hooks/specs/ids.py
-            pipelines_hooks/specs/aliases.py
-            pipelines_hooks/specs/trailer_ids.py
-            pipelines_hooks/specs/priority.py
-            pipelines_hooks/specs/requirements_doc.py
+            pipelines_hooks
+            releases
+            .specify/templates
       - name: Install pinned architecture scoring dependency
         run: python3 -m pip install --disable-pip-version-check networkx==3.6.1
       - name: Validate architecture explorer imports
         run: |
           python3 generator/scripts/architecture_explorer/build.py --help
           PYTHONPATH=generator python3 -c "from scripts.architecture_explorer.story_render import prepare_models"
+          PYTHONPATH=generator python3 -c "from pipelines_hooks.specs.plan_conformance import template_text"
       - name: Build architecture explorer
         env:
           GITHUB_TOKEN: ${{ github.token }}
